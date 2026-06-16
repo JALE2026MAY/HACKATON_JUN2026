@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
-  <TalendMetadata:FileExcelConnection xmi:id="_h7iOsGmcEfGiX-30GkgJcQ" name="nbi_ofiical" dataPackage="_h7iOsWmcEfGiX-30GkgJcQ" Server="Localhost 127.0.0.1" FilePath="/Users/andresgaibor/geniuslab/Fuentes_INEC/nbi_oficial_inec_canton.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="1" FirstLineCaption="true" SheetName="NBI_Oficial_Canton" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" sheetList="NBI_Oficial_Canton:w&#xA;">
+  <TalendMetadata:FileExcelConnection xmi:id="_h7iOsGmcEfGiX-30GkgJcQ" name="nbi_ofiical" id="_h7a58GmcEfGiX-30GkgJcQ" dataPackage="_h7iOsWmcEfGiX-30GkgJcQ" Server="Localhost 127.0.0.1" FilePath="/Users/andresgaibor/geniuslab/Fuentes_INEC/nbi_oficial_inec_canton.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="1" FirstLineCaption="true" SheetName="NBI_Normalizado" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" sheetList="NBI_Normalizado:w&#xA;">
     <sheetColumns>A</sheetColumns>
     <sheetColumns>B</sheetColumns>
     <sheetColumns>C</sheetColumns>
@@ -9,8 +9,6 @@
     <sheetColumns>F</sheetColumns>
     <sheetColumns>G</sheetColumns>
     <sheetColumns>H</sheetColumns>
-    <sheetColumns>I</sheetColumns>
-    <sheetColumns>J</sheetColumns>
   </TalendMetadata:FileExcelConnection>
   <orgomg.cwm.resource.record:RecordFile xmi:id="_h7iOsWmcEfGiX-30GkgJcQ" name="default" dataManager="_h7iOsGmcEfGiX-30GkgJcQ">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_h7i1wGmcEfGiX-30GkgJcQ" id="_-W-xEGmbEfGiX-30GkgJcQ" label="metadata">

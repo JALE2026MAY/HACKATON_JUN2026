@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_7ndOwGmmEfGiX-30GkgJcQ" name="nbi_oficial" dataPackage="_7ndOwWmmEfGiX-30GkgJcQ" Server="Localhost 127.0.0.1" FilePath="/Users/andresgaibor/geniuslab/Fuentes_INEC/nbi_oficial_inec_canton.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="1" FirstLineCaption="true" SheetName="NBI_Normalizado" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" sheetList="NBI_Normalizado:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_7ndOwWmmEfGiX-30GkgJcQ" name="default" dataManager="_7ndOwGmmEfGiX-30GkgJcQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_7ndOwmmmEfGiX-30GkgJcQ" id="_uE5BoGmmEfGiX-30GkgJcQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7ndOw2mmEfGiX-30GkgJcQ" label="orden_pdf" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7ndOxGmmEfGiX-30GkgJcQ" label="provincia" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7ndOxWmmEfGiX-30GkgJcQ" label="canton" length="32" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7ndOxmmmEfGiX-30GkgJcQ" label="periodo" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7ndOx2mmEfGiX-30GkgJcQ" label="numero" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7ndOyGmmEfGiX-30GkgJcQ" label="porcentaje" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7ndOyWmmEfGiX-30GkgJcQ" label="variacion_porcentual" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7ndOymmmEfGiX-30GkgJcQ" label="fuente" length="159" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
