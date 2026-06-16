@@ -1,0 +1,32 @@
+{
+  "itemId" : "_xis4MGmZEfGiX-30GkgJcQ",
+  "contextList" : [ {
+    "contextName" : "QA",
+    "repoId" : "_dk5X4GmXEfGiX-30GkgJcQ",
+    "parameterList" : [ {
+      "id" : "_wZVHR2mXEfGiX-30GkgJcQ",
+      "name" : "inec_path"
+    } ]
+  }, {
+    "contextName" : "PROD",
+    "repoId" : "_dk5X4GmXEfGiX-30GkgJcQ",
+    "parameterList" : [ {
+      "id" : "_wZVHRWmXEfGiX-30GkgJcQ",
+      "name" : "inec_path"
+    } ]
+  }, {
+    "contextName" : "DEV",
+    "repoId" : "_dk5X4GmXEfGiX-30GkgJcQ",
+    "parameterList" : [ {
+      "id" : "_wZVHQWmXEfGiX-30GkgJcQ",
+      "name" : "inec_path"
+    } ]
+  }, {
+    "contextName" : "MAC",
+    "repoId" : "_dk5X4GmXEfGiX-30GkgJcQ",
+    "parameterList" : [ {
+      "id" : "_wZVHQ2mXEfGiX-30GkgJcQ",
+      "name" : "inec_path"
+    } ]
+  } ]
+}
