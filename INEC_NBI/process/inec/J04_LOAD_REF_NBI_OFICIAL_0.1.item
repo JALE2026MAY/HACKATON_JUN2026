@@ -142,10 +142,8 @@
     <elementParameter field="TEXT" name="HELP" value="org.talend.help.tFileInputExcel" show="false"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/Applications/TalendStudio-8.0.1/studio/configuration/lib/java" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_7nV6AGmmEfGiX-30GkgJcQ" show="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;/Users/andresgaibor/geniuslab/Fuentes_INEC/nbi_oficial_inec_canton.xlsx&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.inec_path + &quot;nbi_oficial_inec_canton.xlsx&quot;"/>
     <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:mlVOFY8IMk0Bwtn1GKKlW8tSd95S5towwLGGqyUu"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
@@ -278,7 +276,7 @@
         <mapperTableEntries name="PERIODO_REFERENCIA" expression="row1.periodo " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="PROVINCIA" expression="row1.provincia " type="id_String" nullable="true"/>
         <mapperTableEntries name="CANTON" expression="row1.canton " type="id_String" nullable="true"/>
-        <mapperTableEntries name="NBI_OFICIAL_INEC" expression="row1.porcentaje " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NBI_OFICIAL_INEC" expression="row1.porcentaje == null || row1.porcentaje.trim().isEmpty()&#xA;? null&#xA;: row1.porcentaje.trim().replace(&quot;,&quot;, &quot;.&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="CODIGO_PROVINCIA" expression="&quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="CODIGO_CANTON" expression="&quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="FUENTE" expression="row1.fuente " type="id_String" nullable="true"/>
@@ -314,7 +312,7 @@
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
     <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="CODIGO_PROVINCIA" show="false"/>
-    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="true"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com"/>
