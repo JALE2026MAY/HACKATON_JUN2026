@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_-SRygGkzEfGvU5xU8BRfng" name="Conn_SingleStore_Retail_Staging" id="_2WZ9kGkyEfGvU5xU8BRfng" label="Conn_SingleStore_Retail_Staging" dataPackage="_cdI8sGk2EfGvU5xU8BRfng" DatabaseType="MySQL" DriverClass="com.mysql.cj.jdbc.Driver" URL="jdbc:mysql://svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_rosalinda_9fd4a?noDatetimeStringSync=true&amp;enabledTLSProtocols=TLSv1.2,TLSv1.1,TLSv1" dbVersionString="MYSQL_8" Port="3333" Username="rosalinda-84164" Password="enc:system.encryption.key.v1:vGSfAUUIXRECSR+A9pWyk0c7HOuxqusTyMZEh+OBAC2DleuKSFFGhVF35CAH4Zluv/M=" ServerName="svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com" DatasourceName="" FileFieldName="" SID="db_rosalinda_9fd4a" SqlSynthax="" StringQuote="" NullChar="" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true&amp;enabledTLSProtocols=TLSv1.2,TLSv1.1,TLSv1" StandardSQL="true" SQLMode="false" UiSchema="" supportNLS="false">
+    <taggedValue xmi:id="_-SRygWkzEfGvU5xU8BRfng" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_-TodYGkzEfGvU5xU8BRfng" tag="package filter" value=""/>
+    <taggedValue xmi:id="_-TodYWkzEfGvU5xU8BRfng" tag="Status" value=""/>
+    <taggedValue xmi:id="_-TodYmkzEfGvU5xU8BRfng" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_-TodY2kzEfGvU5xU8BRfng" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_-TodZGkzEfGvU5xU8BRfng" tag="Description" value=""/>
+    <taggedValue xmi:id="_-TodZWkzEfGvU5xU8BRfng" tag="Author" value=""/>
+    <taggedValue xmi:id="_-TodZmkzEfGvU5xU8BRfng" tag="otherParameter"/>
+    <taggedValue xmi:id="_2yJ-EGk1EfGvU5xU8BRfng" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_2yJ-EWk1EfGvU5xU8BRfng" tag="DB ProductVersion" value="5.7.32"/>
+    <taggedValue xmi:id="_2yJ-Emk1EfGvU5xU8BRfng" tag="DB IdentifierQuoteString" value="`"/>
+    <parameters xmi:id="_-SRygmkzEfGvU5xU8BRfng" key="CONN_PARA_KEY_USERNAME" value="rosalinda-84164"/>
+    <parameters xmi:id="_V4nVMGk1EfGvU5xU8BRfng" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_cdI8sGk2EfGvU5xU8BRfng" name="db_rosalinda_9fd4a" dataManager="_-SRygGkzEfGvU5xU8BRfng"/>
+</xmi:XMI>
