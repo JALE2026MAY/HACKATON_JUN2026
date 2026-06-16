@@ -9,4 +9,11 @@
 	<natures>
 		<nature>org.talend.core.talendnature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>.Reporte_ENEMDU_2025_Personas_Profile-20260616-1604-00010.pdf</name>
+			<type>1</type>
+			<location>C:/TalendReports/ENEMDU_2025/Personas/Reporte_ENEMDU_2025_Personas_Profile-20260616-1604-00010.pdf</location>
+		</link>
+	</linkedResources>
 </projectDescription>
