@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_R-6-0GmNEfGNJ8zmLxelSg" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_d3u_4GmNEfGNJ8zmLxelSg" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com"/>
+  <contextParameter xmi:id="_d3u_4WmNEfGNJ8zmLxelSg" comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="3333"/>
+  <contextParameter xmi:id="_d3u_4mmNEfGNJ8zmLxelSg" comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="angel-01686"/>
+  <contextParameter xmi:id="_d3u_42mNEfGNJ8zmLxelSg" comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:2y8aa4HkGgxVRHl7x5/jq9lgpgT6eLmn2fFbi9ede0WdPKSLa1Z+uh2Djwayp6AdBA=="/>
+  <contextParameter xmi:id="_d3u_5GmNEfGNJ8zmLxelSg" comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="db_angel_5df2c"/>
+  <contextParameter xmi:id="_AjfX0GmPEfGNJ8zmLxelSg" comment="" name="path" prompt="path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:\fuenteDatos\"/>
+</talendfile:ContextType>

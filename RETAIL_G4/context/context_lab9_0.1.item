@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_oDfn4F-KEfGsct_TJueQYg" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_oDfn4V-KEfGsct_TJueQYg" comment="" name="BASE_FILE_PATH" prompt="BASE_FILE_PATH?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:\geniuslab\"/>
+  <contextParameter xmi:id="_oDfn4l-KEfGsct_TJueQYg" comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="209.50.254.159"/>
+  <contextParameter xmi:id="_oDfn41-KEfGsct_TJueQYg" comment="" name="DB_NAME" prompt="DB_NAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DSADEV"/>
+  <contextParameter xmi:id="_oDfn5F-KEfGsct_TJueQYg" comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="acme123"/>
+  <contextParameter xmi:id="_oDfn5V-KEfGsct_TJueQYg" comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="3306"/>
+  <contextParameter xmi:id="_oDfn5l-KEfGsct_TJueQYg" comment="" name="DB_USER" prompt="DB_USER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="usr_acme"/>
+  <contextParameter xmi:id="_oDfn51-KEfGsct_TJueQYg" comment="" name="PIPELINE_NAME" prompt="PIPELINE_NAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="lab09_olist_pipeline"/>
+  <contextParameter xmi:id="_pr7MAF-PEfGzpKko6vOaQg" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="routines.System.currentTimeMillis().toString()"/>
+  <contextParameter xmi:id="_WlILIGBcEfGLi-HetJeatQ" comment="" name="FECHAINI" prompt="FECHAINI?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+</talendfile:ContextType>

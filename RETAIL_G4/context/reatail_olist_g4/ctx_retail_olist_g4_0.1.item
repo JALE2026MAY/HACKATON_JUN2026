@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_LEhGkGmPEfGE1IodBGmaCw" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_LEhGkWmPEfGE1IodBGmaCw" comment="" name="ss_host" prompt="ss_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="svc-ee830d84-e0b6-4103-bb56-0f73ee5cf643-dml.aws-virginia-8.svc.singlestore.com"/>
+  <contextParameter xmi:id="_LEhGkmmPEfGE1IodBGmaCw" comment="" name="ss_port" prompt="ss_port?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="3306"/>
+  <contextParameter xmi:id="_LEhGk2mPEfGE1IodBGmaCw" comment="" name="ss_db" prompt="ss_db?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="raw"/>
+  <contextParameter xmi:id="_LEhGlGmPEfGE1IodBGmaCw" comment="" name="ss_user" prompt="ss_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="admin"/>
+  <contextParameter xmi:id="_LEhGlWmPEfGE1IodBGmaCw" comment="" name="ss_password" prompt="ss_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:1u2zjm0JhW11D2w0TZSgdoVc1Dc2zo7D6MkroJ5BbpXza1nRgQzSudfolplcQDB0s+YctJ3S"/>
+  <contextParameter xmi:id="_LEhGlmmPEfGE1IodBGmaCw" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="'RUN_001'"/>
+  <contextParameter xmi:id="_LEhGl2mPEfGE1IodBGmaCw" comment="" name="olist_path" prompt="olist_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Tmp/FUENTES/"/>
+  <contextParameter xmi:id="_LEhGmGmPEfGE1IodBGmaCw" comment="" name="env" prompt="env?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dev"/>
+</talendfile:ContextType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
+  <deletedFolders>context/ctx_dataton</deletedFolders>
+  <deletedFolders>metadata/fileDelimited/OLIST</deletedFolders>
+  <deletedFolders>metadata/fileDelimited/OLISTS</deletedFolders>
+  <deletedFolders>process/RETAIL_OLIST_G4/Dataton_OLIST</deletedFolders>
+  <deletedFolders>process/X</deletedFolders>
+  <deletedItems id="_R-e58GmNEfGNJ8zmLxelSg" path="" type="CONTEXT"/>
+  <deletedItems id="_oDBt0F-KEfGsct_TJueQYg" path="" type="CONTEXT"/>
+  <deletedItems id="_TU-6YGmvEfGgPtFU1f2lyA" path="ctx_dataton" type="CONTEXT"/>
+</recyclebin:RecycleBin>
