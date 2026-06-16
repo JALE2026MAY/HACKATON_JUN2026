@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_5p9SMWmkEfGSSoP7lP4F9A" label="retail_g4" description="Proyecto retail para un e-comerse de Brasil" language="java" technicalLabel="RETAIL_G4" author="_5p9SMmmkEfGSSoP7lP4F9A" productVersion="Qlik Talend Cloud Enterprise Edition-8.0.1.20260521_1039-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/JALE2026MAY/HACKATON_JUN2026.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
+    <migrationTask xmi:id="_5qxxkGmkEfGSSoP7lP4F9A" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_5p9SMmmkEfGSSoP7lP4F9A" login="alexandra.toasa@trial.h3esfmw5444ku8w.us.qlikcloud.com" firstName="Roberto" lastName="Jiménez" type="DQ"/>
+</xmi:XMI>
