@@ -2,14 +2,38 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType xmi:id="_wZVHQGmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="DEV">
     <contextParameter xmi:id="_wZVHQWmXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/fuentes_inec/"/>
+    <contextParameter xmi:id="_TvooUGmqEfGad-n5iTGvGg" comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HRNWWSS-PV65102"/>
+    <contextParameter xmi:id="_TvooUWmqEfGad-n5iTGvGg" comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ANDRESGAIBOR"/>
+    <contextParameter xmi:id="_TvooUmmqEfGad-n5iTGvGg" comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:mfElk00bRFS95RlJkN2fVqaw0EMVszU57qSjmUJDPEvX9rksBMuPLrdq"/>
+    <contextParameter xmi:id="_TvooU2mqEfGad-n5iTGvGg" comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="COMPUTE_WH"/>
+    <contextParameter xmi:id="_TvooVGmqEfGad-n5iTGvGg" comment="" name="schema" prompt="schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="REF"/>
+    <contextParameter xmi:id="_TvooVWmqEfGad-n5iTGvGg" comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="NBI_DB"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_wZVHQmmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="MAC">
     <contextParameter xmi:id="_wZVHQ2mXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/"/>
+    <contextParameter xmi:id="_TvooVmmqEfGad-n5iTGvGg" comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HRNWWSS-PV65102"/>
+    <contextParameter xmi:id="_TvooV2mqEfGad-n5iTGvGg" comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ANDRESGAIBOR"/>
+    <contextParameter xmi:id="_TvooWGmqEfGad-n5iTGvGg" comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:VOt/zvMhIpE8y8I/CIuyFRhFv+/TWHGtOaRXBDPQufBLcI66M2hUwBoQ"/>
+    <contextParameter xmi:id="_TvooWWmqEfGad-n5iTGvGg" comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="COMPUTE_WH"/>
+    <contextParameter xmi:id="_TvooWmmqEfGad-n5iTGvGg" comment="" name="schema" prompt="schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="REF"/>
+    <contextParameter xmi:id="_TvooW2mqEfGad-n5iTGvGg" comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="NBI_DB"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_wZVHRGmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="PROD">
     <contextParameter xmi:id="_wZVHRWmXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooXGmqEfGad-n5iTGvGg" comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooXWmqEfGad-n5iTGvGg" comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooXmmqEfGad-n5iTGvGg" comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_TvooX2mqEfGad-n5iTGvGg" comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooYGmqEfGad-n5iTGvGg" comment="" name="schema" prompt="schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooYWmqEfGad-n5iTGvGg" comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_wZVHRmmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="QA">
     <contextParameter xmi:id="_wZVHR2mXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooYmmqEfGad-n5iTGvGg" comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooY2mqEfGad-n5iTGvGg" comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooZGmqEfGad-n5iTGvGg" comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_TvooZWmqEfGad-n5iTGvGg" comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooZmmqEfGad-n5iTGvGg" comment="" name="schema" prompt="schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_TvooZ2mqEfGad-n5iTGvGg" comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>
