@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_Sz8E0GmZEfGiX-30GkgJcQ" name="dpa" dataPackage="_Sz8r4GmZEfGiX-30GkgJcQ" Server="Localhost 127.0.0.1" FilePath="/Users/andresgaibor/geniuslab/Fuentes_INEC/CODIFICACIÓN_2026.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="2" FirstLineCaption="true" SheetName="CODIGOS" firstColumn="2" thousandSeparator="','" decimalSeparator="'.'" sheetList="CODIGOS:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_Sz8r4GmZEfGiX-30GkgJcQ" name="default" dataManager="_Sz8E0GmZEfGiX-30GkgJcQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_Sz8r4WmZEfGiX-30GkgJcQ" id="_6PBkkGmYEfGiX-30GkgJcQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Sz9S8GmZEfGiX-30GkgJcQ" label="COD_PROVINCIA" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Sz9S8WmZEfGiX-30GkgJcQ" label="DESCRIPCION_PROVINCIA" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Sz9S8mmZEfGiX-30GkgJcQ" label="COD_CANTON" length="4" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Sz9S82mZEfGiX-30GkgJcQ" label="DESCRIPCION_CANTON" length="12" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Sz9S9GmZEfGiX-30GkgJcQ" label="COD_PARROQUIA" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Sz9S9WmZEfGiX-30GkgJcQ" label="DESCRIPCION_PARROQUIA" length="24" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
