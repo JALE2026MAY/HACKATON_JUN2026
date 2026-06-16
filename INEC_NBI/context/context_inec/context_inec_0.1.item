@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_wZVHQGmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="DEV">
+    <contextParameter xmi:id="_wZVHQWmXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_wZVHQmmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="MAC">
+    <contextParameter xmi:id="_wZVHQ2mXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_wZVHRGmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="PROD">
+    <contextParameter xmi:id="_wZVHRWmXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_wZVHRmmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="QA">
+    <contextParameter xmi:id="_wZVHR2mXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>
