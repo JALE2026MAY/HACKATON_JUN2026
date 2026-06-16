@@ -1,0 +1,92 @@
+{
+  "itemId" : "_ijGpYGm6EfGiX-30GkgJcQ",
+  "contextList" : [ {
+    "contextName" : "QA",
+    "repoId" : "_dk5X4GmXEfGiX-30GkgJcQ",
+    "parameterList" : [ {
+      "id" : "_TvooYmmqEfGad-n5iTGvGg",
+      "name" : "account"
+    }, {
+      "id" : "_TvooZ2mqEfGad-n5iTGvGg",
+      "name" : "database"
+    }, {
+      "id" : "_wZVHR2mXEfGiX-30GkgJcQ",
+      "name" : "inec_path"
+    }, {
+      "id" : "_TvooZGmqEfGad-n5iTGvGg",
+      "name" : "password"
+    }, {
+      "id" : "_TvooY2mqEfGad-n5iTGvGg",
+      "name" : "user_id"
+    }, {
+      "id" : "_TvooZWmqEfGad-n5iTGvGg",
+      "name" : "warehouse"
+    } ]
+  }, {
+    "contextName" : "PROD",
+    "repoId" : "_dk5X4GmXEfGiX-30GkgJcQ",
+    "parameterList" : [ {
+      "id" : "_TvooXGmqEfGad-n5iTGvGg",
+      "name" : "account"
+    }, {
+      "id" : "_TvooYWmqEfGad-n5iTGvGg",
+      "name" : "database"
+    }, {
+      "id" : "_wZVHRWmXEfGiX-30GkgJcQ",
+      "name" : "inec_path"
+    }, {
+      "id" : "_TvooXmmqEfGad-n5iTGvGg",
+      "name" : "password"
+    }, {
+      "id" : "_TvooXWmqEfGad-n5iTGvGg",
+      "name" : "user_id"
+    }, {
+      "id" : "_TvooX2mqEfGad-n5iTGvGg",
+      "name" : "warehouse"
+    } ]
+  }, {
+    "contextName" : "DEV",
+    "repoId" : "_dk5X4GmXEfGiX-30GkgJcQ",
+    "parameterList" : [ {
+      "id" : "_TvooUGmqEfGad-n5iTGvGg",
+      "name" : "account"
+    }, {
+      "id" : "_TvooVWmqEfGad-n5iTGvGg",
+      "name" : "database"
+    }, {
+      "id" : "_wZVHQWmXEfGiX-30GkgJcQ",
+      "name" : "inec_path"
+    }, {
+      "id" : "_TvooUmmqEfGad-n5iTGvGg",
+      "name" : "password"
+    }, {
+      "id" : "_TvooUWmqEfGad-n5iTGvGg",
+      "name" : "user_id"
+    }, {
+      "id" : "_TvooU2mqEfGad-n5iTGvGg",
+      "name" : "warehouse"
+    } ]
+  }, {
+    "contextName" : "MAC",
+    "repoId" : "_dk5X4GmXEfGiX-30GkgJcQ",
+    "parameterList" : [ {
+      "id" : "_TvooVmmqEfGad-n5iTGvGg",
+      "name" : "account"
+    }, {
+      "id" : "_TvooW2mqEfGad-n5iTGvGg",
+      "name" : "database"
+    }, {
+      "id" : "_wZVHQ2mXEfGiX-30GkgJcQ",
+      "name" : "inec_path"
+    }, {
+      "id" : "_TvooWGmqEfGad-n5iTGvGg",
+      "name" : "password"
+    }, {
+      "id" : "_TvooV2mqEfGad-n5iTGvGg",
+      "name" : "user_id"
+    }, {
+      "id" : "_TvooWWmqEfGad-n5iTGvGg",
+      "name" : "warehouse"
+    } ]
+  } ]
+}
