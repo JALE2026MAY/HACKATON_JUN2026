@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="DEV" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="QA">
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_PGKgoGmbEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS0GmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS0WmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS0mmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_rOKS02mrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS1GmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS1WmrEfGiX-30GkgJcQ"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="PROD">
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_PGKgoWmbEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS1mmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS12mrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS2GmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_rOKS2WmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS2mmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_rOKS22mrEfGiX-30GkgJcQ"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="DEV">
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="C:/fuentes_inec/" internalId="_PGKgommbEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_rOKS3GmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_rOKS3WmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="C:/fuentes_inec/" internalId="_rOKS3mmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:ENqMdkEUyfzQes/xua6WMlvDA/syoid/SDx9mT7II8RGfTKYG3SXmLws" internalId="_rOMIAGmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_rOMIAWmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_rOMIAmmrEfGiX-30GkgJcQ"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="MAC">
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_PGKgo2mbEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_rOMIA2mrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_rOMIBGmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_rOMIBWmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:uqEOO2wS1Gx6AxYPhxceSvdYHmocHjmiPzi/CkToKHVS3YHddH/PsO4r" internalId="_rOMIBmmrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_rOMIB2mrEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_rOMICGmrEfGiX-30GkgJcQ"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -263,14 +283,14 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="&quot;HRNWWSS-PV65102&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.account"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="&quot;ANDRESGAIBOR&quot;"/>
-    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="enc:system.encryption.key.v1:5WsmeIDbh/4lq+0Rx01/sArOdWUnnGrYPvUO2KYx4B3y+Hsi+VPd9j8spRI="/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.user_id"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="context.password"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="COMPUTE_WH"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.warehouse"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="REF"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="NBI_DB"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.database"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DPA_ECUADOR"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
