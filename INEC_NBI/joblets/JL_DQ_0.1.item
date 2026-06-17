@@ -294,7 +294,7 @@
       <metadata connector="FLOW" name="tDBOutput_1">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DATASET" nullable="true" originalDbColumnName="SOURCE_TABLE" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DIMENSION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -408,8 +408,8 @@
     <note opaque="true" posX="360" posY="80" sizeHeight="80" sizeWidth="241" text="Quitamos el dato dummy"/>
     <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1" show="false"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
     </subjob>
     <jobletNodes componentName="INPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="200" input="true">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1"/>
