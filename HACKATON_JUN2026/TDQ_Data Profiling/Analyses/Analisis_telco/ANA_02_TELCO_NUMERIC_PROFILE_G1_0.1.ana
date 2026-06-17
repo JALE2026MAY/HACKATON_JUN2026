@@ -18,7 +18,7 @@
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsNGnWEfGJXK0qJt55Ng"/>
     </context>
     <results xmi:id="_PZEsZ2nZEfGJXK0qJt55Ng">
-      <resultMetadata xmi:id="_PZEsaGnZEfGJXK0qJt55Ng" executionDate="2026-06-16T21:23:30.267-0500" executionDuration="300" message="" executionNumber="6" lastRunOk="true" lastExecutionNumberOk="5"/>
+      <resultMetadata xmi:id="_PZEsaGnZEfGJXK0qJt55Ng" executionDate="2026-06-16T21:24:05.641-0500" executionDuration="236" message="" executionNumber="6" lastRunOk="true" lastExecutionNumberOk="5"/>
       <indicators xsi:type="dataquality.indicators:BoxIndicator" xmi:id="_s8pCgGnaEfGJXK0qJt55Ng">
         <parameters xmi:id="_s8pCgWnaEfGJXK0qJt55Ng"/>
         <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsN2nWEfGJXK0qJt55Ng"/>

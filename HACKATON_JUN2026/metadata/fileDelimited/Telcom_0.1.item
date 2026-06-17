@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
-  <TalendMetadata:DelimitedFileConnection xmi:id="_cHJB0GnWEfGJXK0qJt55Ng" name="Telcom" supplierDependency="_2RpxcGnXEfGJXK0qJt55Ng" dataPackage="_cHMsMGnWEfGJXK0qJt55Ng" Server="Localhost 127.0.0.1" FilePath="C:/Fuente/WA_Fn-UseC_-Telco-Customer-Churn.csv" Format="WINDOWS" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" EscapeType="CSV" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true" FieldSeparatorType="Comma"/>
+  <TalendMetadata:DelimitedFileConnection xmi:id="_cHJB0GnWEfGJXK0qJt55Ng" name="Telcom" supplierDependency="_2RpxcGnXEfGJXK0qJt55Ng" dataPackage="_cHMsMGnWEfGJXK0qJt55Ng" Server="Localhost 127.0.0.1" FilePath="C:/fuente/WA_Fn-UseC_-Telco-Customer-Churn.csv" Format="WINDOWS" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" EscapeType="CSV" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true" FieldSeparatorType="Comma"/>
   <orgomg.cwm.resource.record:RecordFile xmi:id="_cHMsMGnWEfGJXK0qJt55Ng" name="default" dataManager="_cHJB0GnWEfGJXK0qJt55Ng">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_cHMsMWnWEfGJXK0qJt55Ng" id="_S8wV4GnWEfGJXK0qJt55Ng" label="metadata">
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsMmnWEfGJXK0qJt55Ng" id="customerID" label="customerID" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
@@ -69,6 +69,7 @@
     </ownedElement>
   </orgomg.cwm.resource.record:RecordFile>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_2RpxcGnXEfGJXK0qJt55Ng" kind="Usage" supplier="_cHJB0GnWEfGJXK0qJt55Ng">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_telco/ANA_01_TELCO_GENERAL_PROFILE_G1_0.1.ana#_rnJzEWnWEfGJXK0qJt55Ng"/>
     <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_telco/ANA_02_TELCO_NUMERIC_PROFILE_G1_0.1.ana#_PZEsYGnZEfGJXK0qJt55Ng"/>
     <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_telco/ANA_03_TELCO_DOMAIN_PROFILE_G1_0.1.ana#_ME_akGnbEfGJXK0qJt55Ng"/>
   </orgomg.cwm.objectmodel.core:Dependency>
