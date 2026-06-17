@@ -203,7 +203,7 @@
         <mapperTableEntries name="order_item_id" expression="row1.order_item_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="product_id" expression="row1.product_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="seller_id" expression="row1.seller_id " type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_limit_date" expression="row1.shipping_limit_date " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="shipping_limit_date" expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, row1.shipping_limit_date) " type="id_Date" nullable="true"/>
         <mapperTableEntries name="price" expression="row1.price " type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="freight_value" expression="row1.freight_value " type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="load_ts" expression="TalendDate.getCurrentDate() " type="id_Date" nullable="true"/>
@@ -390,7 +390,7 @@
       <column comment="" key="false" length="-1" name="raw_payload" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_rejects">
         <mapperTableEntries name="load_ts" expression="TalendDate.getCurrentDate() " type="id_Date" nullable="true"/>
