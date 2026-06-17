@@ -1,0 +1,26 @@
+{
+  "itemId" : "_Mpw_kGmvEfGwDP0ClKaWhg",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_DkkXoGmZEfGH2I2ds9GWtg",
+    "parameterList" : [ {
+      "id" : "_Dk5u0WmZEfGH2I2ds9GWtg",
+      "name" : "bank_path"
+    }, {
+      "id" : "_Dk5u0mmZEfGH2I2ds9GWtg",
+      "name" : "ss_host"
+    }, {
+      "id" : "_Dk5u02mZEfGH2I2ds9GWtg",
+      "name" : "ss_port"
+    }, {
+      "id" : "_Dk5u1GmZEfGH2I2ds9GWtg",
+      "name" : "ss_db"
+    }, {
+      "id" : "_Dk5u1WmZEfGH2I2ds9GWtg",
+      "name" : "ss_user"
+    }, {
+      "id" : "_Dk5u1mmZEfGH2I2ds9GWtg",
+      "name" : "ss_password"
+    } ]
+  } ]
+}

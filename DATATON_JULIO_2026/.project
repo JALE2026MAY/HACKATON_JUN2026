@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>DATATON_JULIO_2026</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.talend.core.talendnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.Reporte_bank_additional_full-20260616-1736-00000.pdf</name>
+			<type>1</type>
+			<location>C:/Users/User/Desktop/Reporte_bank_additional_full-20260616-1736-00000.pdf</location>
+		</link>
+		<link>
+			<name>.Reporte_bank_additional_full-20260616-1736-00028.pdf</name>
+			<type>1</type>
+			<location>C:/Users/User/Desktop/Reporte_bank_additional_full-20260616-1736-00028.pdf</location>
+		</link>
+	</linkedResources>
+</projectDescription>

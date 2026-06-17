@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_8N3hwWmWEfGH2I2ds9GWtg" label="Dataton_Julio_2026" language="java" technicalLabel="DATATON_JULIO_2026" author="_8N3hwmmWEfGH2I2ds9GWtg" productVersion="Qlik Talend Cloud Enterprise Edition-8.0.1.20260521_1039-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/JALE2026MAY/HACKATON_JUN2026.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
+    <migrationTask xmi:id="_8P4T8GmWEfGH2I2ds9GWtg" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_8N3hwmmWEfGH2I2ds9GWtg" login="anthony.chacon@trial.7259to739jk9nvx.us.qlikcloud.com" firstName="Anthony" lastName="Chacon" type="DQ"/>
+</xmi:XMI>
