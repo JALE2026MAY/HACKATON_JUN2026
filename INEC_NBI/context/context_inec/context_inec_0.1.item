@@ -7,6 +7,8 @@
     <contextParameter xmi:id="_TvooUmmqEfGad-n5iTGvGg" comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:mfElk00bRFS95RlJkN2fVqaw0EMVszU57qSjmUJDPEvX9rksBMuPLrdq"/>
     <contextParameter xmi:id="_TvooU2mqEfGad-n5iTGvGg" comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="COMPUTE_WH"/>
     <contextParameter xmi:id="_TvooVWmqEfGad-n5iTGvGg" comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="NBI_DB"/>
+    <contextParameter xmi:id="_vC2zAGnYEfGiX-30GkgJcQ" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_vC2zAWnYEfGiX-30GkgJcQ" comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_wZVHQmmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="MAC">
     <contextParameter xmi:id="_wZVHQ2mXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/"/>
@@ -15,6 +17,8 @@
     <contextParameter xmi:id="_TvooWGmqEfGad-n5iTGvGg" comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:VOt/zvMhIpE8y8I/CIuyFRhFv+/TWHGtOaRXBDPQufBLcI66M2hUwBoQ"/>
     <contextParameter xmi:id="_TvooWWmqEfGad-n5iTGvGg" comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="COMPUTE_WH"/>
     <contextParameter xmi:id="_TvooW2mqEfGad-n5iTGvGg" comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="NBI_DB"/>
+    <contextParameter xmi:id="_vC2zAmnYEfGiX-30GkgJcQ" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_vC2zA2nYEfGiX-30GkgJcQ" comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_wZVHRGmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="PROD">
     <contextParameter xmi:id="_wZVHRWmXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
@@ -23,6 +27,8 @@
     <contextParameter xmi:id="_TvooXmmqEfGad-n5iTGvGg" comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
     <contextParameter xmi:id="_TvooX2mqEfGad-n5iTGvGg" comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_TvooYWmqEfGad-n5iTGvGg" comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_vC2zBGnYEfGiX-30GkgJcQ" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_vC2zBWnYEfGiX-30GkgJcQ" comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_wZVHRmmXEfGiX-30GkgJcQ" confirmationNeeded="false" hide="false" name="QA">
     <contextParameter xmi:id="_wZVHR2mXEfGiX-30GkgJcQ" comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
@@ -31,5 +37,7 @@
     <contextParameter xmi:id="_TvooZGmqEfGad-n5iTGvGg" comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
     <contextParameter xmi:id="_TvooZWmqEfGad-n5iTGvGg" comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_TvooZ2mqEfGad-n5iTGvGg" comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_vC2zBmnYEfGiX-30GkgJcQ" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_vC2zB2nYEfGiX-30GkgJcQ" comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>
