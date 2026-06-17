@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_Lzn98GoAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter xmi:id="_LzolAGoAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="209.50.254.159"/>
+    <contextParameter xmi:id="_LzolAWoAEfGFz-1eMWTYGQ" comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="3306"/>
+    <contextParameter xmi:id="_LzolAmoAEfGFz-1eMWTYGQ" comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DSADEV"/>
+    <contextParameter xmi:id="_LzolA2oAEfGFz-1eMWTYGQ" comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="usr_acme"/>
+    <contextParameter xmi:id="_LzolBGoAEfGFz-1eMWTYGQ" comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:4hrENwJzhy2v15jagbL39RsKkv6/Ejz9Pjn4j26gRMDr7gs="/>
+    <contextParameter xmi:id="_LzolBWoAEfGFz-1eMWTYGQ" comment="" name="source_file_path" prompt="source_file_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:\fuente\"/>
+    <contextParameter xmi:id="_LzolBmoAEfGFz-1eMWTYGQ" comment="" name="source_file_name" prompt="source_file_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="WA_Fn-UseC_-Telco-Customer-Churn"/>
+    <contextParameter xmi:id="_LzolB2oAEfGFz-1eMWTYGQ" comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="IBM_TELCO_KAGGLE"/>
+    <contextParameter xmi:id="_LzolCGoAEfGFz-1eMWTYGQ" comment="" name="job_name" prompt="job_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ELT_JOB_01_INGEST_TELCO_TO_SINGLESTORE_G1"/>
+    <contextParameter xmi:id="_LzolCWoAEfGFz-1eMWTYGQ" comment="" name="target_raw_table" prompt="target_raw_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="raw_telco_customer_churn_grupo_uno"/>
+    <contextParameter xmi:id="_LzolCmoAEfGFz-1eMWTYGQ" comment="" name="target_reject_table" prompt="target_reject_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="raw_ingest_rejects_grupo_uno"/>
+    <contextParameter xmi:id="_LzolC2oAEfGFz-1eMWTYGQ" comment="" name="target_audit_table" prompt="target_audit_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="elt_run_audit_grupo_uno"/>
+    <contextParameter xmi:id="_LzolDGoAEfGFz-1eMWTYGQ" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzolDWoAEfGFz-1eMWTYGQ" comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
+    <contextParameter xmi:id="_LzolDmoAEfGFz-1eMWTYGQ" comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="1000"/>
+    <contextParameter xmi:id="_LzolD2oAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Grupo1"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_LzolEGoAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="DEV">
+    <contextParameter xmi:id="_LzolEWoAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzolEmoAEfGFz-1eMWTYGQ" comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzolE2oAEfGFz-1eMWTYGQ" comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzolFGoAEfGFz-1eMWTYGQ" comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzolFWoAEfGFz-1eMWTYGQ" comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_LzolFmoAEfGFz-1eMWTYGQ" comment="" name="source_file_path" prompt="source_file_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMEGoAEfGFz-1eMWTYGQ" comment="" name="source_file_name" prompt="source_file_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMEWoAEfGFz-1eMWTYGQ" comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMEmoAEfGFz-1eMWTYGQ" comment="" name="job_name" prompt="job_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpME2oAEfGFz-1eMWTYGQ" comment="" name="target_raw_table" prompt="target_raw_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMFGoAEfGFz-1eMWTYGQ" comment="" name="target_reject_table" prompt="target_reject_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMFWoAEfGFz-1eMWTYGQ" comment="" name="target_audit_table" prompt="target_audit_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMFmoAEfGFz-1eMWTYGQ" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMF2oAEfGFz-1eMWTYGQ" comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
+    <contextParameter xmi:id="_LzpMGGoAEfGFz-1eMWTYGQ" comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_LzpMGWoAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_LzpMGmoAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="PROD">
+    <contextParameter xmi:id="_LzpMG2oAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMHGoAEfGFz-1eMWTYGQ" comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMHWoAEfGFz-1eMWTYGQ" comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMHmoAEfGFz-1eMWTYGQ" comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMH2oAEfGFz-1eMWTYGQ" comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_LzpMIGoAEfGFz-1eMWTYGQ" comment="" name="source_file_path" prompt="source_file_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMIWoAEfGFz-1eMWTYGQ" comment="" name="source_file_name" prompt="source_file_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMImoAEfGFz-1eMWTYGQ" comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMI2oAEfGFz-1eMWTYGQ" comment="" name="job_name" prompt="job_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMJGoAEfGFz-1eMWTYGQ" comment="" name="target_raw_table" prompt="target_raw_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMJWoAEfGFz-1eMWTYGQ" comment="" name="target_reject_table" prompt="target_reject_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMJmoAEfGFz-1eMWTYGQ" comment="" name="target_audit_table" prompt="target_audit_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMJ2oAEfGFz-1eMWTYGQ" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMKGoAEfGFz-1eMWTYGQ" comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
+    <contextParameter xmi:id="_LzpMKWoAEfGFz-1eMWTYGQ" comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_LzpMKmoAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_LzpMK2oAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="QA">
+    <contextParameter xmi:id="_LzpMLGoAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMLWoAEfGFz-1eMWTYGQ" comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMLmoAEfGFz-1eMWTYGQ" comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpML2oAEfGFz-1eMWTYGQ" comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMMGoAEfGFz-1eMWTYGQ" comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
+    <contextParameter xmi:id="_LzpMMWoAEfGFz-1eMWTYGQ" comment="" name="source_file_path" prompt="source_file_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMMmoAEfGFz-1eMWTYGQ" comment="" name="source_file_name" prompt="source_file_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMM2oAEfGFz-1eMWTYGQ" comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMNGoAEfGFz-1eMWTYGQ" comment="" name="job_name" prompt="job_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMNWoAEfGFz-1eMWTYGQ" comment="" name="target_raw_table" prompt="target_raw_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMNmoAEfGFz-1eMWTYGQ" comment="" name="target_reject_table" prompt="target_reject_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMN2oAEfGFz-1eMWTYGQ" comment="" name="target_audit_table" prompt="target_audit_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMOGoAEfGFz-1eMWTYGQ" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_LzpMOWoAEfGFz-1eMWTYGQ" comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
+    <contextParameter xmi:id="_LzpMOmoAEfGFz-1eMWTYGQ" comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_LzpMO2oAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

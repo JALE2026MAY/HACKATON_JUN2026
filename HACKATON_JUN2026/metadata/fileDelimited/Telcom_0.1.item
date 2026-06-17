@@ -9,7 +9,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsM2nWEfGJXK0qJt55Ng" id="gender" label="gender" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RpxiWnXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsNGnWEfGJXK0qJt55Ng" id="SeniorCitizen" label="SeniorCitizen" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsNGnWEfGJXK0qJt55Ng" id="SeniorCitizen" label="SeniorCitizen" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RpxlGnXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsNWnWEfGJXK0qJt55Ng" id="Partner" label="Partner" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
@@ -18,7 +18,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsNmnWEfGJXK0qJt55Ng" id="Dependents" label="Dependents" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2Rpxw2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsN2nWEfGJXK0qJt55Ng" id="tenure" label="tenure" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsN2nWEfGJXK0qJt55Ng" id="tenure" label="tenure" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RpxzmnXEfGJXK0qJt55Ng" tag="Content Type" value="Interval"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsOGnWEfGJXK0qJt55Ng" id="PhoneService" label="PhoneService" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
@@ -33,37 +33,37 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsO2nWEfGJXK0qJt55Ng" id="OnlineSecurity" label="OnlineSecurity" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqY22nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPGnWEfGJXK0qJt55Ng" id="OnlineBackup" label="OnlineBackup" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPGnWEfGJXK0qJt55Ng" id="OnlineBackup" label="OnlineBackup" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqY82nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPWnWEfGJXK0qJt55Ng" id="DeviceProtection" label="DeviceProtection" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPWnWEfGJXK0qJt55Ng" id="DeviceProtection" label="DeviceProtection" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZC2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPmnWEfGJXK0qJt55Ng" id="TechSupport" label="TechSupport" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPmnWEfGJXK0qJt55Ng" id="TechSupport" label="TechSupport" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZI2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsP2nWEfGJXK0qJt55Ng" id="StreamingTV" label="StreamingTV" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsP2nWEfGJXK0qJt55Ng" id="StreamingTV" label="StreamingTV" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZO2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQGnWEfGJXK0qJt55Ng" id="StreamingMovies" label="StreamingMovies" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQGnWEfGJXK0qJt55Ng" id="StreamingMovies" label="StreamingMovies" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZU2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQWnWEfGJXK0qJt55Ng" id="Contract" label="Contract" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQWnWEfGJXK0qJt55Ng" id="Contract" label="Contract" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZa2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQmnWEfGJXK0qJt55Ng" id="PaperlessBilling" label="PaperlessBilling" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQmnWEfGJXK0qJt55Ng" id="PaperlessBilling" label="PaperlessBilling" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZg2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQ2nWEfGJXK0qJt55Ng" id="PaymentMethod" label="PaymentMethod" length="25" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQ2nWEfGJXK0qJt55Ng" id="PaymentMethod" label="PaymentMethod" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZm2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRGnWEfGJXK0qJt55Ng" id="MonthlyCharges" label="MonthlyCharges" length="6" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRGnWEfGJXK0qJt55Ng" id="MonthlyCharges" label="MonthlyCharges" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZpmnXEfGJXK0qJt55Ng" tag="Content Type" value="Interval"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRWnWEfGJXK0qJt55Ng" id="TotalCharges" label="TotalCharges" length="7" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRWnWEfGJXK0qJt55Ng" id="TotalCharges" label="TotalCharges" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZsWnXEfGJXK0qJt55Ng" tag="Content Type" value="Interval"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRmnWEfGJXK0qJt55Ng" id="Churn" label="Churn" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRmnWEfGJXK0qJt55Ng" id="Churn" label="Churn" length="-1" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
         <taggedValue xmi:id="_2RqZyWnXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
       </feature>
     </ownedElement>
