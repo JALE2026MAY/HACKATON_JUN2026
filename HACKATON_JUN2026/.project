@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>HACKATON_JUN2026</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.talend.core.talendnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.REP_01_TELCO_EXPLORATORY_PROFILE_G4-20260616-1853-00005.pdf</name>
+			<type>1</type>
+			<location>C:/Tmp/CAP_Genius_Lab/Telcom/Reporte_Grupo_1_Telcom/REP_01_TELCO_EXPLORATORY_PROFILE_G4-20260616-1853-00005.pdf</location>
+		</link>
+	</linkedResources>
+</projectDescription>
