@@ -237,7 +237,7 @@
       <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_dq01">
         <mapperTableEntries name="RUN_ID" expression="context.run_id" type="id_String" nullable="true"/>
@@ -379,7 +379,7 @@
       <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_dq02">
         <mapperTableEntries name="RUN_ID" expression="context.run_id" type="id_String" nullable="true"/>
@@ -514,7 +514,7 @@
       <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_dq03">
         <mapperTableEntries name="RUN_ID" expression="context.run_id" type="id_String" nullable="true"/>
@@ -649,7 +649,7 @@
       <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_dq04">
         <mapperTableEntries name="RUN_ID" expression="context.run_id" type="id_String" nullable="true"/>
@@ -785,7 +785,7 @@
       <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_dq05">
         <mapperTableEntries name="RUN_ID" expression="context.run_id" type="id_String" nullable="true"/>
@@ -907,6 +907,7 @@
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="Mapeo_6"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out_dq06">
       <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -919,7 +920,7 @@
       <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_dq06">
         <mapperTableEntries name="RUN_ID" expression="context.run_id" type="id_String" nullable="true"/>
