@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:TalendProperties="http://www.talend.org/properties" xmlns:model="http://www.talend.com/joblet.ecore">
-  <model:JobletProcess defaultContext="Default" jobType="Standard">
-    <context confirmationNeeded="false" hide="false" name="Default"/>
+  <model:JobletProcess defaultContext="DEV" jobType="Standard">
+    <context confirmationNeeded="false" hide="false" name="QA">
+      <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt0GnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt0WnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt0mnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_aDpt02nbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt1GnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_aDpt1WnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt1mnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt12nbEfGiX-30GkgJcQ"/>
+    </context>
+    <context confirmationNeeded="false" hide="false" name="PROD">
+      <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt2GnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt2WnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt2mnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_aDpt22nbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt3GnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_aDpt3WnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt3mnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDpt32nbEfGiX-30GkgJcQ"/>
+    </context>
+    <context confirmationNeeded="false" hide="false" name="DEV">
+      <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_aDpt4GnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_aDpt4WnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="C:/fuentes_inec/" internalId="_aDpt4mnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:phuhC11Kqt3ofx05kuLZvBOuDvQ2B+gGNMN4buba2K/de/DY1Dp1achX" internalId="_aDqU4GnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDqU4WnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_aDqU4mnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_aDqU42nbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_aDqU5GnbEfGiX-30GkgJcQ"/>
+    </context>
+    <context confirmationNeeded="false" hide="false" name="MAC">
+      <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_aDqU5WnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_aDqU5mnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_aDqU52nbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:0WLExzx4U9NVGvSV37edIOY5NwXjD7iRmO8bpG3voRAeGgLyVaydVA+k" internalId="_aDqU6GnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_aDqU6WnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_aDqU6mnbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_aDqU62nbEfGiX-30GkgJcQ"/>
+      <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_aDqU7GnbEfGiX-30GkgJcQ"/>
+    </context>
     <parameters>
       <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
       <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -73,7 +112,7 @@
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tReplicate_1">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -82,7 +121,7 @@
         <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="120">
+    <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="120">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_11" show="false"/>
       <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
       <elementParameter field="TABLE" name="CONDITIONS">
@@ -93,10 +132,11 @@
       </elementParameter>
       <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
       <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tFilterDummy"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tFilterRow_11">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -106,7 +146,7 @@
       </metadata>
       <metadata connector="FILTER" name="FILTER">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -116,7 +156,7 @@
       </metadata>
       <metadata connector="REJECT" name="REJECT">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -151,7 +191,7 @@
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tAggregateRow_1">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -159,51 +199,6 @@
         <column comment="" key="false" length="-1" name="SEVERITY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="ROWS_KO" nullable="true" pattern="" precision="-1" sourceType="" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      </metadata>
-    </node>
-    <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="720" posY="120">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
-      <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-      <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-      <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-      <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
-      <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
-      <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-      <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
-      <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
-      <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
-      <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
-      <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
-      <elementParameter field="TABLE" name="LENGTHS" show="false">
-        <elementValue elementRef="SCHEMA_COLUMN" value="RUN_ID" id="0"/>
-        <elementValue elementRef="LENGTH" value="10" id="1"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="RUN_TS" id="2"/>
-        <elementValue elementRef="LENGTH" value="10" id="3"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="DATASET" id="4"/>
-        <elementValue elementRef="LENGTH" value="10" id="5"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="ERROR_REASON" id="6"/>
-        <elementValue elementRef="LENGTH" value="10" id="7"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="RULE_ID" id="8"/>
-        <elementValue elementRef="LENGTH" value="10" id="9"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="DIMENSION" id="10"/>
-        <elementValue elementRef="LENGTH" value="10" id="11"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="SEVERITY" id="12"/>
-        <elementValue elementRef="LENGTH" value="10" id="13"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="BUSINESS_KEY" id="14"/>
-        <elementValue elementRef="LENGTH" value="10" id="15"/>
-      </elementParameter>
-      <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-      <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tLogRow_1">
-        <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="DIMENSION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="SEVERITY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       </metadata>
     </node>
     <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="760" posY="280">
@@ -222,28 +217,28 @@
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="out_metrics">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DIMENSION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="18" name="ROWS_EVAL" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="ROWS_KO" nullable="true" pattern="" precision="-1" sourceType="" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="SCORE" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="18" name="ROWS_EVAL" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Long" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="ROWS_KO" nullable="true" pattern="" precision="-1" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SCORE" nullable="true" pattern="" precision="-1" sourceType="" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       </metadata>
       <nodeData xsi:type="TalendMapper:MapperData">
         <uiProperties/>
         <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
         <outputTables sizeState="INTERMEDIATE" name="out_metrics">
           <mapperTableEntries name="RUN_ID" expression="row4.RUN_ID " type="id_String" nullable="true"/>
-          <mapperTableEntries name="RUN_TS" expression="row4.RUN_TS " type="id_String" nullable="true"/>
+          <mapperTableEntries name="RUN_TS" expression="row4.RUN_TS " type="id_Date" nullable="true"/>
           <mapperTableEntries name="DATASET" expression="row4.DATASET " type="id_String" nullable="true"/>
           <mapperTableEntries name="DIMENSION" expression="row4.DIMENSION " type="id_String" nullable="true"/>
-          <mapperTableEntries name="ROWS_EVAL" expression="row5.ROWS_EVAL " type="id_BigDecimal"/>
-          <mapperTableEntries name="ROWS_KO" expression="row4.ROWS_KO " type="id_BigDecimal" nullable="true"/>
-          <mapperTableEntries name="SCORE" expression="row5.ROWS_EVAL == null || row5.ROWS_EVAL.doubleValue() == 0&#xA;&#x9;&#x9;&#x9;&#x9;? 0.0&#xA;&#x9;&#x9;&#x9;&#x9;: 1.0 - ((row4.ROWS_KO.doubleValue() - 1) / row5.ROWS_EVAL.doubleValue()) " type="id_Double" nullable="true"/>
+          <mapperTableEntries name="ROWS_EVAL" expression="row5.ROWS_EVAL == null ? 0L : row5.ROWS_EVAL.longValue()" type="id_Long"/>
+          <mapperTableEntries name="ROWS_KO" expression="row4.ROWS_KO == null ? 0L : row4.ROWS_KO.longValue()" type="id_Long" nullable="true"/>
+          <mapperTableEntries name="SCORE" expression="row5.ROWS_EVAL == null || row5.ROWS_EVAL.longValue() == 0L&#xA;&#x9;&#x9;&#x9;? new java.math.BigDecimal(&quot;0.0000&quot;)&#xA;&#x9;&#x9;&#x9;: java.math.BigDecimal.valueOf(&#xA;&#x9;&#x9;&#x9;    row5.ROWS_EVAL.longValue() - (row4.ROWS_KO == null ? 0L : row4.ROWS_KO.longValue())&#xA;&#x9;&#x9;&#x9;  ).divide(&#xA;&#x9;&#x9;&#x9;    java.math.BigDecimal.valueOf(row5.ROWS_EVAL.longValue()),&#xA;&#x9;&#x9;&#x9;    4,&#xA;&#x9;&#x9;&#x9;    java.math.RoundingMode.HALF_UP&#xA;&#x9;&#x9;&#x9;  ) " type="id_BigDecimal" nullable="true"/>
         </outputTables>
         <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
           <mapperTableEntries name="RUN_ID" type="id_String" nullable="true"/>
-          <mapperTableEntries name="RUN_TS" type="id_String" nullable="true"/>
+          <mapperTableEntries name="RUN_TS" type="id_Date" nullable="true"/>
           <mapperTableEntries name="DATASET" type="id_String" nullable="true"/>
           <mapperTableEntries name="ERROR_REASON" type="id_String" nullable="true"/>
           <mapperTableEntries name="RULE_ID" type="id_String" nullable="true"/>
@@ -257,46 +252,129 @@
         </inputTables>
       </nodeData>
     </node>
-    <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="920" posY="320">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
-      <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-      <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-      <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-      <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
-      <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
-      <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-      <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
-      <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
-      <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
-      <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
-      <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
-      <elementParameter field="TABLE" name="LENGTHS" show="false">
-        <elementValue elementRef="SCHEMA_COLUMN" value="RUN_ID" id="0"/>
-        <elementValue elementRef="LENGTH" value="10" id="1"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="RUN_TS" id="2"/>
-        <elementValue elementRef="LENGTH" value="10" id="3"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="DATASET" id="4"/>
-        <elementValue elementRef="LENGTH" value="10" id="5"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="DIMENSION" id="6"/>
-        <elementValue elementRef="LENGTH" value="10" id="7"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="ROWS_EVAL" id="8"/>
-        <elementValue elementRef="LENGTH" value="10" id="9"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="ROWS_KO" id="10"/>
-        <elementValue elementRef="LENGTH" value="10" id="11"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="SCORE" id="12"/>
-        <elementValue elementRef="LENGTH" value="10" id="13"/>
-      </elementParameter>
-      <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-      <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tLogRow_2">
+    <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="880" posY="120">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
+      <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+      <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.account"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.user_id"/>
+      <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="context.password"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.warehouse"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="DQ"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.database"/>
+      <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+      <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="REJECTS"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+      <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="RUN_ID" show="false"/>
+      <elementParameter field="CHECK" name="configuration.dieOnError" value="true"/>
+      <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="TIMEZONE=America/Guayaquil"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+      <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+      <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+      <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+      <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+      <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+      <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+      <metadata connector="FLOW" name="tDBOutput_1">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="DIMENSION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SEVERITY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="BUSINESS_KEY" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="LOOKUP" name="LOOKUP"/>
+      <metadata connector="MERGE" name="MERGE"/>
+      <metadata connector="reject" name="reject">
+        <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="280">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2" show="false"/>
+      <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+      <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.account"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.user_id"/>
+      <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="context.password"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.warehouse"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="DQ"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.database"/>
+      <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+      <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="METRICS"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+      <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="RUN_ID" show="false"/>
+      <elementParameter field="CHECK" name="configuration.dieOnError" value="true"/>
+      <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcParameters" value="TIMEZONE=America/Guayaquil"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15"/>
+      <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+      <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+      <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+      <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+      <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+      <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+      <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+      <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+      <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+      <metadata connector="FLOW" name="tDBOutput_2">
+        <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DIMENSION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="18" name="ROWS_EVAL" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="ROWS_KO" nullable="true" pattern="" precision="-1" sourceType="" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="SCORE" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="18" name="ROWS_EVAL" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Long" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="ROWS_KO" nullable="true" pattern="" precision="-1" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="SCORE" nullable="true" pattern="" precision="-1" sourceType="" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="LOOKUP" name="LOOKUP"/>
+      <metadata connector="MERGE" name="MERGE"/>
+      <metadata connector="reject" name="reject">
+        <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       </metadata>
     </node>
     <connection connectorName="FLOW" label="out_dq01" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tReplicate_1">
@@ -311,15 +389,15 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
     </connection>
-    <connection connectorName="FILTER" label="row6" lineStyle="0" metaname="tFilterRow_11" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_11" target="tLogRow_1">
+    <connection connectorName="FILTER" label="row1" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_11" target="tDBOutput_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
     </connection>
     <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMap_2">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
     </connection>
-    <connection connectorName="FLOW" label="out_metrics" lineStyle="0" metaname="out_metrics" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_2">
+    <connection connectorName="FLOW" label="out_metrics" lineStyle="0" metaname="out_metrics" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_2">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="out_metrics" show="false"/>
     </connection>
@@ -327,6 +405,7 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
     </connection>
+    <note opaque="true" posX="360" posY="80" sizeHeight="80" sizeWidth="241" text="Quitamos el dato dummy"/>
     <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1" show="false"/>
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
@@ -343,7 +422,7 @@
       <elementParameter field="MEMO" name="COMMENT" value=""/>
       <metadata connector="FLOW" name="INPUT_1">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RUN_TS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="DATASET" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="ERROR_REASON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
         <column comment="" key="false" length="-1" name="RULE_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
