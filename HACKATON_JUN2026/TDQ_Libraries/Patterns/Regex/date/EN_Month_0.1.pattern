@@ -6,7 +6,7 @@
   <taggedValue xmi:id="_cfcepEC_EeWBxNQvuPBQ-Q" tag="Description" value="Month in English"/>
   <taggedValue xmi:id="_cfcepUC_EeWBxNQvuPBQ-Q" tag="Version" value="0.1"/>
   <taggedValue xmi:id="_cfcepkC_EeWBxNQvuPBQ-Q" tag="Validation_Status" value="true"/>
-  <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_yyqBYGnfEfGFz-1eMWTYGQ" expressionType="REGEXP">
-    <expression xmi:id="_yyqBYWnfEfGFz-1eMWTYGQ" body="'^(January|June|July|February|March|May|April|August|September|October|November|December)$'" language="SQL"/>
+  <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_cfcep0C_EeWBxNQvuPBQ-Q" expressionType="REGEXP">
+    <expression xmi:id="_cfceqEC_EeWBxNQvuPBQ-Q" body="'^(January|June|July|February|March|May|April|August|September|October|November|December)$'" language="SQL" modificationDate="2015-08-12 15:53:13"/>
   </components>
 </dataquality.domain.pattern:Pattern>
