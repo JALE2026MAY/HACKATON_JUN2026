@@ -18,7 +18,7 @@
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsNGnWEfGJXK0qJt55Ng"/>
     </context>
     <results xmi:id="_PZEsZ2nZEfGJXK0qJt55Ng">
-      <resultMetadata xmi:id="_PZEsaGnZEfGJXK0qJt55Ng" executionDate="2026-06-16T19:02:42.012-0500" executionDuration="150" message="" executionNumber="3" lastExecutionNumberOk="2"/>
+      <resultMetadata xmi:id="_PZEsaGnZEfGJXK0qJt55Ng" executionDate="2026-06-16T19:39:32.493-0500" executionDuration="240" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="4"/>
       <indicators xsi:type="dataquality.indicators:BoxIndicator" xmi:id="_s8pCgGnaEfGJXK0qJt55Ng">
         <parameters xmi:id="_s8pCgWnaEfGJXK0qJt55Ng"/>
         <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsN2nWEfGJXK0qJt55Ng"/>
@@ -26,7 +26,7 @@
         <IQR xmi:id="_s8pCgmnaEfGJXK0qJt55Ng" computed="true">
           <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsN2nWEfGJXK0qJt55Ng"/>
           <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Inter_Quartile_Range_0.1.definition#_ccI48xF2Ed2PKb6nEJEvhw"/>
-          <lowerValue xsi:type="dataquality.indicators:LowerQuartileIndicator" xmi:id="_s8pCg2naEfGJXK0qJt55Ng" count="7043" computed="true" value="9.0" datatype="4">
+          <lowerValue xsi:type="dataquality.indicators:LowerQuartileIndicator" xmi:id="_s8pCg2naEfGJXK0qJt55Ng" count="7043" computed="true" value="3.0" datatype="4">
             <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsN2nWEfGJXK0qJt55Ng"/>
             <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Lower_Quartile_0.1.definition#_ccI49BF2Ed2PKb6nEJEvhw"/>
             <builtInIndicatorDefinition xmi:id="_tGKx8GnaEfGJXK0qJt55Ng" name="Lower Quartile" label="Lower Quartile">
@@ -41,7 +41,7 @@
               <sqlGenericExpression xmi:id="_tGKx-WnaEfGJXK0qJt55Ng" body=" SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
             </builtInIndicatorDefinition>
           </lowerValue>
-          <upperValue xsi:type="dataquality.indicators:UpperQuartileIndicator" xmi:id="_s8pChGnaEfGJXK0qJt55Ng" count="7043" computed="true" value="55.0" datatype="4">
+          <upperValue xsi:type="dataquality.indicators:UpperQuartileIndicator" xmi:id="_s8pChGnaEfGJXK0qJt55Ng" count="7043" computed="true" value="18.0" datatype="4">
             <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsN2nWEfGJXK0qJt55Ng"/>
             <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Upper_Quartile_0.1.definition#_ccI49RF2Ed2PKb6nEJEvhw"/>
             <builtInIndicatorDefinition xmi:id="_tGQ4kGnaEfGJXK0qJt55Ng" name="Upper Quartile" label="Upper Quartile">
@@ -119,7 +119,7 @@
         <IQR xmi:id="_s8pCjGnaEfGJXK0qJt55Ng" computed="true">
           <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsRGnWEfGJXK0qJt55Ng"/>
           <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Inter_Quartile_Range_0.1.definition#_ccI48xF2Ed2PKb6nEJEvhw"/>
-          <lowerValue xsi:type="dataquality.indicators:LowerQuartileIndicator" xmi:id="_s8pCjWnaEfGJXK0qJt55Ng" count="7043" computed="true" value="35.5" datatype="6">
+          <lowerValue xsi:type="dataquality.indicators:LowerQuartileIndicator" xmi:id="_s8pCjWnaEfGJXK0qJt55Ng" count="7043" computed="true" value="20.3" datatype="6">
             <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsRGnWEfGJXK0qJt55Ng"/>
             <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Lower_Quartile_0.1.definition#_ccI49BF2Ed2PKb6nEJEvhw"/>
             <builtInIndicatorDefinition xmi:id="_tG38kGnaEfGJXK0qJt55Ng" name="Lower Quartile" label="Lower Quartile">
@@ -134,7 +134,7 @@
               <sqlGenericExpression xmi:id="_tG38mWnaEfGJXK0qJt55Ng" body=" SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
             </builtInIndicatorDefinition>
           </lowerValue>
-          <upperValue xsi:type="dataquality.indicators:UpperQuartileIndicator" xmi:id="_s8pCjmnaEfGJXK0qJt55Ng" count="7043" computed="true" value="89.85" datatype="6">
+          <upperValue xsi:type="dataquality.indicators:UpperQuartileIndicator" xmi:id="_s8pCjmnaEfGJXK0qJt55Ng" count="7043" computed="true" value="55.15" datatype="6">
             <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsRGnWEfGJXK0qJt55Ng"/>
             <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Upper_Quartile_0.1.definition#_ccI49RF2Ed2PKb6nEJEvhw"/>
             <builtInIndicatorDefinition xmi:id="_tG81EGnaEfGJXK0qJt55Ng" name="Upper Quartile" label="Upper Quartile">

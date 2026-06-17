@@ -32,7 +32,7 @@
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsRmnWEfGJXK0qJt55Ng"/>
     </context>
     <results xmi:id="_ME_al2nbEfGJXK0qJt55Ng">
-      <resultMetadata xmi:id="_ME_amGnbEfGJXK0qJt55Ng" executionDate="2026-06-16T19:02:42.015-0500" executionDuration="877" message="" executionNumber="3" lastExecutionNumberOk="2"/>
+      <resultMetadata xmi:id="_ME_amGnbEfGJXK0qJt55Ng" executionDate="2026-06-16T19:39:32.736-0500" executionDuration="1556" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="4"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_4BN4UGncEfGJXK0qJt55Ng" count="7043" computed="true">
         <parameters xmi:id="_4BN4UWncEfGJXK0qJt55Ng"/>
         <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsM2nWEfGJXK0qJt55Ng"/>

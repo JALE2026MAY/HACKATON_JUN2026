@@ -9,4 +9,21 @@
 	<natures>
 		<nature>org.talend.core.talendnature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>.Reportesiu-20260616-1936-00044.pdf</name>
+			<type>1</type>
+			<location>C:/GeniusLab/Reportesiu-20260616-1936-00044.pdf</location>
+		</link>
+		<link>
+			<name>.Reportesiu-20260616-1938-00035.pdf</name>
+			<type>1</type>
+			<location>C:/GeniusLab/Reportesiu-20260616-1938-00035.pdf</location>
+		</link>
+		<link>
+			<name>.Reportesiu-20260616-1939-00035.pdf</name>
+			<type>1</type>
+			<location>C:/GeniusLab/Reportesiu-20260616-1939-00035.pdf</location>
+		</link>
+	</linkedResources>
 </projectDescription>
