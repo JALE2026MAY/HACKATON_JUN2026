@@ -1,0 +1,26 @@
+{
+  "itemId" : "_1W2fQGmZEfGQ69NYdA84Kw",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_dj19EGmZEfGQ69NYdA84Kw",
+    "parameterList" : [ {
+      "id" : "_dkLUQWmZEfGQ69NYdA84Kw",
+      "name" : "bank_path"
+    }, {
+      "id" : "_dkLUQmmZEfGQ69NYdA84Kw",
+      "name" : "ss_host"
+    }, {
+      "id" : "_dkLUQ2mZEfGQ69NYdA84Kw",
+      "name" : "ss_port"
+    }, {
+      "id" : "_dkLURGmZEfGQ69NYdA84Kw",
+      "name" : "ss_db"
+    }, {
+      "id" : "_dkLURWmZEfGQ69NYdA84Kw",
+      "name" : "ss_user"
+    }, {
+      "id" : "_dkLURmmZEfGQ69NYdA84Kw",
+      "name" : "ss_password"
+    } ]
+  } ]
+}
