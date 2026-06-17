@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_lb0tUGmWEfGSwO0J6evOtA" label="Dataton_Grupo3" language="java" technicalLabel="DATATON_GRUPO3" author="_lb0tUWmWEfGSwO0J6evOtA" productVersion="Qlik Talend Cloud Enterprise Edition-8.0.1.20260521_1039-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/JALE2026MAY/HACKATON_JUN2026.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
+    <migrationTask xmi:id="_lc32MGmWEfGSwO0J6evOtA" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_lb0tUWmWEfGSwO0J6evOtA" login="arleth.caceres@trial.olr4l0yw0kkjxlv.us.qlikcloud.com" firstName="Arleth" lastName="Cáceres" type="DQ"/>
+  <TalendProperties:User xmi:id="_OTxhwGmYEfGK1d1z6hu2zA" login="arleth.caceres@trial.l9hcpheq0rztzvw.us.qlikcloud.com"/>
+</xmi:XMI>

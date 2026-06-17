@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_dkLUQGmZEfGQ69NYdA84Kw" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_dkLUQWmZEfGQ69NYdA84Kw" comment="" name="bank_path" prompt="bank_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Tmp/bank-additional/bank-additional/"/>
+  <contextParameter xmi:id="_dkLUQmmZEfGQ69NYdA84Kw" comment="" name="ss_host" prompt="ss_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com"/>
+  <contextParameter xmi:id="_dkLUQ2mZEfGQ69NYdA84Kw" comment="" name="ss_port" prompt="ss_port?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="3333"/>
+  <contextParameter xmi:id="_dkLURGmZEfGQ69NYdA84Kw" comment="" name="ss_db" prompt="ss_db?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="db_arleth_a9355"/>
+  <contextParameter xmi:id="_dkLURWmZEfGQ69NYdA84Kw" comment="" name="ss_user" prompt="ss_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="arleth-577ff"/>
+  <contextParameter xmi:id="_dkLURmmZEfGQ69NYdA84Kw" comment="" name="ss_password" prompt="ss_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:QWBpmmxGjQ74O1jVC1a4L3ifT+rJI1uLjKGf/5rmkmITYvlXJZYVqHbTImDjExJmUg=="/>
+</talendfile:ContextType>
