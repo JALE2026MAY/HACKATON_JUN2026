@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.analysis:Analysis xmi:id="_PZEsYGnZEfGJXK0qJt55Ng" name="ANA_02_TELCO_NUMERIC_PROFILE_G4" supplierDependency="_gPNw0GneEfGJXK0qJt55Ng" creationDate="2026-06-16T18:15:18.693-0500" defaultContext="Default">
+  <dataquality.analysis:Analysis xmi:id="_PZEsYGnZEfGJXK0qJt55Ng" name="ANA_02_TELCO_NUMERIC_PROFILE_G1" supplierDependency="_gPNw0GneEfGJXK0qJt55Ng" creationDate="2026-06-16T18:15:18.693-0500" defaultContext="Default">
     <clientDependency href="../../../metadata/fileDelimited/Telcom_0.1.item#_2RpxcGnXEfGJXK0qJt55Ng"/>
     <taggedValue xmi:id="_PZEsYWnZEfGJXK0qJt55Ng" tag="Status" value="Draft"/>
     <taggedValue xmi:id="_PZEsYmnZEfGJXK0qJt55Ng" tag="Author" value="tonymen13579@trial.f221wfxsdlu6mpk.us.qlikcloud.com"/>
     <taggedValue xmi:id="_PZEsY2nZEfGJXK0qJt55Ng" tag="Purpose" value="Perfilar los campos numéricos principales del dataset Telco Customer Churn."/>
-    <taggedValue xmi:id="_PZEsZGnZEfGJXK0qJt55Ng" tag="Description" value="Analizar rangos, mínimos, máximos, promedio, mediana y distribución de los campos numéricos principales del dataset Telco.&#xA; "/>
+    <taggedValue xmi:id="_PZEsZGnZEfGJXK0qJt55Ng" tag="Description" value="Analizar rangos, mínimos, máximos, promedio, mediana y distribución de los campos numéricos principales del dataset Telco.&#xD;&#xA; "/>
     <taggedValue xmi:id="_PZEsZWnZEfGJXK0qJt55Ng" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_YS6a4WnZEfGJXK0qJt55Ng" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_YS6a4mnZEfGJXK0qJt55Ng" tag="PREVIEW_ROW_NUMBER" value="50"/>
@@ -18,7 +18,7 @@
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsNGnWEfGJXK0qJt55Ng"/>
     </context>
     <results xmi:id="_PZEsZ2nZEfGJXK0qJt55Ng">
-      <resultMetadata xmi:id="_PZEsaGnZEfGJXK0qJt55Ng" executionDate="2026-06-16T19:39:32.493-0500" executionDuration="240" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="4"/>
+      <resultMetadata xmi:id="_PZEsaGnZEfGJXK0qJt55Ng" executionDate="2026-06-16T19:44:53.691-0500" executionDuration="205" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="4"/>
       <indicators xsi:type="dataquality.indicators:BoxIndicator" xmi:id="_s8pCgGnaEfGJXK0qJt55Ng">
         <parameters xmi:id="_s8pCgWnaEfGJXK0qJt55Ng"/>
         <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../../metadata/fileDelimited/Telcom_0.1.item#_cHMsN2nWEfGJXK0qJt55Ng"/>
@@ -305,7 +305,7 @@
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_gPNw0GneEfGJXK0qJt55Ng" kind="Usage" supplier="_PZEsYGnZEfGJXK0qJt55Ng">
     <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Perfilado_Telco/Reporte_Telcom_1_0.1.rep#_OaC_sGnWEfGJXK0qJt55Ng"/>
   </orgomg.cwm.objectmodel.core:Dependency>
-  <dataquality.domain:Domain xmi:id="_YS6a5WnZEfGJXK0qJt55Ng" name="ANA_02_TELCO_NUMERIC_PROFILE_G4">
+  <dataquality.domain:Domain xmi:id="_YS6a5WnZEfGJXK0qJt55Ng" name="ANA_02_TELCO_NUMERIC_PROFILE_G1">
     <ranges xmi:id="_YS6a5mnZEfGJXK0qJt55Ng">
       <expressions xmi:id="_YS6a52nZEfGJXK0qJt55Ng">
         <expression xsi:type="relational:TdExpression" xmi:id="_YS6a6GnZEfGJXK0qJt55Ng" language="SQL"/>
