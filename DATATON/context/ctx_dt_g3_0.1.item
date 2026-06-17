@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_bQASMGmZEfGZZYx4fvOkMA" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_bQASMWmZEfGZZYx4fvOkMA" comment="" name="bank_path" prompt="bank_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Tmp/Dataton/bank-additional/"/>
+  <contextParameter xmi:id="_bQASMmmZEfGZZYx4fvOkMA" comment="" name="ss_host" prompt="ss_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com"/>
+  <contextParameter xmi:id="_bQASM2mZEfGZZYx4fvOkMA" comment="" name="ss_port" prompt="ss_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="3333"/>
+  <contextParameter xmi:id="_bQASNGmZEfGZZYx4fvOkMA" comment="" name="ss_db" prompt="ss_db?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="db_milton_ae33b"/>
+  <contextParameter xmi:id="_bQASNWmZEfGZZYx4fvOkMA" comment="" name="ss_user" prompt="ss_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="milton-f56ff"/>
+  <contextParameter xmi:id="_bQASNmmZEfGZZYx4fvOkMA" comment="" name="ss_password" prompt="ss_password?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="UZ~Z;pGf;Xy)vw#~c9B}L"/>
+</talendfile:ContextType>
