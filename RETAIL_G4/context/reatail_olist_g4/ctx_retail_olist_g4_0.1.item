@@ -8,4 +8,7 @@
   <contextParameter xmi:id="_LEhGlmmPEfGE1IodBGmaCw" comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="'RUN_001'"/>
   <contextParameter xmi:id="_LEhGl2mPEfGE1IodBGmaCw" comment="" name="olist_path" prompt="olist_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Tmp/FUENTES/"/>
   <contextParameter xmi:id="_LEhGmGmPEfGE1IodBGmaCw" comment="" name="env" prompt="env?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dev"/>
+  <contextParameter xmi:id="_m4yxQGn8EfGSSoP7lP4F9A" comment="" name="ss_db_stg" prompt="ss_db_stg?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="stg"/>
+  <contextParameter xmi:id="_m4yxQWn8EfGSSoP7lP4F9A" comment="" name="ss_db_mart" prompt="ss_db_mart?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="mart"/>
+  <contextParameter xmi:id="_-Ji68Gn8EfGSSoP7lP4F9A" comment="" name="ss_db_audit" prompt="ss_db_audit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="audit"/>
 </talendfile:ContextType>
