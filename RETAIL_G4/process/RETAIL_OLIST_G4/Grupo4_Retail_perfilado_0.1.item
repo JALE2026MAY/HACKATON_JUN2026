@@ -255,7 +255,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT '&quot; + context.run_id + &quot;' AS run_id, &quot; &#xD;&#xA;+ &quot;DATE_SUB(UTC_TIMESTAMP(6), INTERVAL 5 HOUR) AS run_ts, &quot;&#xD;&#xA;+ &quot;'&quot; + context.current_table + &quot;' AS dataset, &quot;&#xD;&#xA;+ &quot;'&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;' AS column_name, &quot;&#xD;&#xA;+ &quot;'&quot; + ((String)globalMap.get(&quot;row2.data_type&quot;)) + &quot;' AS data_type, &quot;&#xD;&#xA;+ &quot;COUNT(*) AS rows_total, &quot;&#xD;&#xA;// Uso de COALESCE para evitar rows_null = NULL en tablas vacías&#xD;&#xA;+ &quot;COALESCE(SUM(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;` IS NULL), 0) AS rows_null, &quot;&#xD;&#xA;// pct_null con manejo de división por cero&#xD;&#xA;+ &quot;COALESCE(ROUND(100.0 * SUM(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;` IS NULL) / NULLIF(COUNT(*), 0), 2), 0) AS pct_null, &quot;&#xD;&#xA;+ &quot;COUNT(DISTINCT `&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;`) AS cardinality, &quot;&#xD;&#xA;+ &quot;CAST(MIN(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;`) AS CHAR) AS min_val, &quot;&#xD;&#xA;+ &quot;CAST(MAX(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;`) AS CHAR) AS max_val, &quot;&#xD;&#xA;+ &quot;ROUND(AVG(CHAR_LENGTH(CAST(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;` AS CHAR))), 2) AS avg_len, &quot;&#xD;&#xA;+ &quot;(SELECT CAST(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;` AS CHAR) &quot;&#xD;&#xA;    + &quot;FROM &quot; + context.current_table + &quot; &quot;&#xD;&#xA;    + &quot;GROUP BY 1 ORDER BY COUNT(*) DESC LIMIT 1) AS pattern_top, &quot;&#xD;&#xA;+ &quot;COALESCE((SELECT ROUND(100.0 * MAX(cnt) / NULLIF((SELECT COUNT(*) FROM &quot; + context.current_table + &quot;), 0), 2) &quot;&#xD;&#xA;    + &quot;FROM (SELECT COUNT(*) AS cnt FROM &quot; + context.current_table + &quot; &quot;&#xD;&#xA;    + &quot;GROUP BY `&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;`) t), 0) AS pct_top &quot;&#xD;&#xA;+ &quot;FROM &quot; + context.current_table"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT '&quot; + context.run_id + &quot;' AS run_id, &quot; &#xD;&#xA;+ &quot;DATE_SUB(UTC_TIMESTAMP(6), INTERVAL 5 HOUR) AS run_ts, &quot;&#xD;&#xA;+ &quot;'&quot; + context.current_table + &quot;' AS dataset, &quot;&#xD;&#xA;+ &quot;'&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;' AS column_name, &quot;&#xD;&#xA;+ &quot;'&quot; + ((String)globalMap.get(&quot;row2.data_type&quot;)) + &quot;' AS data_type, &quot;&#xD;&#xA;+ &quot;COUNT(*) AS rows_total, &quot;&#xD;&#xA;+ &quot;COALESCE(SUM(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;` IS NULL), 0) AS rows_null, &quot;&#xD;&#xA;+ &quot;COALESCE(ROUND(100.0 * SUM(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;` IS NULL) / NULLIF(COUNT(*), 0), 2), 0) AS pct_null, &quot;&#xD;&#xA;+ &quot;COUNT(DISTINCT `&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;`) AS cardinality, &quot;&#xD;&#xA;+ &quot;COALESCE(CAST(MIN(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;`) AS CHAR), 'N/A') AS min_val, &quot;&#xD;&#xA;+ &quot;COALESCE(CAST(MAX(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;`) AS CHAR), 'N/A') AS max_val, &quot;&#xD;&#xA;+ &quot;COALESCE(ROUND(AVG(CHAR_LENGTH(CAST(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;` AS CHAR))), 2), 0) AS avg_len, &quot;&#xD;&#xA;+ &quot;COALESCE((SELECT CAST(`&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;` AS CHAR) FROM &quot; + context.current_table + &quot; GROUP BY 1 ORDER BY COUNT(*) DESC LIMIT 1), 'N/A') AS pattern_top, &quot;&#xD;&#xA;+ &quot;COALESCE((SELECT ROUND(100.0 * MAX(cnt) / NULLIF((SELECT COUNT(*) FROM &quot; + context.current_table + &quot;), 0), 2) FROM (SELECT COUNT(*) AS cnt FROM &quot; + context.current_table + &quot; GROUP BY `&quot; + ((String)globalMap.get(&quot;row2.column_name&quot;)) + &quot;`) t), 0) AS pct_top &quot;&#xD;&#xA;+ &quot;FROM &quot; + context.current_table"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -335,7 +335,7 @@
       <column comment="" key="false" length="-1" name="data_type" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rows_total" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rows_null" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pct_null" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pct_null" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_Double" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="cardinality" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="min_val" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="max_val" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -354,11 +354,11 @@
         <mapperTableEntries name="data_type" expression="row3.data_type " type="id_String" nullable="true"/>
         <mapperTableEntries name="rows_total" expression="row3.rows_total " type="id_Long" nullable="true"/>
         <mapperTableEntries name="rows_null" expression="row3.rows_null " type="id_Long" nullable="true"/>
-        <mapperTableEntries name="pct_null" expression="row3.pct_null " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="pct_null" expression="(row3.rows_total == null || row3.rows_total == 0) &#xD;&#xA;? 0.0 &#xD;&#xA;: ((row3.rows_null == null ? 0 : row3.rows_null) * 100.0) / (double) row3.rows_total " type="id_Double" nullable="true"/>
         <mapperTableEntries name="cardinality" expression="row3.cardinality " type="id_Long" nullable="true"/>
         <mapperTableEntries name="min_val" expression="row3.min_val " type="id_String" nullable="true"/>
         <mapperTableEntries name="max_val" expression="row3.max_val " type="id_String" nullable="true"/>
-        <mapperTableEntries name="avg_len" expression="row3.avg_len " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="avg_len" expression=" row3.avg_len " type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="pattern_top" expression="row3.pattern_top " type="id_String" nullable="true"/>
         <mapperTableEntries name="pct_top" expression="row3.pct_top " type="id_BigDecimal" nullable="true"/>
       </outputTables>
@@ -494,7 +494,7 @@
       <column comment="" key="false" length="-1" name="data_type" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rows_total" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rows_null" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pct_null" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pct_null" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_Double" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="cardinality" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="min_val" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="max_val" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -510,7 +510,7 @@
       <column comment="" key="false" length="-1" name="data_type" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rows_total" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rows_null" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pct_null" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pct_null" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_Double" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="cardinality" nullable="true" pattern="" precision="-1" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="min_val" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="max_val" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -561,28 +561,28 @@
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_3" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
 </talendfile:ProcessType>
