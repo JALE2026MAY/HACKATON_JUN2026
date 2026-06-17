@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_cHJB0GnWEfGJXK0qJt55Ng" name="Telcom" supplierDependency="_2RpxcGnXEfGJXK0qJt55Ng" dataPackage="_cHMsMGnWEfGJXK0qJt55Ng" Server="Localhost 127.0.0.1" FilePath="C:/Tmp/CAP_Genius_Lab/Telcom/WA_Fn-UseC_-Telco-Customer-Churn.csv" Format="WINDOWS" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" EscapeType="CSV" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_cHMsMGnWEfGJXK0qJt55Ng" name="default" dataManager="_cHJB0GnWEfGJXK0qJt55Ng">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_cHMsMWnWEfGJXK0qJt55Ng" id="_S8wV4GnWEfGJXK0qJt55Ng" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsMmnWEfGJXK0qJt55Ng" id="customerID" label="customerID" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RpxcWnXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsM2nWEfGJXK0qJt55Ng" id="gender" label="gender" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RpxiWnXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsNGnWEfGJXK0qJt55Ng" id="SeniorCitizen" label="SeniorCitizen" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RpxlGnXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsNWnWEfGJXK0qJt55Ng" id="Partner" label="Partner" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_zOKyUGnXEfGJXK0qJt55Ng" tag="Content Type" value="Other"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsNmnWEfGJXK0qJt55Ng" id="Dependents" label="Dependents" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2Rpxw2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsN2nWEfGJXK0qJt55Ng" id="tenure" label="tenure" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RpxzmnXEfGJXK0qJt55Ng" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsOGnWEfGJXK0qJt55Ng" id="PhoneService" label="PhoneService" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqYk2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsOWnWEfGJXK0qJt55Ng" id="MultipleLines" label="MultipleLines" length="16" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqYq2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsOmnWEfGJXK0qJt55Ng" id="InternetService" label="InternetService" length="11" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqYw2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsO2nWEfGJXK0qJt55Ng" id="OnlineSecurity" label="OnlineSecurity" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqY22nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPGnWEfGJXK0qJt55Ng" id="OnlineBackup" label="OnlineBackup" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqY82nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPWnWEfGJXK0qJt55Ng" id="DeviceProtection" label="DeviceProtection" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZC2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsPmnWEfGJXK0qJt55Ng" id="TechSupport" label="TechSupport" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZI2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsP2nWEfGJXK0qJt55Ng" id="StreamingTV" label="StreamingTV" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZO2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQGnWEfGJXK0qJt55Ng" id="StreamingMovies" label="StreamingMovies" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZU2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQWnWEfGJXK0qJt55Ng" id="Contract" label="Contract" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZa2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQmnWEfGJXK0qJt55Ng" id="PaperlessBilling" label="PaperlessBilling" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZg2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsQ2nWEfGJXK0qJt55Ng" id="PaymentMethod" label="PaymentMethod" length="25" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZm2nXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRGnWEfGJXK0qJt55Ng" id="MonthlyCharges" label="MonthlyCharges" length="6" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZpmnXEfGJXK0qJt55Ng" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRWnWEfGJXK0qJt55Ng" id="TotalCharges" label="TotalCharges" length="7" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZsWnXEfGJXK0qJt55Ng" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cHMsRmnWEfGJXK0qJt55Ng" id="Churn" label="Churn" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_2RqZyWnXEfGJXK0qJt55Ng" tag="Content Type" value="Nominal"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_2RpxcGnXEfGJXK0qJt55Ng" kind="Usage" supplier="_cHJB0GnWEfGJXK0qJt55Ng">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_telco/ANA_01_TELCO_GENERAL_PROFILE_G4_0.1.ana#_rnJzEWnWEfGJXK0qJt55Ng"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_telco/ANA_02_TELCO_NUMERIC_PROFILE_G4_0.1.ana#_PZEsYGnZEfGJXK0qJt55Ng"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_telco/ANA_03_TELCO_DOMAIN_PROFILE_G4_0.1.ana#_ME_akGnbEfGJXK0qJt55Ng"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
