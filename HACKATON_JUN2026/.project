@@ -9,4 +9,16 @@
 	<natures>
 		<nature>org.talend.core.talendnature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>.Reporte Telcom-20260616-1945-00043.pdf</name>
+			<type>1</type>
+			<location>C:/Users/jonat/Downloads/Reporte Telcom-20260616-1945-00043.pdf</location>
+		</link>
+		<link>
+			<name>.Reporte Telcom-20260616-1947-00027.pdf</name>
+			<type>1</type>
+			<location>C:/Users/jonat/Downloads/Reporte Telcom-20260616-1947-00027.pdf</location>
+		</link>
+	</linkedResources>
 </projectDescription>
