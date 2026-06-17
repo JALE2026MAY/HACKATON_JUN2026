@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataquality.reports:TdReport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.reports="http://dataquality.reports" xmi:id="_OaC_sGnWEfGJXK0qJt55Ng" name="Reporte_Telcom_1" creationDate="2026-06-16T17:53:43.546-0500" defaultContext="Default">
-  <clientDependency href="../../Analyses/Analisis_telco/ANA_01_TELCO_GENERAL_PROFILE_G4_0.1.ana#_Huc4IGnbEfGJXK0qJt55Ng"/>
+  <clientDependency href="../../Analyses/Analisis_telco/ANA_01_TELCO_GENERAL_PROFILE_G1_0.1.ana#_Huc4IGnbEfGJXK0qJt55Ng"/>
   <taggedValue xmi:id="_OaC_sWnWEfGJXK0qJt55Ng" tag="Status" value="development"/>
   <taggedValue xmi:id="_OaC_smnWEfGJXK0qJt55Ng" tag="Author" value="tonymen13579@trial.f221wfxsdlu6mpk.us.qlikcloud.com"/>
   <taggedValue xmi:id="_OaC_s2nWEfGJXK0qJt55Ng" tag="Purpose"/>
   <taggedValue xmi:id="_OaC_tGnWEfGJXK0qJt55Ng" tag="Description"/>
   <taggedValue xmi:id="_OaC_tWnWEfGJXK0qJt55Ng" tag="Version" value="0.1"/>
-  <taggedValue xmi:id="_OaC_tmnWEfGJXK0qJt55Ng" tag="OutputFolder" value="C:\Users\jonat\Downloads"/>
+  <taggedValue xmi:id="_OaC_tmnWEfGJXK0qJt55Ng" tag="OutputFolder" value="C:\Users\Francis\Downloads"/>
   <taggedValue xmi:id="_OaC_t2nWEfGJXK0qJt55Ng" tag="REP_DBINFO_DBTYPE" value="HSQL"/>
   <taggedValue xmi:id="_OaC_uGnWEfGJXK0qJt55Ng" tag="REP_DBINFO_DBVERSION" value=""/>
   <taggedValue xmi:id="_OaC_uWnWEfGJXK0qJt55Ng" tag="REP_DBINFO_HOST" value=""/>
@@ -15,7 +15,7 @@
   <taggedValue xmi:id="_OaC_vGnWEfGJXK0qJt55Ng" tag="REP_DBINFO_DBNAME" value="talend_dq"/>
   <taggedValue xmi:id="_OaC_vWnWEfGJXK0qJt55Ng" tag="REP_DBINFO_SCHEMA" value=""/>
   <taggedValue xmi:id="_OaC_vmnWEfGJXK0qJt55Ng" tag="REP_DBINFO_USER" value="sa"/>
-  <taggedValue xmi:id="_OaC_v2nWEfGJXK0qJt55Ng" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:g+NqYY7T6jsWfkswonVYqGGFtqDjAVz0UcsWqA=="/>
+  <taggedValue xmi:id="_OaC_v2nWEfGJXK0qJt55Ng" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:jhd8NOe4eMgsKNlE7SA6QZAAbMZDJXaa+003PA=="/>
   <taggedValue xmi:id="_OaC_wGnWEfGJXK0qJt55Ng" tag="REP_DBINFO_PARAMETER" value=""/>
   <taggedValue xmi:id="_OaC_wWnWEfGJXK0qJt55Ng" tag="REP_DBINFO_URL" value="jdbc:hsqldb:file:/C:\Program Files (x86)\Talend-Studio\studio\workspace\TDQ_reporting_db\talend_dq"/>
   <taggedValue xmi:id="_OaC_wmnWEfGJXK0qJt55Ng" tag="REP_DBINFO_DRIVER" value="org.hsqldb.jdbcDriver"/>
@@ -23,20 +23,20 @@
   <taggedValue xmi:id="_OaC_xGnWEfGJXK0qJt55Ng" tag="REP_PASSWORD_CONTEXT" value="false"/>
   <taggedValue xmi:id="_ObB3IGnWEfGJXK0qJt55Ng" tag="REP_GENERATE_FILE" value="true"/>
   <taggedValue xmi:id="_ObB3IWnWEfGJXK0qJt55Ng" tag="OutputType" value="pdf"/>
-  <taggedValue xmi:id="_fWGRIGnWEfGJXK0qJt55Ng" tag="OutputFileName" value="Reporte Telcom"/>
+  <taggedValue xmi:id="_fWGRIGnWEfGJXK0qJt55Ng" tag="OutputFileName" value="Reporte_telco"/>
   <taggedValue xmi:id="_fWGRIWnWEfGJXK0qJt55Ng" tag="Single output" value="false"/>
   <taggedValue xmi:id="_HucREWnbEfGJXK0qJt55Ng" tag="REP_LAST_RUN_CONTEXT" value="Default"/>
   <taggedValue xmi:id="_HucREmnbEfGJXK0qJt55Ng" tag="REP_AUTHPASSWORD_CONTEXT" value="false"/>
   <taggedValue xmi:id="_HucRE2nbEfGJXK0qJt55Ng" tag="REP_CLIENTSECRET_CONTEXT" value="false"/>
   <analysisMap xmi:id="_CKj5IGnYEfGJXK0qJt55Ng" mustRefresh="true" reportType="Basic">
-    <analysis href="../../Analyses/Analisis_telco/ANA_01_TELCO_GENERAL_PROFILE_G4_0.1.ana#_rnJzEWnWEfGJXK0qJt55Ng"/>
+    <analysis href="../../Analyses/Analisis_telco/ANA_01_TELCO_GENERAL_PROFILE_G1_0.1.ana#_rnJzEWnWEfGJXK0qJt55Ng"/>
   </analysisMap>
-  <analysisMap xmi:id="_FWC1UGnmEfGFz-1eMWTYGQ" mustRefresh="true" reportType="Basic">
-    <analysis href="../../Analyses/Analisis_telco/ANA_02_TELCO_NUMERIC_PROFILE_G4_0.1.ana#_PZEsYGnZEfGJXK0qJt55Ng"/>
+  <analysisMap xmi:id="_sNxwYGnlEfGkzJaqfEH8LA" mustRefresh="true" reportType="Basic">
+    <analysis href="../../Analyses/Analisis_telco/ANA_02_TELCO_NUMERIC_PROFILE_G1_0.1.ana#_PZEsYGnZEfGJXK0qJt55Ng"/>
   </analysisMap>
-  <analysisMap xmi:id="_FWC1UWnmEfGFz-1eMWTYGQ" mustRefresh="true" reportType="Basic">
-    <analysis href="../../Analyses/Analisis_telco/ANA_03_TELCO_DOMAIN_PROFILE_G4_0.1.ana#_ME_akGnbEfGJXK0qJt55Ng"/>
+  <analysisMap xmi:id="_sNxwYWnlEfGkzJaqfEH8LA" mustRefresh="true" reportType="Basic">
+    <analysis href="../../Analyses/Analisis_telco/ANA_03_TELCO_DOMAIN_PROFILE_G1_0.1.ana#_ME_akGnbEfGJXK0qJt55Ng"/>
   </analysisMap>
-  <ExecInformations xmi:id="_3SsPUGnlEfGFz-1eMWTYGQ" executionDate="2026-06-16T19:47:22.164-0500" executionDuration="4196" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+  <ExecInformations xmi:id="_wiP2QGnlEfGkzJaqfEH8LA" executionDate="2026-06-16T19:44:52.167-0500" executionDuration="2909" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
   <context xmi:id="_HucREGnbEfGJXK0qJt55Ng" confirmationNeeded="false" hide="false" name="Default"/>
 </dataquality.reports:TdReport>
