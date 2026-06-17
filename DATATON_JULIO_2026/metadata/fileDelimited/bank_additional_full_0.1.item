@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_htAmgWnIEfG0Euo6tNno2w" name="bank_additional_full" supplierDependency="_YXzwsGnTEfG21I2H12_xHA" dataPackage="_htAmgmnIEfG0Euo6tNno2w" Server="Localhost 127.0.0.1" FilePath="C:/tmp/DatatonGrupo3/bank_additional_full.csv" Format="WINDOWS" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" EscapeType="CSV" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_htAmgmnIEfG0Euo6tNno2w" name="default" dataManager="_htAmgWnIEfG0Euo6tNno2w">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_htAmg2nIEfG0Euo6tNno2w" id="_cHFf0GnIEfG0Euo6tNno2w" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmhGnIEfG0Euo6tNno2w" id="age" label="age" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YXzwsWnTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmhWnIEfG0Euo6tNno2w" id="job" label="job" length="13" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YXzwxmnTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmhmnIEfG0Euo6tNno2w" id="marital" label="marital" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YXzw22nTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmh2nIEfG0Euo6tNno2w" id="education" label="education" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YXzw8GnTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmiGnIEfG0Euo6tNno2w" id="credit_default" label="credit_default" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YXzxBWnTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmiWnIEfG0Euo6tNno2w" id="housing" label="housing" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YXzxGmnTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmimnIEfG0Euo6tNno2w" id="loan" label="loan" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YXzxL2nTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmi2nIEfG0Euo6tNno2w" id="contact" label="contact" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YXzxRGnTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmjGnIEfG0Euo6tNno2w" id="month" label="month" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0XxmnTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmjWnIEfG0Euo6tNno2w" id="day_of_week" label="day_of_week" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0X22nTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmjmnIEfG0Euo6tNno2w" id="duration" label="duration" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0X8GnTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmj2nIEfG0Euo6tNno2w" id="campaign" label="campaign" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YBWnTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmkGnIEfG0Euo6tNno2w" id="pdays" label="pdays" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YGmnTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmkWnIEfG0Euo6tNno2w" id="previous" label="previous" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YL2nTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmkmnIEfG0Euo6tNno2w" id="poutcome" label="poutcome" length="11" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YRGnTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmk2nIEfG0Euo6tNno2w" id="emp_var_rate" label="emp_var_rate" length="3" precision="2" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YWWnTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmlGnIEfG0Euo6tNno2w" id="cons_price_idx" label="cons_price_idx" length="6" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YbmnTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmlWnIEfG0Euo6tNno2w" id="cons_conf_idx" label="cons_conf_idx" length="5" precision="2" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0Yg2nTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmlmnIEfG0Euo6tNno2w" id="euribor3m" label="euribor3m" length="5" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YmGnTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAml2nIEfG0Euo6tNno2w" id="nr_employed" label="nr_employed" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YrWnTEfG21I2H12_xHA" tag="Content Type" value="Interval"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_htAmmGnIEfG0Euo6tNno2w" id="y" label="y" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_YX0YwmnTEfG21I2H12_xHA" tag="Content Type" value="Nominal"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_YXzwsGnTEfG21I2H12_xHA" kind="Usage" supplier="_htAmgWnIEfG0Euo6tNno2w">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Basic_Column_Analysis_0.1.ana#_5pk-QGnREfG21I2H12_xHA"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
