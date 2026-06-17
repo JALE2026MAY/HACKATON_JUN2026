@@ -9,4 +9,11 @@
 	<natures>
 		<nature>org.talend.core.talendnature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>.Reporte_telco-20260616-1944-00059.pdf</name>
+			<type>1</type>
+			<location>C:/Users/Francis/Downloads/Reporte_telco-20260616-1944-00059.pdf</location>
+		</link>
+	</linkedResources>
 </projectDescription>
