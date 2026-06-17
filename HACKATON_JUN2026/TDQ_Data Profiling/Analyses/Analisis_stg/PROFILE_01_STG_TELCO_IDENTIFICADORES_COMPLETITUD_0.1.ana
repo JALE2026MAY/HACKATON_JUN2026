@@ -22,7 +22,7 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmgO2WqLEfG5aM4fdR_Gwg"/>
     </context>
     <results xmi:id="_KR9ql2qHEfG5aM4fdR_Gwg">
-      <resultMetadata xmi:id="_KR9qmGqHEfG5aM4fdR_Gwg" executionDate="2026-06-17T16:38:04.732-0500" executionDuration="13683" message="" executionNumber="6" lastRunOk="true" lastExecutionNumberOk="6"/>
+      <resultMetadata xmi:id="_KR9qmGqHEfG5aM4fdR_Gwg" executionDate="2026-06-17T16:43:07.314-0500" executionDuration="4405" message="" executionNumber="7" lastRunOk="true" lastExecutionNumberOk="7"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_WwVBAGqNEfG1lqxu6qhfiQ" count="7043" computed="true">
         <parameters xmi:id="_WwVBAWqNEfG1lqxu6qhfiQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnwGqLEfG5aM4fdR_Gwg"/>
