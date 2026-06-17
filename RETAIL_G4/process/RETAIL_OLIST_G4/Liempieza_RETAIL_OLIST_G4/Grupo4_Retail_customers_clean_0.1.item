@@ -184,11 +184,11 @@
       <column comment="" key="false" length="16" name="customer_zip_code_prefix" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="128" name="customer_city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="8" name="customer_state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="64" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_customers">
         <mapperTableEntries name="customer_id" expression="row1.customer_id " type="id_String" nullable="true"/>
@@ -287,7 +287,7 @@
       <column comment="" key="false" length="16" name="customer_zip_code_prefix" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="128" name="customer_city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="8" name="customer_state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="64" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
@@ -296,7 +296,7 @@
       <column comment="" key="false" length="16" name="customer_zip_code_prefix" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="128" name="customer_city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="8" name="customer_state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="64" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -424,7 +424,7 @@
       <column comment="" key="false" length="-1" name="raw_payload" nullable="true" pattern="" precision="-1" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_rejects">
         <mapperTableEntries name="load_ts" expression="TalendDate.getCurrentDate() " type="id_Date" nullable="true"/>

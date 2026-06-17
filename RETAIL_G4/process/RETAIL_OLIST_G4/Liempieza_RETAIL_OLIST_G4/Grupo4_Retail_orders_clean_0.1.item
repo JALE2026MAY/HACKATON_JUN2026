@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" hide="false" name="Default"/>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" name="ss_host" prompt="ss_host?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="svc-ee830d84-e0b6-4103-bb56-0f73ee5cf643-dml.aws-virginia-8.svc.singlestore.com" internalId="_MWvfYGp_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="ss_port" prompt="ss_port?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_Integer" value="3306" internalId="_MWvfYWp_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="ss_db" prompt="ss_db?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="raw" internalId="_MWvfYmp_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="ss_user" prompt="ss_user?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="admin" internalId="_MWvfY2p_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="ss_password" prompt="ss_password?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_Password" value="enc:system.encryption.key.v1:cSfpDK2YOmtvmHoTmDoxA/1e59qriiLfVif2DAd3qByuwv+++Xk5SGI8EdEc4ynLfa8kYDfU" internalId="_MWvfZGp_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="'RUN_001'" internalId="_MWvfZWp_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="olist_path" prompt="olist_path?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="C:/Tmp/FUENTES/" internalId="_MWvfZmp_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="env" prompt="env?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="dev" internalId="_MWvfZ2p_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="ss_db_stg" prompt="ss_db_stg?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="stg" internalId="_MWvfaGp_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="ss_db_mart" prompt="ss_db_mart?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="mart" internalId="_MWvfaWp_EfGsZ5ixw-ctVQ"/>
+    <contextParameter comment="" name="ss_db_audit" prompt="ss_db_audit?" promptNeeded="false" repositoryContextId="_LENkkGmPEfGE1IodBGmaCw" type="id_String" value="audit" internalId="_MWvfamp_EfGsZ5ixw-ctVQ"/>
+  </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -97,4 +111,412 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ss_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ss_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ss_db"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.ss_user"/>
+    <elementParameter field="PASSWORD" name="PASS" value="context.ss_password"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;orders_g4&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT TRIM(order_id) AS order_id, TRIM(customer_id) AS customer_id, LOWER(TRIM(order_status)) AS order_status, order_purchase_timestamp, order_approved_at, order_delivered_carrier_date, order_delivered_customer_date, order_estimated_delivery_date, load_ts, load_run FROM raw.orders_g4 WHERE order_id IS NOT NULL AND customer_id IS NOT NULL AND order_status IS NOT NULL AND order_purchase_timestamp IS NOT NULL AND LOWER(TRIM(order_status)) IN ('delivered','shipped','canceled','unavailable','invoiced','processing','approved','created') AND order_id IN (SELECT order_id FROM raw.orders_g4 GROUP BY order_id HAVING COUNT(*) = 1) AND NOT (LOWER(TRIM(order_status)) = 'delivered' AND order_delivered_customer_date IS NULL) AND NOT (LOWER(TRIM(order_status)) = 'canceled' AND order_delivered_customer_date IS NOT NULL) AND (order_approved_at IS NULL OR order_approved_at >= order_purchase_timestamp) AND (order_delivered_customer_date IS NULL OR order_delivered_customer_date >= order_purchase_timestamp) AND (order_delivered_carrier_date IS NULL OR order_delivered_customer_date IS NULL OR order_delivered_carrier_date &lt;= order_delivered_customer_date)&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_id" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customer_id" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_status" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_purchase_timestamp" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_approved_at" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_delivered_carrier_date" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_delivered_customer_date" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_estimated_delivery_date" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="load_ts" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="load_run" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="64" name="order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="customer_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_purchase_timestamp" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_approved_at" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_delivered_carrier_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_delivered_customer_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_estimated_delivery_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_4GCPAGptEfGsZ5ixw-ctVQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out_orders">
+      <column comment="" key="false" length="64" name="order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="customer_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_status" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_purchase_timestamp" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_approved_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_delivered_carrier_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_delivered_customer_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_estimated_delivery_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out_orders">
+        <mapperTableEntries name="order_id" expression="row1.order_id " type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer_id" expression="row1.customer_id " type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_status" expression="row1.order_status " type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_purchase_timestamp" expression="row1.order_purchase_timestamp == null || row1.order_purchase_timestamp.trim().isEmpty()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? null&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, row1.order_purchase_timestamp) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="order_approved_at" expression="row1.order_approved_at == null || row1.order_approved_at.trim().isEmpty()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? null&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, row1.order_approved_at) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="order_delivered_carrier_date" expression="row1.order_delivered_carrier_date == null || row1.order_delivered_carrier_date.trim().isEmpty()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? null&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, row1.order_delivered_carrier_date) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="order_delivered_customer_date" expression="row1.order_delivered_customer_date == null || row1.order_delivered_customer_date.trim().isEmpty()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? null&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, row1.order_delivered_customer_date) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="order_estimated_delivery_date" expression="row1.order_estimated_delivery_date == null || row1.order_estimated_delivery_date.trim().isEmpty()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? null&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, row1.order_estimated_delivery_date) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="load_ts" expression="TalendDate.getCurrentDate() " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="load_run" expression="row1.load_run " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="order_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_status" type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_purchase_timestamp" type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_approved_at" type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_delivered_carrier_date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_delivered_customer_date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_estimated_delivery_date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="load_ts" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="load_run" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="680" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ss_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ss_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ss_db_stg"/>
+    <elementParameter field="TEXT" name="USER" value="context.ss_user"/>
+    <elementParameter field="PASSWORD" name="PASS" value="context.ss_password"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;orders_g4&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_id" id="0"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="1"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="2"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="3"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="4"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customer_id" id="5"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="6"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="7"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="8"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_status" id="10"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="11"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="12"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="13"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="14"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_purchase_timestamp" id="15"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="16"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="17"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="18"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_approved_at" id="20"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="21"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="22"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="23"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="24"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_delivered_carrier_date" id="25"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="26"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="27"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="28"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_delivered_customer_date" id="30"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="31"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="32"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="33"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="34"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_estimated_delivery_date" id="35"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="36"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="37"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="38"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="load_ts" id="40"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="41"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="42"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="43"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="44"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="load_run" id="45"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="46"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="47"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="48"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="49"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
+    <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" key="false" length="64" name="order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="customer_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_status" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_purchase_timestamp" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_approved_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_delivered_carrier_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_delivered_customer_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_estimated_delivery_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="64" name="order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="customer_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_status" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_purchase_timestamp" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_approved_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_delivered_carrier_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_delivered_customer_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="32" name="order_estimated_delivery_date" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="64" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ss_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ss_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ss_db"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.ss_user"/>
+    <elementParameter field="PASSWORD" name="PASS" value="context.ss_password"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;orders_g4&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT load_run, load_ts, CONCAT(IF(order_id IS NULL,'DQ-001 order_id nulo | ',''), IF(customer_id IS NULL,'customer_id nulo | ',''), IF(order_status IS NULL,'order_status nulo | ',''), IF(order_purchase_timestamp IS NULL,'order_purchase_timestamp nulo | ',''), IF(order_status IS NOT NULL AND LOWER(TRIM(order_status)) NOT IN ('delivered','shipped','canceled','unavailable','invoiced','processing','approved','created'),'DQ-005 order_status invalido | ',''), IF(order_id IN (SELECT order_id FROM raw.orders_g4 GROUP BY order_id HAVING COUNT(*) > 1),'DQ-001 order_id duplicado | ',''), IF(LOWER(TRIM(order_status)) = 'delivered' AND order_delivered_customer_date IS NULL,'DQ-002 pedido delivered sin fecha de entrega cliente | ',''), IF(LOWER(TRIM(order_status)) = 'canceled' AND order_delivered_customer_date IS NOT NULL,'DQ-007 pedido canceled con fecha de entrega cliente | ',''), IF(order_approved_at IS NOT NULL AND order_purchase_timestamp IS NOT NULL AND order_approved_at &lt; order_purchase_timestamp,'DQ-003 aprobacion antes de compra | ',''), IF(order_delivered_customer_date IS NOT NULL AND order_purchase_timestamp IS NOT NULL AND order_delivered_customer_date &lt; order_purchase_timestamp,'DQ-008 entrega cliente antes de compra | ',''), IF(order_delivered_carrier_date IS NOT NULL AND order_delivered_customer_date IS NOT NULL AND order_delivered_carrier_date > order_delivered_customer_date,'DQ-009 entrega transportista despues de entrega cliente | ','')) AS reject_reason, CONCAT('{','\&quot;order_id\&quot;:\&quot;',IFNULL(order_id,''),'\&quot;,','\&quot;customer_id\&quot;:\&quot;',IFNULL(customer_id,''),'\&quot;,','\&quot;order_status\&quot;:\&quot;',IFNULL(order_status,''),'\&quot;,','\&quot;order_purchase_timestamp\&quot;:\&quot;',IFNULL(order_purchase_timestamp,''),'\&quot;,','\&quot;order_approved_at\&quot;:\&quot;',IFNULL(order_approved_at,''),'\&quot;,','\&quot;order_delivered_carrier_date\&quot;:\&quot;',IFNULL(order_delivered_carrier_date,''),'\&quot;,','\&quot;order_delivered_customer_date\&quot;:\&quot;',IFNULL(order_delivered_customer_date,''),'\&quot;,','\&quot;order_estimated_delivery_date\&quot;:\&quot;',IFNULL(order_estimated_delivery_date,''),'\&quot;','}') AS raw_payload FROM raw.orders_g4 WHERE order_id IS NULL OR customer_id IS NULL OR order_status IS NULL OR order_purchase_timestamp IS NULL OR LOWER(TRIM(order_status)) NOT IN ('delivered','shipped','canceled','unavailable','invoiced','processing','approved','created') OR order_id IN (SELECT order_id FROM raw.orders_g4 GROUP BY order_id HAVING COUNT(*) > 1) OR (LOWER(TRIM(order_status)) = 'delivered' AND order_delivered_customer_date IS NULL) OR (LOWER(TRIM(order_status)) = 'canceled' AND order_delivered_customer_date IS NOT NULL) OR (order_approved_at IS NOT NULL AND order_purchase_timestamp IS NOT NULL AND order_approved_at &lt; order_purchase_timestamp) OR (order_delivered_customer_date IS NOT NULL AND order_purchase_timestamp IS NOT NULL AND order_delivered_customer_date &lt; order_purchase_timestamp) OR (order_delivered_carrier_date IS NOT NULL AND order_delivered_customer_date IS NOT NULL AND order_delivered_carrier_date > order_delivered_customer_date)&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="load_run" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="load_ts" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="reject_reason" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="raw_payload" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="" key="false" length="64" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="load_ts" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="536870911" name="reject_reason" nullable="true" pattern="" precision="0" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="536870911" name="raw_payload" nullable="true" pattern="" precision="0" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_4GCPAGptEfGsZ5ixw-ctVQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out_rejects">
+      <column comment="" key="false" length="-1" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="reject_reason" nullable="true" pattern="" precision="0" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="raw_payload" nullable="true" pattern="" precision="0" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out_rejects">
+        <mapperTableEntries name="load_run" expression="row2.load_run " type="id_String" nullable="true"/>
+        <mapperTableEntries name="load_ts" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="reject_reason" expression="row2.reject_reason " type="id_String" nullable="true"/>
+        <mapperTableEntries name="raw_payload" expression="row2.raw_payload " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="load_run" type="id_String" nullable="true"/>
+        <mapperTableEntries name="load_ts" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="reject_reason" type="id_String" nullable="true"/>
+        <mapperTableEntries name="raw_payload" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="680" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ss_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ss_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ss_db_audit"/>
+    <elementParameter field="TEXT" name="USER" value="context.ss_user"/>
+    <elementParameter field="PASSWORD" name="PASS" value="context.ss_password"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;rejects_g4&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="load_run" id="0"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="1"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="2"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="3"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="4"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="load_ts" id="5"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="6"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="7"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="8"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="reject_reason" id="10"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="11"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="12"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="13"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="14"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="raw_payload" id="15"/>
+      <elementValue elementRef="UPDATE_KEY" value="false" id="16"/>
+      <elementValue elementRef="DELETE_KEY" value="false" id="17"/>
+      <elementValue elementRef="UPDATABLE" value="true" id="18"/>
+      <elementValue elementRef="INSERTABLE" value="true" id="19"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
+    <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column comment="" key="false" length="-1" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="reject_reason" nullable="true" pattern="" precision="0" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="raw_payload" nullable="true" pattern="" precision="0" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="load_run" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="load_ts" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="reject_reason" nullable="true" pattern="" precision="0" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="raw_payload" nullable="true" pattern="" precision="0" sourceType="LONGTEXT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out_orders" lineStyle="0" metaname="out_orders" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out_orders" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out_rejects" lineStyle="0" metaname="out_rejects" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out_rejects" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
 </talendfile:ProcessType>
