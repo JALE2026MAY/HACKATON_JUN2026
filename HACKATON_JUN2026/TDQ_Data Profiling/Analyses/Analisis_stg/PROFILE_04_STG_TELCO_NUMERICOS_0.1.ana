@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_1bJ6IWqOEfG1lqxu6qhfiQ" name="PROFILE_04_STG_TELCO_NUMERICOS" supplierDependency="_NPHMoGqREfG1lqxu6qhfiQ" creationDate="2026-06-17T15:55:12.834-0500" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_2A-EUGqLEfG5aM4fdR_Gwg"/>
+    <taggedValue xmi:id="_1bJ6ImqOEfG1lqxu6qhfiQ" tag="Status" value="Draft"/>
+    <taggedValue xmi:id="_1bJ6I2qOEfG1lqxu6qhfiQ" tag="Author" value="jeferson.monje@trial.f221wfxsdlu6mpk.us.qlikcloud.com"/>
+    <taggedValue xmi:id="_1bJ6JGqOEfG1lqxu6qhfiQ" tag="Purpose" value="Perfilar las variables numéricas y flags binarios de la capa STG/Silver para validar rangos, valores mínimos, máximos, promedios, nulos y distribución de indicadores derivados."/>
+    <taggedValue xmi:id="_1bJ6JWqOEfG1lqxu6qhfiQ" tag="Description" value="Este análisis revisa las columnas senior_citizen, partner_flag, dependents_flag, tenure_months, paperless_billing_flag, monthly_charges, total_charges, total_charges_was_imputed, churn_flag y service_score de la tabla stg_telco_customer_churn_grupo_uno. El objetivo es comprobar que las conversiones numéricas realizadas en STG/Silver fueron correctas, que no existen rangos incoherentes y que los flags binarios contienen únicamente valores válidos 0 y 1. También se revisa service_score como variable derivada para segmentación posterior."/>
+    <taggedValue xmi:id="_1bJ6JmqOEfG1lqxu6qhfiQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_JfWBMGqPEfG1lqxu6qhfiQ" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_JZy9YWqQEfG1lqxu6qhfiQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_JZy9YmqQEfG1lqxu6qhfiQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_JZzk92qQEfG1lqxu6qhfiQ" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_1bJ6J2qOEfG1lqxu6qhfiQ">
+      <connection href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_E6SecGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnyGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnzGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn0GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+    </context>
+    <results xmi:id="_1bJ6KGqOEfG1lqxu6qhfiQ">
+      <resultMetadata xmi:id="_1bJ6KWqOEfG1lqxu6qhfiQ" executionDate="2026-06-17T16:38:32.241-0500" executionDuration="16524" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="5"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzkcGqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkcWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnyGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGOWqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KBMUkGqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KBMUkWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KBMUkmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KBMUk2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzkcmqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkc2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnyGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGOmqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `senior_citizen` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KBQmAGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KBQmAWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KBQmAmqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KBQmA2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzkdGqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_JZzkdWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnyGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGO2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `senior_citizen` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KBUQYGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KBUQYWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KBUQYmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KBUQY2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzkdmqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzkd2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnyGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzkeGqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnyGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGPGqQEfG1lqxu6qhfiQ" body="SELECT MIN(`senior_citizen`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KBZI4GqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KBZI4WqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KBZI4mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KBZI42qQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzkeWqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="1" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnyGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGPWqQEfG1lqxu6qhfiQ" body="SELECT MAX(`senior_citizen`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KBdaUGqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KBdaUWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KBdaUmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KBdaU2qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzkemqQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="1142">
+        <parameters xmi:id="_JZzke2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnyGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGPmqQEfG1lqxu6qhfiQ" body="SELECT SUM(`senior_citizen`), COUNT(`senior_citizen`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KBhEsGqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KBhEsWqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KBhEsmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KBhEs2qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KBhEtGqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KBhEtWqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KBhEtmqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KBhEt2qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KBhEuGqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzkfWqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkfmqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnzGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGNGqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KBmkQGqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KBmkQWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KBmkQmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KBmkQ2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzkf2qQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkgGqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnzGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGP2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `partner_flag` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KBq1sGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KBq1sWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KBq1smqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KBq1s2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzkgWqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_JZzkgmqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnzGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGQGqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `partner_flag` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KBvuMGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KBvuMWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KBvuMmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KBvuM2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzkg2qQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzkhGqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnzGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzkhWqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnzGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGQWqQEfG1lqxu6qhfiQ" body="SELECT MIN(`partner_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KByxgGqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KByxgWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KByxgmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KBzYkGqQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzkhmqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="1" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnzGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGQmqQEfG1lqxu6qhfiQ" body="SELECT MAX(`partner_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KB3C8GqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KB3C8WqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KB3C8mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KB3C82qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzkh2qQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="3402">
+        <parameters xmi:id="_JZzkiGqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfnzGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGQ2qQEfG1lqxu6qhfiQ" body="SELECT SUM(`partner_flag`), COUNT(`partner_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KB8igGqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KB8igWqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KB8igmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KB8ig2qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KB8ihGqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KB8ihWqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KB8ihmqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KB8ih2qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KB8iiGqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzkimqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzki2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn0GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGMmqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCCCEGqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KCCCEWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KCCCEmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KCCCE2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzkjGqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkjWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn0GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGRGqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `dependents_flag` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCGTgGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KCGTgWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KCGTgmqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KCGTg2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzkjmqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_JZzkj2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn0GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGRWqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `dependents_flag` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCKk8GqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KCKk8WqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KCKk8mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KCKk82qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzkkGqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzkkWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn0GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzkkmqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn0GqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGRmqQEfG1lqxu6qhfiQ" body="SELECT MIN(`dependents_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KCO2YGqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KCQEgGqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KCQEgWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KCQEgmqQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzkk2qQEfG1lqxu6qhfiQ" count="7043" computed="true" value="1" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn0GqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFbUUGqQEfG1lqxu6qhfiQ" body="SELECT MAX(`dependents_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KCUV8GqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KCUV8WqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KCUV8mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KCUV82qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzklGqQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="2110">
+        <parameters xmi:id="_JZzklWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn0GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFbUUWqQEfG1lqxu6qhfiQ" body="SELECT SUM(`dependents_flag`), COUNT(`dependents_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCYnYGqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KCYnYWqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KCYnYmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KCYnY2qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KCYnZGqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KCYnZWqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KCYnZmqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KCYnZ2qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KCYnaGqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzkl2qQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkmGqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGMGqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCc40GqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KCc40WqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KCc40mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KCc402qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzkmWqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkmmqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFbUUmqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `tenure_months` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCgjMGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KCgjMWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KCgjMmqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KCgjM2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzkm2qQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="73">
+        <parameters xmi:id="_JZzknGqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFbUU2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `tenure_months` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCkNkGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KCkNkWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KCkNkmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KCkNk2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MedianIndicator" xmi:id="_JZzknWqQEfG1lqxu6qhfiQ" computed="true" median="29.0">
+        <parameters xmi:id="_JZzknmqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Median_0.1.definition#_ccI48hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KKn9YGqQEfG1lqxu6qhfiQ" body="SELECT `tenure_months` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `tenure_months` IS NOT NULL  ORDER BY `tenure_months` LIMIT 3521,1" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCofAGqQEfG1lqxu6qhfiQ" name="Median" label="Median">
+          <taggedValue xmi:id="_KCofAWqQEfG1lqxu6qhfiQ" tag="Description" value="The median is the value separating the higher half of a sample, a population or a probability distribution from the lower half"/>
+          <taggedValue xmi:id="_KCofAmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the median of the records"/>
+          <sqlGenericExpression xmi:id="_KCofA2qQEfG1lqxu6qhfiQ" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) AND  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KCofBGqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KCofBWqQEfG1lqxu6qhfiQ" body="SELECT AVG(&lt;%=__COLUMN_NAMES__%>) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KCofBmqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="10"/>
+          <sqlGenericExpression xmi:id="_KCofB2qQEfG1lqxu6qhfiQ" body=" SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="9"/>
+          <sqlGenericExpression xmi:id="_KCofCGqQEfG1lqxu6qhfiQ" body="SELECT AVG(double(&lt;%=__COLUMN_NAMES__%>)) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="DB2"/>
+          <sqlGenericExpression xmi:id="_KCofCWqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KCofCmqQEfG1lqxu6qhfiQ" body="SELECT AVG(cast (&lt;%=__COLUMN_NAMES__%> AS NUMERIC)) FROM (SELECT distinct &lt;%=__COLUMN_NAMES__%> FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) STT WHERE (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) AS SOU WHERE SOU.&lt;%=__COLUMN_NAMES__%> &lt;= STT.&lt;%=__COLUMN_NAMES__%>) AND (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%>) AS SUR WHERE SUR.&lt;%=__COLUMN_NAMES__%> >= STT.&lt;%=__COLUMN_NAMES__%>) ) T" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_KCofC2qQEfG1lqxu6qhfiQ" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_KCofDGqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzkn2qQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="227990">
+        <parameters xmi:id="_JZzkoGqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KKn9YWqQEfG1lqxu6qhfiQ" body="SELECT SUM(`tenure_months`), COUNT(`tenure_months`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KCsJYGqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KCsJYWqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KCsJYmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KCsJY2qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KCsJZGqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KCsJZWqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KCsJZmqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KCsJZ2qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KCsJaGqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzkoWqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzkomqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzko2qQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0" datatype="4">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KKokcGqQEfG1lqxu6qhfiQ" body="SELECT MIN(`tenure_months`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KCyQAGqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KCyQAWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KCyQAmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KCyQA2qQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzkpGqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="72" datatype="4">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn1GqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KKokcWqQEfG1lqxu6qhfiQ" body="SELECT MAX(`tenure_months`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KC3IgGqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KC3IgWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KC3IgmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KC3Ig2qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzkpmqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkp2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGN2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KC8oEGqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KC8oEWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KC8oEmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KC8oE2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzkqGqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkqWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KKokcmqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `paperless_billing_flag` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDCHoGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KDCHoWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KDCHomqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KDCHo2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzkqmqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_JZzkq2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KKokc2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `paperless_billing_flag` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDFyAGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KDFyAWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KDFyAmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KDFyA2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzkrGqQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="4171">
+        <parameters xmi:id="_JZzkrWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KKokdGqQEfG1lqxu6qhfiQ" body="SELECT SUM(`paperless_billing_flag`), COUNT(`paperless_billing_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDJcYGqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KDJcYWqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KDJcYmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KDJcY2qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KDJcZGqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KDJcZWqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KDJcZmqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KDJcZ2qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KDJcaGqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MedianIndicator" xmi:id="_JZzkrmqQEfG1lqxu6qhfiQ" computed="true" median="1.0">
+        <parameters xmi:id="_JZzkr2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Median_0.1.definition#_ccI48hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KUqqMGqQEfG1lqxu6qhfiQ" body="SELECT `paperless_billing_flag` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `paperless_billing_flag` IS NOT NULL  ORDER BY `paperless_billing_flag` LIMIT 3521,1" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDMfsGqQEfG1lqxu6qhfiQ" name="Median" label="Median">
+          <taggedValue xmi:id="_KDMfsWqQEfG1lqxu6qhfiQ" tag="Description" value="The median is the value separating the higher half of a sample, a population or a probability distribution from the lower half"/>
+          <taggedValue xmi:id="_KDMfsmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the median of the records"/>
+          <sqlGenericExpression xmi:id="_KDMfs2qQEfG1lqxu6qhfiQ" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) AND  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KDMftGqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KDMftWqQEfG1lqxu6qhfiQ" body="SELECT AVG(&lt;%=__COLUMN_NAMES__%>) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KDMftmqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="10"/>
+          <sqlGenericExpression xmi:id="_KDMft2qQEfG1lqxu6qhfiQ" body=" SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="9"/>
+          <sqlGenericExpression xmi:id="_KDMfuGqQEfG1lqxu6qhfiQ" body="SELECT AVG(double(&lt;%=__COLUMN_NAMES__%>)) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="DB2"/>
+          <sqlGenericExpression xmi:id="_KDMfuWqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KDMfumqQEfG1lqxu6qhfiQ" body="SELECT AVG(cast (&lt;%=__COLUMN_NAMES__%> AS NUMERIC)) FROM (SELECT distinct &lt;%=__COLUMN_NAMES__%> FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) STT WHERE (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) AS SOU WHERE SOU.&lt;%=__COLUMN_NAMES__%> &lt;= STT.&lt;%=__COLUMN_NAMES__%>) AND (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%>) AS SUR WHERE SUR.&lt;%=__COLUMN_NAMES__%> >= STT.&lt;%=__COLUMN_NAMES__%>) ) T" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_KDMfu2qQEfG1lqxu6qhfiQ" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_KDMfvGqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzksGqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzksWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzksmqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KUqqMWqQEfG1lqxu6qhfiQ" body="SELECT MIN(`paperless_billing_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KDR_QGqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KDR_QWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KDR_QmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KDR_Q2qQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzks2qQEfG1lqxu6qhfiQ" count="7043" computed="true" value="1" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KUqqMmqQEfG1lqxu6qhfiQ" body="SELECT MAX(`paperless_billing_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KDW3wGqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KDW3wWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KDW3wmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KDW3w2qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzktGqQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="456116.60">
+        <parameters xmi:id="_JZzktWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KUqqM2qQEfG1lqxu6qhfiQ" body="SELECT SUM(`monthly_charges`), COUNT(`monthly_charges`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDaiIGqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KDaiIWqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KDaiImqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KDaiI2qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KDaiJGqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KDaiJWqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KDaiJmqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KDaiJ2qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KDaiKGqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MedianIndicator" xmi:id="_JZzktmqQEfG1lqxu6qhfiQ" computed="true" median="70.35">
+        <parameters xmi:id="_JZzkt2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Median_0.1.definition#_ccI48hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Kb23UGqQEfG1lqxu6qhfiQ" body="SELECT `monthly_charges` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `monthly_charges` IS NOT NULL  ORDER BY `monthly_charges` LIMIT 3521,1" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDezkGqQEfG1lqxu6qhfiQ" name="Median" label="Median">
+          <taggedValue xmi:id="_KDezkWqQEfG1lqxu6qhfiQ" tag="Description" value="The median is the value separating the higher half of a sample, a population or a probability distribution from the lower half"/>
+          <taggedValue xmi:id="_KDezkmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the median of the records"/>
+          <sqlGenericExpression xmi:id="_KDezk2qQEfG1lqxu6qhfiQ" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) AND  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KDezlGqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KDezlWqQEfG1lqxu6qhfiQ" body="SELECT AVG(&lt;%=__COLUMN_NAMES__%>) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KDezlmqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="10"/>
+          <sqlGenericExpression xmi:id="_KDezl2qQEfG1lqxu6qhfiQ" body=" SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="9"/>
+          <sqlGenericExpression xmi:id="_KDezmGqQEfG1lqxu6qhfiQ" body="SELECT AVG(double(&lt;%=__COLUMN_NAMES__%>)) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="DB2"/>
+          <sqlGenericExpression xmi:id="_KDezmWqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KDezmmqQEfG1lqxu6qhfiQ" body="SELECT AVG(cast (&lt;%=__COLUMN_NAMES__%> AS NUMERIC)) FROM (SELECT distinct &lt;%=__COLUMN_NAMES__%> FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) STT WHERE (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) AS SOU WHERE SOU.&lt;%=__COLUMN_NAMES__%> &lt;= STT.&lt;%=__COLUMN_NAMES__%>) AND (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%>) AS SUR WHERE SUR.&lt;%=__COLUMN_NAMES__%> >= STT.&lt;%=__COLUMN_NAMES__%>) ) T" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_KDezm2qQEfG1lqxu6qhfiQ" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_KDeznGqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzkuGqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzkuWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzkumqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="18.25" datatype="3">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Kb23UWqQEfG1lqxu6qhfiQ" body="SELECT MIN(`monthly_charges`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KDjFAGqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KDjFAWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KDjFAmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KDjFA2qQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzku2qQEfG1lqxu6qhfiQ" count="7043" computed="true" value="118.75" datatype="3">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Kb23UmqQEfG1lqxu6qhfiQ" body="SELECT MAX(`monthly_charges`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KDnWcGqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KDnWcWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KDnWcmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KDnWc2qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzkvGqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkvWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGOGqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDqZwGqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KDqZwWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KDqZwmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KDqZw2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzkvmqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkv2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Kb23U2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `monthly_charges` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDuEIGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KDuEIWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KDuEImqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KDuEI2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzkwGqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="1585">
+        <parameters xmi:id="_JZzkwWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Kb23VGqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `monthly_charges` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KDxugGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KDxugWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KDxugmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KDxug2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzkwmqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkw2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGMWqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KD1Y4GqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KD1Y4WqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KD1Y4mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KD1Y42qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzkxGqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzkxWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Kb23VWqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `total_charges` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KD4cMGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KD4cMWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KD4cMmqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KD4cM2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzkxmqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="6531">
+        <parameters xmi:id="_JZzkx2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Kb23VmqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `total_charges` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KD7fgGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KD7fgWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KD7fgmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KD7fg2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzkyGqQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="16056168.70">
+        <parameters xmi:id="_JZzkyWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Kb23V2qQEfG1lqxu6qhfiQ" body="SELECT SUM(`total_charges`), COUNT(`total_charges`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KD_J4GqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KD_J4WqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KD_J4mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KD_J42qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KD_J5GqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KD_J5WqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KD_J5mqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KD_J52qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KD_J6GqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MedianIndicator" xmi:id="_JZzkymqQEfG1lqxu6qhfiQ" computed="true" median="1394.55">
+        <parameters xmi:id="_JZzky2qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Median_0.1.definition#_ccI48hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiK6sGqQEfG1lqxu6qhfiQ" body="SELECT `total_charges` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `total_charges` IS NOT NULL  ORDER BY `total_charges` LIMIT 3521,1" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KECNMGqQEfG1lqxu6qhfiQ" name="Median" label="Median">
+          <taggedValue xmi:id="_KECNMWqQEfG1lqxu6qhfiQ" tag="Description" value="The median is the value separating the higher half of a sample, a population or a probability distribution from the lower half"/>
+          <taggedValue xmi:id="_KECNMmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the median of the records"/>
+          <sqlGenericExpression xmi:id="_KECNM2qQEfG1lqxu6qhfiQ" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) AND  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KECNNGqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KECNNWqQEfG1lqxu6qhfiQ" body="SELECT AVG(&lt;%=__COLUMN_NAMES__%>) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KECNNmqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="10"/>
+          <sqlGenericExpression xmi:id="_KECNN2qQEfG1lqxu6qhfiQ" body=" SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="9"/>
+          <sqlGenericExpression xmi:id="_KECNOGqQEfG1lqxu6qhfiQ" body="SELECT AVG(double(&lt;%=__COLUMN_NAMES__%>)) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="DB2"/>
+          <sqlGenericExpression xmi:id="_KECNOWqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KECNOmqQEfG1lqxu6qhfiQ" body="SELECT AVG(cast (&lt;%=__COLUMN_NAMES__%> AS NUMERIC)) FROM (SELECT distinct &lt;%=__COLUMN_NAMES__%> FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) STT WHERE (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) AS SOU WHERE SOU.&lt;%=__COLUMN_NAMES__%> &lt;= STT.&lt;%=__COLUMN_NAMES__%>) AND (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%>) AS SUR WHERE SUR.&lt;%=__COLUMN_NAMES__%> >= STT.&lt;%=__COLUMN_NAMES__%>) ) T" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_KECNO2qQEfG1lqxu6qhfiQ" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_KECNPGqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzkzGqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzkzWqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzkzmqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0.00" datatype="3">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhwGqQEfG1lqxu6qhfiQ" body="SELECT MIN(`total_charges`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KEGeoGqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KEGeoWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KEGeomqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KEGeo2qQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzkz2qQEfG1lqxu6qhfiQ" count="7043" computed="true" value="8684.80" datatype="3">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhwWqQEfG1lqxu6qhfiQ" body="SELECT MAX(`total_charges`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KEKJAGqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KEKJAWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KEKJAmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KEKJA2qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzk0GqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzk0WqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGNmqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KEPokGqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KEPokWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KEPokmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KEPok2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzk0mqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzk02qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhwmqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `total_charges_was_imputed` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KET6AGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KET6AWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KET6AmqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KET6A2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzk1GqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_JZzk1WqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhw2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `total_charges_was_imputed` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KEYygGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KEYygWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KEYygmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KEYyg2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzk1mqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzk12qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzk2GqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhxGqQEfG1lqxu6qhfiQ" body="SELECT MIN(`total_charges_was_imputed`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KEcc4GqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KEcc4WqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KEcc4mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KEcc42qQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzk2WqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="1" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhxWqQEfG1lqxu6qhfiQ" body="SELECT MAX(`total_charges_was_imputed`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KEguUGqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KEguUWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KEguUmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KEguU2qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzk2mqQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="11">
+        <parameters xmi:id="_JZzk22qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhxmqQEfG1lqxu6qhfiQ" body="SELECT SUM(`total_charges_was_imputed`), COUNT(`total_charges_was_imputed`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KEjxoGqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KEjxoWqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KEjxomqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KEjxo2qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KEjxpGqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KEjxpWqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KEjxpmqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KEjxp2qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KEjxqGqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzk3GqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzk3WqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGNWqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KEmN4GqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KEmN4WqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KEmN4mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KEmN42qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzk3mqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzk32qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhx2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `churn_flag` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KErGYGqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KErGYWqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KErGYmqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KErGY2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzk4GqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_JZzk4WqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhyGqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `churn_flag` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KEuJsGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KEuJsWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KEuJsmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KEuJs2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzk4mqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzk42qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzk5GqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhyWqQEfG1lqxu6qhfiQ" body="SELECT MIN(`churn_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KEybIGqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KEybIWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KEybImqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KEybI2qQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzk5WqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="1" datatype="-6">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhymqQEfG1lqxu6qhfiQ" body="SELECT MAX(`churn_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KE2FgGqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KE2FgWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KE2FgmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KE2Fg2qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzk5mqQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="1869">
+        <parameters xmi:id="_JZzk52qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhy2qQEfG1lqxu6qhfiQ" body="SELECT SUM(`churn_flag`), COUNT(`churn_flag`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KE5v4GqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KE5v4WqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KE5v4mqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KE5v42qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KE5v5GqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KE5v5WqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KE5v5mqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KE5v52qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KE5v6GqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_JZzk6GqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzk6WqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KFaGM2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KE_PcGqQEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_KE_PcWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_KE_PcmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_KE_Pc2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_JZzk6mqQEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_JZzk62qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhzGqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `service_score` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KFDg4GqQEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_KFDg4WqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_KFDg4mqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_KFDg42qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_JZzk7GqQEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="7">
+        <parameters xmi:id="_JZzk7WqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhzWqQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `service_score` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KFHLQGqQEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_KFHLQWqQEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_KFHLQmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_KFHLQ2qQEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_JZzk7mqQEfG1lqxu6qhfiQ" count="7043" computed="true" sumStr="14353">
+        <parameters xmi:id="_JZzk72qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KiLhzmqQEfG1lqxu6qhfiQ" body="SELECT SUM(`service_score`), COUNT(`service_score`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KFK1oGqQEfG1lqxu6qhfiQ" name="Mean" label="Mean">
+          <taggedValue xmi:id="_KFK1oWqQEfG1lqxu6qhfiQ" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_KFK1omqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_KFK1o2qQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KFK1pGqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KFK1pWqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KFK1pmqQEfG1lqxu6qhfiQ" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KFK1p2qQEfG1lqxu6qhfiQ" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_KFK1qGqQEfG1lqxu6qhfiQ" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MedianIndicator" xmi:id="_JZzk8GqQEfG1lqxu6qhfiQ" computed="true" median="2.0">
+        <parameters xmi:id="_JZzk8WqQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Median_0.1.definition#_ccI48hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KmYsUGqQEfG1lqxu6qhfiQ" body="SELECT `service_score` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `service_score` IS NOT NULL  ORDER BY `service_score` LIMIT 3521,1" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_KFOgAGqQEfG1lqxu6qhfiQ" name="Median" label="Median">
+          <taggedValue xmi:id="_KFOgAWqQEfG1lqxu6qhfiQ" tag="Description" value="The median is the value separating the higher half of a sample, a population or a probability distribution from the lower half"/>
+          <taggedValue xmi:id="_KFOgAmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the median of the records"/>
+          <sqlGenericExpression xmi:id="_KFOgA2qQEfG1lqxu6qhfiQ" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) AND  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END)  + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+          <sqlGenericExpression xmi:id="_KFOgBGqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_KFOgBWqQEfG1lqxu6qhfiQ" body="SELECT AVG(&lt;%=__COLUMN_NAMES__%>) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_KFOgBmqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="10"/>
+          <sqlGenericExpression xmi:id="_KFOgB2qQEfG1lqxu6qhfiQ" body=" SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" version="9"/>
+          <sqlGenericExpression xmi:id="_KFOgCGqQEfG1lqxu6qhfiQ" body="SELECT AVG(double(&lt;%=__COLUMN_NAMES__%>)) FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) OVER( ) total, CAST(COUNT(*) OVER( ) AS DECIMAL)/2 mid, CEIL(CAST(COUNT(*) OVER( ) AS DECIMAL)/2) next, ROW_NUMBER() OVER ( ORDER BY &lt;%=__COLUMN_NAMES__%>) rn FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>) x WHERE ( MOD(total,2) = 0&#x9; AND rn IN ( mid, mid+1 ) ) OR ( MOD(total,2) = 1 AND rn = next )" language="DB2"/>
+          <sqlGenericExpression xmi:id="_KFOgCWqQEfG1lqxu6qhfiQ" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_KFOgCmqQEfG1lqxu6qhfiQ" body="SELECT AVG(cast (&lt;%=__COLUMN_NAMES__%> AS NUMERIC)) FROM (SELECT distinct &lt;%=__COLUMN_NAMES__%> FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) STT WHERE (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> ) AS SOU WHERE SOU.&lt;%=__COLUMN_NAMES__%> &lt;= STT.&lt;%=__COLUMN_NAMES__%>) AND (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>) &lt;= (SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM (SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> UNION ALL SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%>) AS SUR WHERE SUR.&lt;%=__COLUMN_NAMES__%> >= STT.&lt;%=__COLUMN_NAMES__%>) ) T" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_KFOgC2qQEfG1lqxu6qhfiQ" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_KFOgDGqQEfG1lqxu6qhfiQ" body="SELECT MEDIAN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_JZzk8mqQEfG1lqxu6qhfiQ" computed="true">
+        <parameters xmi:id="_JZzk82qQEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_JZzk9GqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="0" datatype="4">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KmZTYGqQEfG1lqxu6qhfiQ" body="SELECT MIN(`service_score`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KFSKYGqQEfG1lqxu6qhfiQ" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_KFSKYWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_KFSKYmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_KFSKY2qQEfG1lqxu6qhfiQ" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_JZzk9WqQEfG1lqxu6qhfiQ" count="7043" computed="true" value="6" datatype="4">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoIGqLEfG5aM4fdR_Gwg"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_KmZTYWqQEfG1lqxu6qhfiQ" body="SELECT MAX(`service_score`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_KFV0wGqQEfG1lqxu6qhfiQ" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_KFV0wWqQEfG1lqxu6qhfiQ" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_KFV0wmqQEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_KFV0w2qQEfG1lqxu6qhfiQ" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+    </results>
+    <parameters xmi:id="_1bJ6KmqOEfG1lqxu6qhfiQ" dataFilter="_JZzk-GqQEfG1lqxu6qhfiQ" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_JZy9YGqQEfG1lqxu6qhfiQ" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_NPHMoGqREfG1lqxu6qhfiQ" kind="Usage" supplier="_1bJ6IWqOEfG1lqxu6qhfiQ">
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Perfilado_Telco/REPORT_01_STG_TELCO_RETENTION_INTELLIGENCE_PROFILING_G1_0.1.rep#_rJIB8GqUEfG1lqxu6qhfiQ"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <dataquality.domain:Domain xmi:id="_JZzk-GqQEfG1lqxu6qhfiQ" name="PROFILE_04_STG_TELCO_NUMERICOS">
+    <ranges xmi:id="_JZzk-WqQEfG1lqxu6qhfiQ">
+      <expressions xmi:id="_JZzk-mqQEfG1lqxu6qhfiQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_JZzk-2qQEfG1lqxu6qhfiQ" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

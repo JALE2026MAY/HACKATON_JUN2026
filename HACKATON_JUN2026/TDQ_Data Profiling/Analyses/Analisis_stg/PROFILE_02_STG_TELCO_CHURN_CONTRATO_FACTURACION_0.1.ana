@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_uUJQoGqNEfG1lqxu6qhfiQ" name="PROFILE_02_STG_TELCO_CHURN_CONTRATO_FACTURACION" supplierDependency="_NO5KMGqREfG1lqxu6qhfiQ" creationDate="2026-06-17T15:47:15.616-0500" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_2A-EUGqLEfG5aM4fdR_Gwg"/>
+    <taggedValue xmi:id="_uUJQoWqNEfG1lqxu6qhfiQ" tag="Status" value="Draft"/>
+    <taggedValue xmi:id="_uUJQomqNEfG1lqxu6qhfiQ" tag="Author" value="jeferson.monje@trial.f221wfxsdlu6mpk.us.qlikcloud.com"/>
+    <taggedValue xmi:id="_uUJQo2qNEfG1lqxu6qhfiQ" tag="Purpose" value="Perfilar la variable objetivo de churn y las columnas de contrato, facturación y método de pago para validar su completitud, distribución y coherencia en la capa STG/Silver."/>
+    <taggedValue xmi:id="_uUJQpGqNEfG1lqxu6qhfiQ" tag="Description" value="Este análisis revisa las columnas churn_label, churn_flag, contract_type, paperless_billing_flag, payment_method, monthly_charges, total_charges, total_charges_raw y total_charges_was_imputed de la tabla stg_telco_customer_churn_grupo_uno. El objetivo es validar que la variable objetivo Churn esté correctamente estandarizada en formato textual y binario, que los dominios de contrato y método de pago estén controlados, y que las variables de facturación tengan rangos numéricos coherentes. También se revisa la marca de imputación de total_charges para documentar el tratamiento de valores faltantes."/>
+    <taggedValue xmi:id="_uUJQpWqNEfG1lqxu6qhfiQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_CWMCoGqOEfG1lqxu6qhfiQ" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_MBBJMWqOEfG1lqxu6qhfiQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_MBBJMmqOEfG1lqxu6qhfiQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_MBCXUGqOEfG1lqxu6qhfiQ" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_uUJQpmqNEfG1lqxu6qhfiQ">
+      <connection href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_E6SecGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoHGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn_GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoBGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoEGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+    </context>
+    <results xmi:id="_uUJQp2qNEfG1lqxu6qhfiQ">
+      <resultMetadata xmi:id="_uUJQqGqNEfG1lqxu6qhfiQ" executionDate="2026-06-17T16:38:18.416-0500" executionDuration="7972" message="" executionNumber="6" lastRunOk="true" lastExecutionNumberOk="6"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwQGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwQWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoHGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX0mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MlsjkGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_MlsjkWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_MlsjkmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_Mlsjk2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwQmqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwQ2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoHGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX12qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `churn_label` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MlwN8GqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_MlwN8WqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_MlwN8mqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_MlwN82qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwRGqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_MBBwRWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoHGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX2GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `churn_label` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mlz4UGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_Mlz4UWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_Mlz4UmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_Mlz4U2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwRmqOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_MBBwR2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoHGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-4GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `churn_label`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `churn_label` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Ml27oGqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_Ml27oWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_Ml27omqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_Ml27o2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_Ml27pGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_Ml27pWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_Ml27pmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_Ml27p2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_Ml27qGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_Ml27qWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBwSGqOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="2">
+        <parameters xmi:id="_MBBwSWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoHGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-4WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `churn_label`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `churn_label` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Ml7NEGqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_Ml7NEWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_Ml7NEmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_Ml7NE2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_Ml7NFGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_Ml7NFWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_Ml7NFmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_Ml7NF2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_Ml7NGGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_Ml7NGWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_MBBwSmqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwS2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoHGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-4mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`churn_label`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`churn_label`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmAFkGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_MmAFkWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_MmAFkmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_MmAFk2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MmAFlGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MmAFlWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_MmAFlmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MmAFl2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwTWqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwTmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpYwwGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmFlIGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_MmFlIWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_MmFlImqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_MmFlI2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwT2qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwUGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-42qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `churn_flag` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmJ2kGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_MmJ2kWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_MmJ2kmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_MmJ2k2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwUWqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_MBBwUmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-5GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `churn_flag` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmOvEGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_MmOvEWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_MmOvEmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_MmOvE2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwU2qOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_MBBwVGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-5WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `churn_flag`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `churn_flag` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmUOoGqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_MmUOoWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_MmUOomqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_MmUOo2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MmUOpGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MmUOpWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MmUOpmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MmUOp2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MmUOqGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MmUOqWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBwVWqOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="2">
+        <parameters xmi:id="_MBBwVmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoGGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-5mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `churn_flag`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `churn_flag` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmZHIGqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_MmZHIWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_MmZHImqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_MmZHI2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MmZHJGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MmZHJWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MmZHJmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MmZHJ2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MmZHKGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MmZHKWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwWGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwWWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn_GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX1WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmemsGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_MmemsWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_MmemsmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_Mmems2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwWmqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwW2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn_GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-52qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `contract_type` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmiREGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_MmiREWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_MmiREmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_MmiRE2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwXGqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_MBBwXWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn_GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-6GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `contract_type` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmmigGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_MmmigWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_MmmigmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_Mmmig2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwXmqOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_MBBwX2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn_GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-6WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `contract_type`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `contract_type` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmrbAGqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_MmrbAWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_MmrbAmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_MmrbA2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MmrbBGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MmrbBWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MmrbBmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MmrbB2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MmrbCGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MmrbCWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBwYGqOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="3">
+        <parameters xmi:id="_MBBwYWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn_GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-6mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `contract_type`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `contract_type` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MmvscGqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_MmvscWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_MmvscmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_Mmvsc2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MmvsdGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MmvsdWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MmvsdmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_Mmvsd2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MmvseGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MmvseWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_MBBwYmqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwY2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn_GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-62qOEfG1lqxu6qhfiQ" body="SELECT COUNT(`contract_type`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`contract_type`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mm1MAGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_Mm1MAWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_Mm1MAmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_Mm1MA2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_Mm1MBGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_Mm1MBWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_Mm1MBmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_Mm1MB2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwZWqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwZmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX02qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mm6EgGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_Mm6EgWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_Mm6EgmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_Mm6Eg2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwZ2qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwaGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-7GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `paperless_billing_flag` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mm9u4GqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_Mm9u4WqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_Mm9u4mqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_Mm9u42qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwaWqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_MBBwamqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-7WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `paperless_billing_flag` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnD1gGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_MnD1gWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_MnD1gmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_MnD1g2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwa2qOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_MBBwbGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZ-7mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `paperless_billing_flag`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `paperless_billing_flag` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnIG8GqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_MnIG8WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_MnIG8mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_MnIG82qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MnIG9GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MnIG9WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MnIG9mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MnIG92qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MnIG-GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MnIG-WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBwbWqOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="2">
+        <parameters xmi:id="_MBBwbmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoAGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal8GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `paperless_billing_flag`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `paperless_billing_flag` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnNmgGqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_MnNmgWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_MnNmgmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_MnNmg2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MnNmhGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MnNmhWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MnNmhmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MnNmh2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MnNmiGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MnNmiWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwcGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwcWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoBGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX1mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnRQ4GqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_MnRQ4WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_MnRQ4mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_MnRQ42qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwcmqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwc2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoBGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal8WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `payment_method` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnWJYGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_MnWJYWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_MnWJYmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_MnWJY2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwdGqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="4">
+        <parameters xmi:id="_MBBwdWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoBGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal8mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `payment_method` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnesQGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_MnesQWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_MnesQmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_MnesQ2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwdmqOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_MBBwd2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoBGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal82qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `payment_method`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `payment_method` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnkL0GqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_MnkL0WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_MnkL0mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_MnkL02qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MnkL1GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MnkL1WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MnkL1mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MnkL12qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MnkL2GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MnkL2WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBweGqOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="4">
+        <parameters xmi:id="_MBBweWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoBGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal9GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `payment_method`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `payment_method` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnpEUGqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_MnpEUWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_MnpEUmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_MnpEU2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MnpEVGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MnpEVWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MnpEVmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MnpEV2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MnpEWGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MnpEWWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_MBBwemqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwe2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoBGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal9WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`payment_method`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`payment_method`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnsusGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_MnsusWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_MnsusmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_Mnsus2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MnsutGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MnsutWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_MnsutmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_Mnsut2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwfWqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwfmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX0WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MnxAIGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_MnxAIWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_MnxAImqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_MnxAI2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwf2qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwgGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal9mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `monthly_charges` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mn3GwGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_Mn3GwWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_Mn3GwmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_Mn3Gw2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwgWqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="1585">
+        <parameters xmi:id="_MBBwgmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal92qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `monthly_charges` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mn7_QGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_Mn7_QWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_Mn7_QmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_Mn7_Q2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwg2qOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="381">
+        <parameters xmi:id="_MBBwhGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal-GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `monthly_charges`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `monthly_charges` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MoBe0GqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_MoBe0WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_MoBe0mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_MoBe02qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MoBe1GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MoBe1WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MoBe1mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MoBe12qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MoBe2GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MoBe2WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBwhWqOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="1204">
+        <parameters xmi:id="_MBBwhmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoCGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal-WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `monthly_charges`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `monthly_charges` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MoG-YGqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_MoG-YWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_MoG-YmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_MoG-Y2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MoG-ZGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MoG-ZWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MoG-ZmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MoG-Z2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MoG-aGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MoG-aWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwiGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwiWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpYwwWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MoL24GqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_MoL24WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_MoL24mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_MoL242qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwimqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwi2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal-mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `total_charges` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MoR9gGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_MoR9gWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_MoR9gmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_MoR9g2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwjGqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="6531">
+        <parameters xmi:id="_MBBwjWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Mpal-2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `total_charges` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MoWO8GqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_MoWO8WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_MoWO8mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_MoWO82qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwjmqOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="6172">
+        <parameters xmi:id="_MBBwj2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNAGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `total_charges`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `total_charges` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MobHcGqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_MobHcWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_MobHcmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_MobHc2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MobHdGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MobHdWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MobHdmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MobHd2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MobHeGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MobHeWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBwkGqOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="359">
+        <parameters xmi:id="_MBBwkWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoDGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNAWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `total_charges`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `total_charges` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Moex0GqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_Moex0WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_Moex0mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_Moex02qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_Moex1GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_Moex1WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_Moex1mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_Moex12qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_Moex2GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_Moex2WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwk2qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwlGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoEGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX1GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MojqUGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_MojqUWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_MojqUmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_MojqU2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwlWqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwlmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoEGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNAmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `total_charges_raw` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mooi0GqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_Mooi0WqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_Mooi0mqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_Mooi02qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwl2qOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="6531">
+        <parameters xmi:id="_MBBwmGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoEGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNA2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `total_charges_raw` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mos0QGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_Mos0QWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_Mos0QmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_Mos0Q2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwmWqOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="6172">
+        <parameters xmi:id="_MBBwmmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoEGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNBGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `total_charges_raw`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `total_charges_raw` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MoxswGqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_MoxswWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_MoxswmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_Moxsw2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MoxsxGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MoxsxWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MoxsxmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_Moxsx2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MoxsyGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MoxsyWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBwm2qOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="359">
+        <parameters xmi:id="_MBBwnGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoEGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNBWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `total_charges_raw`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `total_charges_raw` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mo2lQGqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_Mo2lQWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_Mo2lQmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_Mo2lQ2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_Mo2lRGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_Mo2lRWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_Mo2lRmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_Mo2lR2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_Mo2lSGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_Mo2lSWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_MBBwnWqOEfG1lqxu6qhfiQ" count="7043" computed="true" blankCount="11">
+        <parameters xmi:id="_MBBwnmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoEGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNBmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`total_charges_raw`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`total_charges_raw`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Mo7dwGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_Mo7dwWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_Mo7dwmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_Mo7dw2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_Mo7dxGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_Mo7dxWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_Mo7dxmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_Mo7dx2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwoGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwoWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpZX0GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MpBkYGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_MpBkYWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_MpBkYmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_MpBkY2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_MBBwomqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_MBBwo2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNB2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `total_charges_was_imputed` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MpGc4GqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_MpGc4WqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_MpGc4mqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_MpGc42qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_MBBwpGqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_MBBwpWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNCGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `total_charges_was_imputed` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MpKHQGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_MpKHQWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_MpKHQmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_MpKHQ2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_MBBwpmqOEfG1lqxu6qhfiQ" count="7043" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_MBBwp2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNCWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `total_charges_was_imputed`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  GROUP BY `total_charges_was_imputed` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MpPm0GqOEfG1lqxu6qhfiQ" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_MpPm0WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_MpPm0mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_MpPm02qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MpPm1GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MpPm1WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MpPm1mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MpPm12qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MpPm2GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MpPm2WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_MBBwqGqOEfG1lqxu6qhfiQ" count="7043" computed="true" duplicateValueCount="2">
+        <parameters xmi:id="_MBBwqWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_MpbNCmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT `total_charges_was_imputed`, COUNT(*) mycount FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno`  m  GROUP BY `total_charges_was_imputed` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_MpT4QGqOEfG1lqxu6qhfiQ" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_MpT4QWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_MpT4QmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_MpT4Q2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_MpT4RGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_MpT4RWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_MpT4RmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_MpT4R2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_MpT4SGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_MpT4SWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_uUJQqWqNEfG1lqxu6qhfiQ" dataFilter="_MBCXUWqOEfG1lqxu6qhfiQ" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_MBBJMGqOEfG1lqxu6qhfiQ" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_NO5KMGqREfG1lqxu6qhfiQ" kind="Usage" supplier="_uUJQoGqNEfG1lqxu6qhfiQ">
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Perfilado_Telco/REPORT_01_STG_TELCO_RETENTION_INTELLIGENCE_PROFILING_G1_0.1.rep#_rJIB8GqUEfG1lqxu6qhfiQ"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <dataquality.domain:Domain xmi:id="_MBCXUWqOEfG1lqxu6qhfiQ" name="PROFILE_02_STG_TELCO_CHURN_CONTRATO_FACTURACION">
+    <ranges xmi:id="_MBCXUmqOEfG1lqxu6qhfiQ">
+      <expressions xmi:id="_MBCXU2qOEfG1lqxu6qhfiQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_MBCXVGqOEfG1lqxu6qhfiQ" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
