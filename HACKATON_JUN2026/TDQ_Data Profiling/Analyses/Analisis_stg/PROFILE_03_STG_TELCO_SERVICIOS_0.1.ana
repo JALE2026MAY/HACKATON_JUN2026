@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_Tc0MYGqOEfG1lqxu6qhfiQ" name="PROFILE_03_STG_TELCO_SERVICIOS" supplierDependency="_NPAe8GqREfG1lqxu6qhfiQ" creationDate="2026-06-17T15:51:24.837-0500" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_2A-EUGqLEfG5aM4fdR_Gwg"/>
+    <taggedValue xmi:id="_Tc0MYWqOEfG1lqxu6qhfiQ" tag="Status" value="Draft"/>
+    <taggedValue xmi:id="_Tc0MYmqOEfG1lqxu6qhfiQ" tag="Author" value="jeferson.monje@trial.f221wfxsdlu6mpk.us.qlikcloud.com"/>
+    <taggedValue xmi:id="_Tc0MY2qOEfG1lqxu6qhfiQ" tag="Purpose" value="Perfilar las columnas de servicios TELCO contratados para validar dominios categóricos, completitud y coherencia de servicios telefónicos, internet y servicios digitales."/>
+    <taggedValue xmi:id="_Tc0MZGqOEfG1lqxu6qhfiQ" tag="Description" value="Este análisis evalúa las columnas phone_service, multiple_lines, internet_service, online_security, online_backup, device_protection, tech_support, streaming_tv y streaming_movies de la tabla stg_telco_customer_churn_grupo_uno. El objetivo es revisar la distribución de los servicios contratados, verificar que los dominios categóricos estén controlados y generar evidencia sobre la composición de servicios de los clientes para posteriores análisis de churn, segmentación y acciones de retención."/>
+    <taggedValue xmi:id="_Tc0MZWqOEfG1lqxu6qhfiQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_jlb1wGqOEfG1lqxu6qhfiQ" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_sNMVwWqOEfG1lqxu6qhfiQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_sNMVwmqOEfG1lqxu6qhfiQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_sNM9IWqOEfG1lqxu6qhfiQ" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_Tc0MZmqOEfG1lqxu6qhfiQ">
+      <connection href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_E6SecGqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn2GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn3GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn4GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn5GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn6GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn7GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn8GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn9GqLEfG5aM4fdR_Gwg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn-GqLEfG5aM4fdR_Gwg"/>
+    </context>
+    <results xmi:id="_Tc0MZ2qOEfG1lqxu6qhfiQ">
+      <resultMetadata xmi:id="_Tc0MaGqOEfG1lqxu6qhfiQ" executionDate="2026-06-17T16:38:26.390-0500" executionDuration="5850" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="5"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM80GqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM80WqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn2GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPdGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tQ51gGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tQ51gWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tQ51gmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tQ51g2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM80mqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM802qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn2GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPeWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `phone_service` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tRiHoGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tRiHoWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tRiHomqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tRiHo2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM81GqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM81WqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn2GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPemqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`phone_service`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`phone_service`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tRlK8GqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tRlK8WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tRlK8mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tRlK82qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tRlK9GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tRlK9WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tRlK9mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tRlK92qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM81mqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="2">
+        <parameters xmi:id="_sNM812qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn2GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPe2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `phone_service` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tRoOQGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tRoOQWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tRoOQmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tRoOQ2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM82WqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM82mqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn3GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPdmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tRqDcGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tRqDcWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tRqDcmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tRqDc2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM822qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM83GqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn3GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPfGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `multiple_lines` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tRtGwGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tRtGwWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tRtGwmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tRtGw2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM83WqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM83mqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn3GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPfWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`multiple_lines`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`multiple_lines`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tRwxIGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tRwxIWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tRwxImqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tRwxI2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tRwxJGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tRwxJWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tRwxJmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tRwxJ2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM832qOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_sNM84GqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn3GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPfmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `multiple_lines` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tR0bgGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tR0bgWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tR0bgmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tR0bg2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM84mqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM842qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn4GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPcWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tR4s8GqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tR4s8WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tR4s8mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tR4s82qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM85GqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM85WqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn4GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPf2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `internet_service` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tR8XUGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tR8XUWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tR8XUmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tR8XU2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM85mqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM852qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn4GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPgGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`internet_service`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`internet_service`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSAowGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tSAowWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tSAowmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tSAow2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tSAoxGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tSAoxWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tSAoxmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tSAox2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM86GqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_sNM86WqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn4GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPgWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `internet_service` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSE6MGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tSE6MWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tSE6MmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tSE6M2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM862qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM87GqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn5GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPcmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSH9gGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tSH9gWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tSH9gmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tSH9g2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM87WqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM87mqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn5GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPgmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `online_security` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSLn4GqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tSLn4WqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tSLn4mqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tSLn42qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM872qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM88GqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn5GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2gGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`online_security`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`online_security`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSPSQGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tSPSQWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tSPSQmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tSPSQ2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tSPSRGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tSPSRWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tSPSRmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tSPSR2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM88WqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_sNM88mqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn5GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2gWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `online_security` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSSVkGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tSSVkWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tSSVkmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tSSVk2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM89GqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM89WqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn6GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPc2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSX1IGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tSX1IWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tSX1ImqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tSX1I2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM89mqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM892qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn6GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2gmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `online_backup` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSbfgGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tSbfgWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tSbfgmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tSbfg2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM8-GqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM8-WqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn6GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2g2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(`online_backup`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`online_backup`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSgYAGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tSgYAWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tSgYAmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tSgYA2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tSgYBGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tSgYBWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tSgYBmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tSgYB2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM8-mqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_sNM8-2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn6GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2hGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `online_backup` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSkpcGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tSkpcWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tSkpcmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tSkpc2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM8_WqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM8_mqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn7GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPdWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSoT0GqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tSoT0WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tSoT0mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tSoT02qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM8_2qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9AGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn7GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2hWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `device_protection` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSr-MGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tSr-MWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tSr-MmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tSr-M2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM9AWqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9AmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn7GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2hmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`device_protection`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`device_protection`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSwPoGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tSwPoWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tSwPomqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tSwPo2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tSwPpGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tSwPpWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tSwPpmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tSwPp2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM9A2qOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_sNM9BGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn7GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2h2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `device_protection` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tSzS8GqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tSzS8WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tSzS8mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tSzS82qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM9BmqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9B2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn8GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPcGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tS3kYGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tS3kYWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tS3kYmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tS3kY2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM9CGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9CWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn8GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2iGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `tech_support` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tS6nsGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tS6nsWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tS6nsmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tS6ns2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM9CmqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9C2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn8GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2iWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`tech_support`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`tech_support`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tS9D8GqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tS9D8WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tS9D8mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tS9D82qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tS9D9GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tS9D9WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tS9D9mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tS9D92qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM9DGqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_sNM9DWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn8GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2imqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `tech_support` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTAuUGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tTAuUWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tTAuUmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tTAuU2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM9D2qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9EGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn9GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPd2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTDxoGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tTDxoWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tTDxomqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tTDxo2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM9EWqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9EmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn9GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2i2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `streaming_tv` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTHcAGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tTHcAWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tTHcAmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tTHcA2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM9E2qOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9FGqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn9GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2jGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(`streaming_tv`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`streaming_tv`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTLGYGqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tTLGYWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tTLGYmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tTLGY2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tTLGZGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tTLGZWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tTLGZmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tTLGZ2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM9FWqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_sNM9FmqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn9GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2jWqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `streaming_tv` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTOJsGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tTOJsWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tTOJsmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tTOJs2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sNM9GGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9GWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn-GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTfPeGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTTCMGqOEfG1lqxu6qhfiQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_tTTCMWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_tTTCMmqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_tTTCM2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_sNM9GmqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9G2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn-GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2jmqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE `streaming_movies` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTWFgGqOEfG1lqxu6qhfiQ" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_tTWFgWqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_tTWFgmqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_tTWFg2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_sNM9HGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
+        <parameters xmi:id="_sNM9HWqOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn-GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2j2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(`streaming_movies`) FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` WHERE TRIM(`streaming_movies`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTZI0GqOEfG1lqxu6qhfiQ" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_tTZI0WqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_tTZI0mqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_tTZI02qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_tTZI1GqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_tTZI1WqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_tTZI1mqOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_tTZI12qOEfG1lqxu6qhfiQ" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_sNM9HmqOEfG1lqxu6qhfiQ" count="7043" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_sNM9H2qOEfG1lqxu6qhfiQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_Zmfn-GqLEfG5aM4fdR_Gwg"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tTf2kGqOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT `streaming_movies` FROM `DSADEV`.`stg_telco_customer_churn_grupo_uno` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_tTcMIGqOEfG1lqxu6qhfiQ" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_tTcMIWqOEfG1lqxu6qhfiQ" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_tTcMImqOEfG1lqxu6qhfiQ" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_tTcMI2qOEfG1lqxu6qhfiQ" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_Tc0MaWqOEfG1lqxu6qhfiQ" dataFilter="_sNM9ImqOEfG1lqxu6qhfiQ" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_sNMVwGqOEfG1lqxu6qhfiQ" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_NPAe8GqREfG1lqxu6qhfiQ" kind="Usage" supplier="_Tc0MYGqOEfG1lqxu6qhfiQ">
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Perfilado_Telco/REPORT_01_STG_TELCO_RETENTION_INTELLIGENCE_PROFILING_G1_0.1.rep#_rJIB8GqUEfG1lqxu6qhfiQ"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <dataquality.domain:Domain xmi:id="_sNM9ImqOEfG1lqxu6qhfiQ" name="PROFILE_03_STG_TELCO_SERVICIOS">
+    <ranges xmi:id="_sNM9I2qOEfG1lqxu6qhfiQ">
+      <expressions xmi:id="_sNM9JGqOEfG1lqxu6qhfiQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_sNM9JWqOEfG1lqxu6qhfiQ" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

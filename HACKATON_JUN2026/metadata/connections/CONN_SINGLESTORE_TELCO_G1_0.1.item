@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:TacokitDatabaseConnection xmi:id="_E6SecGqLEfG5aM4fdR_Gwg" name="CONN_SINGLESTORE_TELCO_G1" supplierDependency="_2A-EUGqLEfG5aM4fdR_Gwg" properties="configuration.parameters&#xA;&#xA;[]&#xA;&#xA;configuration.port&#xA;&#xA;80&#xA;&#xA;configuration.dbMapping&#xA;&#xA;singlestore_id&#xA;&#xA;configuration.password&#xA;&#xA;enc:system.encryption.key.v1:oyV1rrZxYjuTV7eOdGq/Eq81gXWVYTydje0p69PUxuc3Eg0=&#xA;&#xA;configuration.snowflakeAuth.authenticationType&#xA;&#xA;BASIC&#xA;&#xA;configuration.useDataSource&#xA;&#xA;false&#xA;&#xA;__TACOKIT_CONFIG_ID&#xA;&#xA;bmV3amRiYyNKREJDI2RhdGFzdG9yZSNKREJDRGF0YVN0b3Jl&#xA;&#xA;configuration.jdbcClass&#xA;&#xA;org.mariadb.jdbc.Driver&#xA;&#xA;configuration.useSharedDBConnection&#xA;&#xA;false&#xA;&#xA;configuration.enableDBType&#xA;&#xA;false&#xA;&#xA;configuration.jdbcDriver&#xA;&#xA;[{configuration.jdbcDriver[].path=mvn:org.mariadb.jdbc/mariadb-java-client/2.5.3/jar}]&#xA;&#xA;configuration.__version&#xA;&#xA;-1&#xA;&#xA;configuration.userId&#xA;&#xA;usr_acme&#xA;&#xA;configuration.snowflakeAuth.grantType&#xA;&#xA;CLIENT_CREDENTIALS&#xA;&#xA;configuration.host&#xA;&#xA;&#xA;&#xA;configuration.jdbcUrl&#xA;&#xA;jdbc:mariadb://209.50.254.159:3306/DSADEV&#xA;&#xA;configuration.setRawUrl&#xA;&#xA;true&#xA;&#xA;__TACOKIT_CONFIG_PARENT_ID&#xA;&#xA;bmV3amRiYyNKREJD&#xA;&#xA;" dataPackage="_R9f2EGqLEfG5aM4fdR_Gwg _R9iSUGqLEfG5aM4fdR_Gwg _R9iSUWqLEfG5aM4fdR_Gwg _R9iSUmqLEfG5aM4fdR_Gwg _R9iSU2qLEfG5aM4fdR_Gwg" DatabaseType="JDBC" SID="" ProductId="SingleStore" supportNLS="false">
+    <taggedValue xmi:id="_RKS3gGqLEfG5aM4fdR_Gwg" tag="Status" value=""/>
+    <taggedValue xmi:id="_RKS3gWqLEfG5aM4fdR_Gwg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_RKS3gmqLEfG5aM4fdR_Gwg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_RKS3g2qLEfG5aM4fdR_Gwg" tag="Description" value=""/>
+    <taggedValue xmi:id="_RKS3hGqLEfG5aM4fdR_Gwg" tag="Author" value=""/>
+    <taggedValue xmi:id="_RKS3hWqLEfG5aM4fdR_Gwg" tag="otherParameter"/>
+    <taggedValue xmi:id="_Rarc4GqLEfG5aM4fdR_Gwg" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_Rarc4WqLEfG5aM4fdR_Gwg" tag="DB ProductVersion" value="5.7.32"/>
+    <taggedValue xmi:id="_Rarc4mqLEfG5aM4fdR_Gwg" tag="DB IdentifierQuoteString" value="`"/>
+  </TalendMetadata:TacokitDatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_R9f2EGqLEfG5aM4fdR_Gwg" name="DSADEV" dataManager="_E6SecGqLEfG5aM4fdR_Gwg">
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NboGqLEfG5aM4fdR_Gwg" name="analytics_dq_v_dq_heatmap" label="analytics_dq_v_dq_heatmap" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NboWqLEfG5aM4fdR_Gwg" name="analytics_dq_v_dq_heatmap_agaibor" label="analytics_dq_v_dq_heatmap_agaibor" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbomqLEfG5aM4fdR_Gwg" name="analytics_dq_v_dq_heatmap_kb" label="analytics_dq_v_dq_heatmap_kb" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbo2qLEfG5aM4fdR_Gwg" name="analytics_dq_v_dq_score_dataset_agaibor" label="analytics_dq_v_dq_score_dataset_agaibor" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbpGqLEfG5aM4fdR_Gwg" name="analytics_dq_v_dq_score_dataset_kb" label="analytics_dq_v_dq_score_dataset_kb" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbpWqLEfG5aM4fdR_Gwg" name="analytics_dq_v_dq_trend" label="analytics_dq_v_dq_trend" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbpmqLEfG5aM4fdR_Gwg" name="analytics_dq_v_dq_trend_agaibor" label="analytics_dq_v_dq_trend_agaibor" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbp2qLEfG5aM4fdR_Gwg" name="analytics_dq_v_dq_trend_kb" label="analytics_dq_v_dq_trend_kb" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbqGqLEfG5aM4fdR_Gwg" name="analytics_dq_v_quarantine" label="analytics_dq_v_quarantine" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbqWqLEfG5aM4fdR_Gwg" name="analytics_dq_v_quarantine_agaibor" label="analytics_dq_v_quarantine_agaibor" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbqmqLEfG5aM4fdR_Gwg" name="analytics_dq_v_quarantine_kb" label="analytics_dq_v_quarantine_kb" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbq2qLEfG5aM4fdR_Gwg" name="analytics_dq_v_top_rejects" label="analytics_dq_v_top_rejects" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbrGqLEfG5aM4fdR_Gwg" name="analytics_dq_v_top_rejects_agaibor" label="analytics_dq_v_top_rejects_agaibor" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbrWqLEfG5aM4fdR_Gwg" name="analytics_dq_v_top_rejects_kb" label="analytics_dq_v_top_rejects_kb" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbrmqLEfG5aM4fdR_Gwg" name="dp_ceo_sales_overview_grupo_cuatro" label="dp_ceo_sales_overview_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbr2qLEfG5aM4fdR_Gwg" name="dp_customer_experience_grupo_cuatro" label="dp_customer_experience_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbsGqLEfG5aM4fdR_Gwg" name="dp_data_quality_findings_detail_grupo_cuatro" label="dp_data_quality_findings_detail_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbsWqLEfG5aM4fdR_Gwg" name="dp_data_quality_overview_grupo_cuatro" label="dp_data_quality_overview_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbsmqLEfG5aM4fdR_Gwg" name="dp_operations_delivery_grupo_cuatro" label="dp_operations_delivery_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbs2qLEfG5aM4fdR_Gwg" name="dp_product_performance_grupo_cuatro" label="dp_product_performance_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbtGqLEfG5aM4fdR_Gwg" name="stg_cur_customers_grupo_cuatro" label="stg_cur_customers_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbtWqLEfG5aM4fdR_Gwg" name="stg_cur_order_items_grupo_cuatro" label="stg_cur_order_items_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbtmqLEfG5aM4fdR_Gwg" name="stg_cur_order_payments_grupo_cuatro" label="stg_cur_order_payments_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbt2qLEfG5aM4fdR_Gwg" name="stg_cur_order_reviews_grupo_cuatro" label="stg_cur_order_reviews_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbuGqLEfG5aM4fdR_Gwg" name="stg_cur_orders_grupo_cuatro" label="stg_cur_orders_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbuWqLEfG5aM4fdR_Gwg" name="stg_cur_product_category_translation_grupo_cuatro" label="stg_cur_product_category_translation_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbumqLEfG5aM4fdR_Gwg" name="stg_cur_products_grupo_cuatro" label="stg_cur_products_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbu2qLEfG5aM4fdR_Gwg" name="stg_cur_sellers_grupo_cuatro" label="stg_cur_sellers_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbvGqLEfG5aM4fdR_Gwg" name="stg_v_customers_acaceres" label="stg_v_customers_acaceres" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbvWqLEfG5aM4fdR_Gwg" name="stg_v_customers_achacon" label="stg_v_customers_achacon" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbvmqLEfG5aM4fdR_Gwg" name="stg_v_customers_agaibor" label="stg_v_customers_agaibor" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbv2qLEfG5aM4fdR_Gwg" name="stg_v_customers_bnasimba" label="stg_v_customers_bnasimba" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbwGqLEfG5aM4fdR_Gwg" name="stg_v_customers_cchimbo" label="stg_v_customers_cchimbo" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbwWqLEfG5aM4fdR_Gwg" name="stg_v_customers_fchafla" label="stg_v_customers_fchafla" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbwmqLEfG5aM4fdR_Gwg" name="stg_v_customers_grupo_cuatro" label="stg_v_customers_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbw2qLEfG5aM4fdR_Gwg" name="stg_v_customers_jchamorro" label="stg_v_customers_jchamorro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbxGqLEfG5aM4fdR_Gwg" name="stg_v_customers_jg" label="stg_v_customers_jg" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbxWqLEfG5aM4fdR_Gwg" name="stg_v_customers_jlopez" label="stg_v_customers_jlopez" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbxmqLEfG5aM4fdR_Gwg" name="stg_v_customers_jmonje" label="stg_v_customers_jmonje" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Nbx2qLEfG5aM4fdR_Gwg" name="stg_v_customers_kbarragan" label="stg_v_customers_kbarragan" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbyGqLEfG5aM4fdR_Gwg" name="stg_v_customers_mcoello" label="stg_v_customers_mcoello" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbyWqLEfG5aM4fdR_Gwg" name="stg_v_customers_rj" label="stg_v_customers_rj" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0NbymqLEfG5aM4fdR_Gwg" name="stg_v_order_items_acaceres" label="stg_v_order_items_acaceres" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpwGqLEfG5aM4fdR_Gwg" name="stg_v_order_items_achacon" label="stg_v_order_items_achacon" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpwWqLEfG5aM4fdR_Gwg" name="stg_v_order_items_agaibor" label="stg_v_order_items_agaibor" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpwmqLEfG5aM4fdR_Gwg" name="stg_v_order_items_bnasimba" label="stg_v_order_items_bnasimba" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Opw2qLEfG5aM4fdR_Gwg" name="stg_v_order_items_cchimbo" label="stg_v_order_items_cchimbo" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpxGqLEfG5aM4fdR_Gwg" name="stg_v_order_items_fchafla" label="stg_v_order_items_fchafla" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpxWqLEfG5aM4fdR_Gwg" name="stg_v_order_items_grupo_cuatro" label="stg_v_order_items_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpxmqLEfG5aM4fdR_Gwg" name="stg_v_order_items_jchamorro" label="stg_v_order_items_jchamorro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Opx2qLEfG5aM4fdR_Gwg" name="stg_v_order_items_jg" label="stg_v_order_items_jg" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpyGqLEfG5aM4fdR_Gwg" name="stg_v_order_items_jlopez" label="stg_v_order_items_jlopez" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpyWqLEfG5aM4fdR_Gwg" name="stg_v_order_items_jmonje" label="stg_v_order_items_jmonje" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpymqLEfG5aM4fdR_Gwg" name="stg_v_order_items_kbarragan" label="stg_v_order_items_kbarragan" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Opy2qLEfG5aM4fdR_Gwg" name="stg_v_order_items_mcoello" label="stg_v_order_items_mcoello" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpzGqLEfG5aM4fdR_Gwg" name="stg_v_order_items_rj" label="stg_v_order_items_rj" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpzWqLEfG5aM4fdR_Gwg" name="stg_v_order_payments_grupo_cuatro" label="stg_v_order_payments_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0OpzmqLEfG5aM4fdR_Gwg" name="stg_v_order_reviews_grupo_cuatro" label="stg_v_order_reviews_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Opz2qLEfG5aM4fdR_Gwg" name="stg_v_orders_acaceres" label="stg_v_orders_acaceres" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op0GqLEfG5aM4fdR_Gwg" name="stg_v_orders_achacon" label="stg_v_orders_achacon" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op0WqLEfG5aM4fdR_Gwg" name="stg_v_orders_agaibor" label="stg_v_orders_agaibor" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op0mqLEfG5aM4fdR_Gwg" name="stg_v_orders_amendoza" label="stg_v_orders_amendoza" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op02qLEfG5aM4fdR_Gwg" name="stg_v_orders_bnasimba" label="stg_v_orders_bnasimba" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op1GqLEfG5aM4fdR_Gwg" name="stg_v_orders_cchimbo" label="stg_v_orders_cchimbo" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op1WqLEfG5aM4fdR_Gwg" name="stg_v_orders_fchafla" label="stg_v_orders_fchafla" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op1mqLEfG5aM4fdR_Gwg" name="stg_v_orders_grupo_cuatro" label="stg_v_orders_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op12qLEfG5aM4fdR_Gwg" name="stg_v_orders_jchamorro" label="stg_v_orders_jchamorro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op2GqLEfG5aM4fdR_Gwg" name="stg_v_orders_jg" label="stg_v_orders_jg" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op2WqLEfG5aM4fdR_Gwg" name="stg_v_orders_jlopez" label="stg_v_orders_jlopez" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op2mqLEfG5aM4fdR_Gwg" name="stg_v_orders_jmonje" label="stg_v_orders_jmonje" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op22qLEfG5aM4fdR_Gwg" name="stg_v_orders_kbarragan" label="stg_v_orders_kbarragan" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op3GqLEfG5aM4fdR_Gwg" name="stg_v_orders_mcoello" label="stg_v_orders_mcoello" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op3WqLEfG5aM4fdR_Gwg" name="stg_v_orders_rj" label="stg_v_orders_rj" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op3mqLEfG5aM4fdR_Gwg" name="stg_v_product_category_translation_grupo_cuatro" label="stg_v_product_category_translation_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op32qLEfG5aM4fdR_Gwg" name="stg_v_products_grupo_cuatro" label="stg_v_products_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op4GqLEfG5aM4fdR_Gwg" name="stg_v_sellers_grupo_cuatro" label="stg_v_sellers_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op4WqLEfG5aM4fdR_Gwg" name="vw_dim_customer_tableau_grupo_cuatro" label="vw_dim_customer_tableau_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op4mqLEfG5aM4fdR_Gwg" name="vw_dim_product_tableau_grupo_cuatro" label="vw_dim_product_tableau_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op42qLEfG5aM4fdR_Gwg" name="vw_dim_seller_tableau_grupo_cuatro" label="vw_dim_seller_tableau_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op5GqLEfG5aM4fdR_Gwg" name="vw_fact_order_items_tableau_grupo_cuatro" label="vw_fact_order_items_tableau_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op5WqLEfG5aM4fdR_Gwg" name="vw_fact_orders_tableau_grupo_cuatro" label="vw_fact_orders_tableau_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op5mqLEfG5aM4fdR_Gwg" name="vw_fact_payments_tableau_grupo_cuatro" label="vw_fact_payments_tableau_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdView" xmi:id="_S0Op52qLEfG5aM4fdR_Gwg" name="vw_fact_reviews_tableau_grupo_cuatro" label="vw_fact_reviews_tableau_grupo_cuatro" tableType="VIEW"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM1WqLEfG5aM4fdR_Gwg" name="DIM_PRODUCTO_EQ2" id="_THI-sGqLEfG5aM4fdR_Gwg" label="DIM_PRODUCTO_EQ2" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM1mqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs" id="_THI-sWqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM12qLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_ac" id="_THI-smqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_ac" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM2GqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_af" id="_THI-s2qLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_af" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM2WqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_ag" id="_THI-tGqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_ag" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM2mqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_alpha" id="_THI-tWqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_alpha" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM22qLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_am" id="_THI-tmqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM3GqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_ap" id="_THI-t2qLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_ap" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM3WqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_beta" id="_THI-uGqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM3mqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_bn" id="_THI-uWqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM32qLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_brnq" id="_THI-umqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_brnq" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM4GqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_cch" id="_THI-u2qLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_cch" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM4WqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_delta" id="_THI-vGqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_delta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM4mqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_fa" id="_THI-vWqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_fa" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM42qLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_fc" id="_THI-vmqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_fc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM5GqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_gamma" id="_THI-v2qLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_gamma" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM5WqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_jc" id="_THI-wGqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_jc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM5mqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_jg" id="_THI-wWqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM52qLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_jjm" id="_THI-wmqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_jjm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM6GqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_jjmg" id="_THI-w2qLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_jjmg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM6WqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_jl" id="_THI-xGqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_jl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM6mqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_k_b" id="_THI-xWqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_k_b" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM62qLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_mc" id="_THI-xmqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_mc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM7GqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_omega" id="_THI-x2qLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_omega" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM7WqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_rj" id="_THI-yGqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM7mqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_rl" id="_THI-yWqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_rl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM72qLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_rt" id="_THI-ymqLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_rt" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM8GqLEfG5aM4fdR_Gwg" name="audit_pipeline_runs_st" id="_THI-y2qLEfG5aM4fdR_Gwg" label="audit_pipeline_runs_st" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM8WqLEfG5aM4fdR_Gwg" name="audit_rejects" id="_THI-zGqLEfG5aM4fdR_Gwg" label="audit_rejects" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM8mqLEfG5aM4fdR_Gwg" name="audit_rejects_ac" id="_THI-zWqLEfG5aM4fdR_Gwg" label="audit_rejects_ac" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM82qLEfG5aM4fdR_Gwg" name="audit_rejects_af" id="_THI-zmqLEfG5aM4fdR_Gwg" label="audit_rejects_af" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM9GqLEfG5aM4fdR_Gwg" name="audit_rejects_ag" id="_THI-z2qLEfG5aM4fdR_Gwg" label="audit_rejects_ag" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM9WqLEfG5aM4fdR_Gwg" name="audit_rejects_am" id="_THI-0GqLEfG5aM4fdR_Gwg" label="audit_rejects_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM9mqLEfG5aM4fdR_Gwg" name="audit_rejects_ap" id="_THI-0WqLEfG5aM4fdR_Gwg" label="audit_rejects_ap" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM92qLEfG5aM4fdR_Gwg" name="audit_rejects_beta" id="_THI-0mqLEfG5aM4fdR_Gwg" label="audit_rejects_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM-GqLEfG5aM4fdR_Gwg" name="audit_rejects_bn" id="_THI-02qLEfG5aM4fdR_Gwg" label="audit_rejects_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM-WqLEfG5aM4fdR_Gwg" name="audit_rejects_brnq" id="_THI-1GqLEfG5aM4fdR_Gwg" label="audit_rejects_brnq" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM-mqLEfG5aM4fdR_Gwg" name="audit_rejects_cch" id="_THI-1WqLEfG5aM4fdR_Gwg" label="audit_rejects_cch" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM-2qLEfG5aM4fdR_Gwg" name="audit_rejects_delta" id="_THI-1mqLEfG5aM4fdR_Gwg" label="audit_rejects_delta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM_GqLEfG5aM4fdR_Gwg" name="audit_rejects_fa" id="_THI-12qLEfG5aM4fdR_Gwg" label="audit_rejects_fa" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM_WqLEfG5aM4fdR_Gwg" name="audit_rejects_fc" id="_THI-2GqLEfG5aM4fdR_Gwg" label="audit_rejects_fc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM_mqLEfG5aM4fdR_Gwg" name="audit_rejects_gamma" id="_THI-2WqLEfG5aM4fdR_Gwg" label="audit_rejects_gamma" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKM_2qLEfG5aM4fdR_Gwg" name="audit_rejects_items_beta" id="_THI-2mqLEfG5aM4fdR_Gwg" label="audit_rejects_items_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNAGqLEfG5aM4fdR_Gwg" name="audit_rejects_jc" id="_THI-22qLEfG5aM4fdR_Gwg" label="audit_rejects_jc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNAWqLEfG5aM4fdR_Gwg" name="audit_rejects_jg" id="_THI-3GqLEfG5aM4fdR_Gwg" label="audit_rejects_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNAmqLEfG5aM4fdR_Gwg" name="audit_rejects_jjm" id="_THI-3WqLEfG5aM4fdR_Gwg" label="audit_rejects_jjm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNA2qLEfG5aM4fdR_Gwg" name="audit_rejects_jjmg" id="_THI-3mqLEfG5aM4fdR_Gwg" label="audit_rejects_jjmg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNBGqLEfG5aM4fdR_Gwg" name="audit_rejects_jl" id="_THI-32qLEfG5aM4fdR_Gwg" label="audit_rejects_jl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNBWqLEfG5aM4fdR_Gwg" name="audit_rejects_k_b" id="_THI-4GqLEfG5aM4fdR_Gwg" label="audit_rejects_k_b" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNBmqLEfG5aM4fdR_Gwg" name="audit_rejects_mc" id="_THI-4WqLEfG5aM4fdR_Gwg" label="audit_rejects_mc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNB2qLEfG5aM4fdR_Gwg" name="audit_rejects_omega" id="_THI-4mqLEfG5aM4fdR_Gwg" label="audit_rejects_omega" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNCGqLEfG5aM4fdR_Gwg" name="audit_rejects_paymens_beta" id="_THI-42qLEfG5aM4fdR_Gwg" label="audit_rejects_paymens_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNCWqLEfG5aM4fdR_Gwg" name="audit_rejects_rj" id="_THI-5GqLEfG5aM4fdR_Gwg" label="audit_rejects_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNCmqLEfG5aM4fdR_Gwg" name="audit_rejects_rl" id="_THI-5WqLEfG5aM4fdR_Gwg" label="audit_rejects_rl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNC2qLEfG5aM4fdR_Gwg" name="audit_rejects_rt" id="_THI-5mqLEfG5aM4fdR_Gwg" label="audit_rejects_rt" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNDGqLEfG5aM4fdR_Gwg" name="cnt_fecha_carga" id="_THI-52qLEfG5aM4fdR_Gwg" label="cnt_fecha_carga" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNDWqLEfG5aM4fdR_Gwg" name="customers_alpha" id="_THI-6GqLEfG5aM4fdR_Gwg" label="customers_alpha" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNDmqLEfG5aM4fdR_Gwg" name="dim_customer_ac" id="_THI-6WqLEfG5aM4fdR_Gwg" label="dim_customer_ac" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKND2qLEfG5aM4fdR_Gwg" name="dim_customer_af" id="_THI-6mqLEfG5aM4fdR_Gwg" label="dim_customer_af" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNEGqLEfG5aM4fdR_Gwg" name="dim_customer_ag" id="_THI-62qLEfG5aM4fdR_Gwg" label="dim_customer_ag" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNEWqLEfG5aM4fdR_Gwg" name="dim_customer_am" id="_THI-7GqLEfG5aM4fdR_Gwg" label="dim_customer_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNEmqLEfG5aM4fdR_Gwg" name="dim_customer_ap" id="_THI-7WqLEfG5aM4fdR_Gwg" label="dim_customer_ap" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNE2qLEfG5aM4fdR_Gwg" name="dim_customer_beta" id="_THI-7mqLEfG5aM4fdR_Gwg" label="dim_customer_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNFGqLEfG5aM4fdR_Gwg" name="dim_customer_bn" id="_THI-72qLEfG5aM4fdR_Gwg" label="dim_customer_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNFWqLEfG5aM4fdR_Gwg" name="dim_customer_cch" id="_THI-8GqLEfG5aM4fdR_Gwg" label="dim_customer_cch" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNFmqLEfG5aM4fdR_Gwg" name="dim_customer_delta" id="_THI-8WqLEfG5aM4fdR_Gwg" label="dim_customer_delta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNF2qLEfG5aM4fdR_Gwg" name="dim_customer_fa" id="_THI-8mqLEfG5aM4fdR_Gwg" label="dim_customer_fa" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNGGqLEfG5aM4fdR_Gwg" name="dim_customer_fc" id="_THI-82qLEfG5aM4fdR_Gwg" label="dim_customer_fc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNGWqLEfG5aM4fdR_Gwg" name="dim_customer_gamma" id="_THI-9GqLEfG5aM4fdR_Gwg" label="dim_customer_gamma" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNGmqLEfG5aM4fdR_Gwg" name="dim_customer_jc" id="_THI-9WqLEfG5aM4fdR_Gwg" label="dim_customer_jc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNG2qLEfG5aM4fdR_Gwg" name="dim_customer_jg" id="_THI-9mqLEfG5aM4fdR_Gwg" label="dim_customer_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNHGqLEfG5aM4fdR_Gwg" name="dim_customer_jl" id="_THI-92qLEfG5aM4fdR_Gwg" label="dim_customer_jl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNHWqLEfG5aM4fdR_Gwg" name="dim_customer_jm" id="_THI--GqLEfG5aM4fdR_Gwg" label="dim_customer_jm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNHmqLEfG5aM4fdR_Gwg" name="dim_customer_k_b" id="_THI--WqLEfG5aM4fdR_Gwg" label="dim_customer_k_b" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNH2qLEfG5aM4fdR_Gwg" name="dim_customer_mc" id="_THI--mqLEfG5aM4fdR_Gwg" label="dim_customer_mc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNIGqLEfG5aM4fdR_Gwg" name="dim_customer_omega" id="_THI--2qLEfG5aM4fdR_Gwg" label="dim_customer_omega" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNIWqLEfG5aM4fdR_Gwg" name="dim_customer_rj" id="_THI-_GqLEfG5aM4fdR_Gwg" label="dim_customer_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNImqLEfG5aM4fdR_Gwg" name="dim_customer_rl" id="_THI-_WqLEfG5aM4fdR_Gwg" label="dim_customer_rl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNI2qLEfG5aM4fdR_Gwg" name="dim_customer_rt" id="_THI-_mqLEfG5aM4fdR_Gwg" label="dim_customer_rt" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNJGqLEfG5aM4fdR_Gwg" name="dim_customer_st" id="_THI-_2qLEfG5aM4fdR_Gwg" label="dim_customer_st" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNJWqLEfG5aM4fdR_Gwg" name="dim_product_ac" id="_THI_AGqLEfG5aM4fdR_Gwg" label="dim_product_ac" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNJmqLEfG5aM4fdR_Gwg" name="dim_product_af" id="_THI_AWqLEfG5aM4fdR_Gwg" label="dim_product_af" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNJ2qLEfG5aM4fdR_Gwg" name="dim_product_ag" id="_THI_AmqLEfG5aM4fdR_Gwg" label="dim_product_ag" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNKGqLEfG5aM4fdR_Gwg" name="dim_product_am" id="_THI_A2qLEfG5aM4fdR_Gwg" label="dim_product_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNKWqLEfG5aM4fdR_Gwg" name="dim_product_ap" id="_THI_BGqLEfG5aM4fdR_Gwg" label="dim_product_ap" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNKmqLEfG5aM4fdR_Gwg" name="dim_product_beta" id="_THI_BWqLEfG5aM4fdR_Gwg" label="dim_product_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNK2qLEfG5aM4fdR_Gwg" name="dim_product_bn" id="_THI_BmqLEfG5aM4fdR_Gwg" label="dim_product_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNLGqLEfG5aM4fdR_Gwg" name="dim_product_cch" id="_THI_B2qLEfG5aM4fdR_Gwg" label="dim_product_cch" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNLWqLEfG5aM4fdR_Gwg" name="dim_product_delta" id="_THI_CGqLEfG5aM4fdR_Gwg" label="dim_product_delta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNLmqLEfG5aM4fdR_Gwg" name="dim_product_fa" id="_THJlwGqLEfG5aM4fdR_Gwg" label="dim_product_fa" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNL2qLEfG5aM4fdR_Gwg" name="dim_product_fc" id="_THJlwWqLEfG5aM4fdR_Gwg" label="dim_product_fc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNMGqLEfG5aM4fdR_Gwg" name="dim_product_gamma" id="_THJlwmqLEfG5aM4fdR_Gwg" label="dim_product_gamma" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNMWqLEfG5aM4fdR_Gwg" name="dim_product_jc" id="_THJlw2qLEfG5aM4fdR_Gwg" label="dim_product_jc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNMmqLEfG5aM4fdR_Gwg" name="dim_product_jg" id="_THJlxGqLEfG5aM4fdR_Gwg" label="dim_product_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNM2qLEfG5aM4fdR_Gwg" name="dim_product_jl" id="_THJlxWqLEfG5aM4fdR_Gwg" label="dim_product_jl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNNGqLEfG5aM4fdR_Gwg" name="dim_product_jm" id="_THJlxmqLEfG5aM4fdR_Gwg" label="dim_product_jm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNNWqLEfG5aM4fdR_Gwg" name="dim_product_k_b" id="_THJlx2qLEfG5aM4fdR_Gwg" label="dim_product_k_b" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNNmqLEfG5aM4fdR_Gwg" name="dim_product_mc" id="_THJlyGqLEfG5aM4fdR_Gwg" label="dim_product_mc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNN2qLEfG5aM4fdR_Gwg" name="dim_product_omega" id="_THJlyWqLEfG5aM4fdR_Gwg" label="dim_product_omega" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNOGqLEfG5aM4fdR_Gwg" name="dim_product_rj" id="_THJlymqLEfG5aM4fdR_Gwg" label="dim_product_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNOWqLEfG5aM4fdR_Gwg" name="dim_product_rl" id="_THJly2qLEfG5aM4fdR_Gwg" label="dim_product_rl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNOmqLEfG5aM4fdR_Gwg" name="dim_product_rt" id="_THJlzGqLEfG5aM4fdR_Gwg" label="dim_product_rt" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNO2qLEfG5aM4fdR_Gwg" name="dim_product_st" id="_THJlzWqLEfG5aM4fdR_Gwg" label="dim_product_st" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNPGqLEfG5aM4fdR_Gwg" name="dq_score_summary_grupo_cuatro" id="_THJlzmqLEfG5aM4fdR_Gwg" label="dq_score_summary_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNPWqLEfG5aM4fdR_Gwg" name="etl_run_audit_grupo_cuatro" id="_THJlz2qLEfG5aM4fdR_Gwg" label="etl_run_audit_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNPmqLEfG5aM4fdR_Gwg" name="eventos_ventas" id="_THJl0GqLEfG5aM4fdR_Gwg" label="eventos_ventas" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNP2qLEfG5aM4fdR_Gwg" name="fact_order_items_am" id="_THJl0WqLEfG5aM4fdR_Gwg" label="fact_order_items_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNQGqLEfG5aM4fdR_Gwg" name="fact_order_items_beta" id="_THJl0mqLEfG5aM4fdR_Gwg" label="fact_order_items_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNQWqLEfG5aM4fdR_Gwg" name="fact_order_items_bn" id="_THJl02qLEfG5aM4fdR_Gwg" label="fact_order_items_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNQmqLEfG5aM4fdR_Gwg" name="fact_order_items_delta" id="_THJl1GqLEfG5aM4fdR_Gwg" label="fact_order_items_delta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNQ2qLEfG5aM4fdR_Gwg" name="fact_order_items_gamma" id="_THJl1WqLEfG5aM4fdR_Gwg" label="fact_order_items_gamma" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNRGqLEfG5aM4fdR_Gwg" name="fact_order_items_jjm" id="_THJl1mqLEfG5aM4fdR_Gwg" label="fact_order_items_jjm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNRWqLEfG5aM4fdR_Gwg" name="fact_order_items_omega" id="_THJl12qLEfG5aM4fdR_Gwg" label="fact_order_items_omega" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNRmqLEfG5aM4fdR_Gwg" name="fact_order_payments" id="_THJl2GqLEfG5aM4fdR_Gwg" label="fact_order_payments" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNR2qLEfG5aM4fdR_Gwg" name="fact_order_payments_am" id="_THJl2WqLEfG5aM4fdR_Gwg" label="fact_order_payments_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNSGqLEfG5aM4fdR_Gwg" name="fact_order_payments_beta" id="_THJl2mqLEfG5aM4fdR_Gwg" label="fact_order_payments_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNSWqLEfG5aM4fdR_Gwg" name="fact_order_payments_bn" id="_THJl22qLEfG5aM4fdR_Gwg" label="fact_order_payments_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNSmqLEfG5aM4fdR_Gwg" name="fact_order_payments_delta" id="_THJl3GqLEfG5aM4fdR_Gwg" label="fact_order_payments_delta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNS2qLEfG5aM4fdR_Gwg" name="fact_order_payments_gamma" id="_THJl3WqLEfG5aM4fdR_Gwg" label="fact_order_payments_gamma" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNTGqLEfG5aM4fdR_Gwg" name="fact_order_payments_jjm" id="_THJl3mqLEfG5aM4fdR_Gwg" label="fact_order_payments_jjm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNTWqLEfG5aM4fdR_Gwg" name="fact_order_payments_omega" id="_THJl32qLEfG5aM4fdR_Gwg" label="fact_order_payments_omega" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNTmqLEfG5aM4fdR_Gwg" name="fact_orders_ac" id="_THJl4GqLEfG5aM4fdR_Gwg" label="fact_orders_ac" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNT2qLEfG5aM4fdR_Gwg" name="fact_orders_af" id="_THJl4WqLEfG5aM4fdR_Gwg" label="fact_orders_af" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNUGqLEfG5aM4fdR_Gwg" name="fact_orders_ag" id="_THJl4mqLEfG5aM4fdR_Gwg" label="fact_orders_ag" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNUWqLEfG5aM4fdR_Gwg" name="fact_orders_am" id="_THJl42qLEfG5aM4fdR_Gwg" label="fact_orders_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNUmqLEfG5aM4fdR_Gwg" name="fact_orders_ap" id="_THJl5GqLEfG5aM4fdR_Gwg" label="fact_orders_ap" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNU2qLEfG5aM4fdR_Gwg" name="fact_orders_beta" id="_THJl5WqLEfG5aM4fdR_Gwg" label="fact_orders_beta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNVGqLEfG5aM4fdR_Gwg" name="fact_orders_bn" id="_THJl5mqLEfG5aM4fdR_Gwg" label="fact_orders_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNVWqLEfG5aM4fdR_Gwg" name="fact_orders_cch" id="_THJl52qLEfG5aM4fdR_Gwg" label="fact_orders_cch" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNVmqLEfG5aM4fdR_Gwg" name="fact_orders_delta" id="_THJl6GqLEfG5aM4fdR_Gwg" label="fact_orders_delta" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNV2qLEfG5aM4fdR_Gwg" name="fact_orders_fa" id="_THJl6WqLEfG5aM4fdR_Gwg" label="fact_orders_fa" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNWGqLEfG5aM4fdR_Gwg" name="fact_orders_fc" id="_THJl6mqLEfG5aM4fdR_Gwg" label="fact_orders_fc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNWWqLEfG5aM4fdR_Gwg" name="fact_orders_gamma" id="_THJl62qLEfG5aM4fdR_Gwg" label="fact_orders_gamma" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNWmqLEfG5aM4fdR_Gwg" name="fact_orders_jc" id="_THJl7GqLEfG5aM4fdR_Gwg" label="fact_orders_jc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNW2qLEfG5aM4fdR_Gwg" name="fact_orders_jg" id="_THJl7WqLEfG5aM4fdR_Gwg" label="fact_orders_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNXGqLEfG5aM4fdR_Gwg" name="fact_orders_jl" id="_THJl7mqLEfG5aM4fdR_Gwg" label="fact_orders_jl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNXWqLEfG5aM4fdR_Gwg" name="fact_orders_jm" id="_THJl72qLEfG5aM4fdR_Gwg" label="fact_orders_jm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNXmqLEfG5aM4fdR_Gwg" name="fact_orders_k_b" id="_THJl8GqLEfG5aM4fdR_Gwg" label="fact_orders_k_b" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNX2qLEfG5aM4fdR_Gwg" name="fact_orders_mc" id="_THJl8WqLEfG5aM4fdR_Gwg" label="fact_orders_mc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNYGqLEfG5aM4fdR_Gwg" name="fact_orders_omega" id="_THJl8mqLEfG5aM4fdR_Gwg" label="fact_orders_omega" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNYWqLEfG5aM4fdR_Gwg" name="fact_orders_rj" id="_THJl82qLEfG5aM4fdR_Gwg" label="fact_orders_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNYmqLEfG5aM4fdR_Gwg" name="fact_orders_rl" id="_THJl9GqLEfG5aM4fdR_Gwg" label="fact_orders_rl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNY2qLEfG5aM4fdR_Gwg" name="fact_orders_rt" id="_THJl9WqLEfG5aM4fdR_Gwg" label="fact_orders_rt" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNZGqLEfG5aM4fdR_Gwg" name="fact_orders_st" id="_THJl9mqLEfG5aM4fdR_Gwg" label="fact_orders_st" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNZWqLEfG5aM4fdR_Gwg" name="mart_dim_customer_acaceres" id="_THJl92qLEfG5aM4fdR_Gwg" label="mart_dim_customer_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNZmqLEfG5aM4fdR_Gwg" name="mart_dim_customer_achacon" id="_THJl-GqLEfG5aM4fdR_Gwg" label="mart_dim_customer_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNZ2qLEfG5aM4fdR_Gwg" name="mart_dim_customer_agaibor" id="_THJl-WqLEfG5aM4fdR_Gwg" label="mart_dim_customer_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNaGqLEfG5aM4fdR_Gwg" name="mart_dim_customer_bnasimba" id="_THJl-mqLEfG5aM4fdR_Gwg" label="mart_dim_customer_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNaWqLEfG5aM4fdR_Gwg" name="mart_dim_customer_cchimbo" id="_THJl-2qLEfG5aM4fdR_Gwg" label="mart_dim_customer_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNamqLEfG5aM4fdR_Gwg" name="mart_dim_customer_fchafla" id="_THJl_GqLEfG5aM4fdR_Gwg" label="mart_dim_customer_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNa2qLEfG5aM4fdR_Gwg" name="mart_dim_customer_grupo_cuatro" id="_THJl_WqLEfG5aM4fdR_Gwg" label="mart_dim_customer_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNbGqLEfG5aM4fdR_Gwg" name="mart_dim_customer_jchamorro" id="_THJl_mqLEfG5aM4fdR_Gwg" label="mart_dim_customer_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNbWqLEfG5aM4fdR_Gwg" name="mart_dim_customer_jg" id="_THJl_2qLEfG5aM4fdR_Gwg" label="mart_dim_customer_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNbmqLEfG5aM4fdR_Gwg" name="mart_dim_customer_jlopez" id="_THJmAGqLEfG5aM4fdR_Gwg" label="mart_dim_customer_jlopez" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNb2qLEfG5aM4fdR_Gwg" name="mart_dim_customer_jmonje" id="_THJmAWqLEfG5aM4fdR_Gwg" label="mart_dim_customer_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNcGqLEfG5aM4fdR_Gwg" name="mart_dim_customer_kbarragan" id="_THJmAmqLEfG5aM4fdR_Gwg" label="mart_dim_customer_kbarragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNcWqLEfG5aM4fdR_Gwg" name="mart_dim_customer_mcoello" id="_THJmA2qLEfG5aM4fdR_Gwg" label="mart_dim_customer_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNcmqLEfG5aM4fdR_Gwg" name="mart_dim_customer_rj" id="_THJmBGqLEfG5aM4fdR_Gwg" label="mart_dim_customer_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNc2qLEfG5aM4fdR_Gwg" name="mart_dim_product_grupo_cuatro" id="_THJmBWqLEfG5aM4fdR_Gwg" label="mart_dim_product_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNdGqLEfG5aM4fdR_Gwg" name="mart_dim_seller_grupo_cuatro" id="_THJmBmqLEfG5aM4fdR_Gwg" label="mart_dim_seller_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNdWqLEfG5aM4fdR_Gwg" name="mart_fact_order_items_grupo_cuatro" id="_THJmB2qLEfG5aM4fdR_Gwg" label="mart_fact_order_items_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNdmqLEfG5aM4fdR_Gwg" name="mart_fact_orders_acaceres" id="_THJmCGqLEfG5aM4fdR_Gwg" label="mart_fact_orders_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNd2qLEfG5aM4fdR_Gwg" name="mart_fact_orders_achacon" id="_THJmCWqLEfG5aM4fdR_Gwg" label="mart_fact_orders_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNeGqLEfG5aM4fdR_Gwg" name="mart_fact_orders_agaibor" id="_THJmCmqLEfG5aM4fdR_Gwg" label="mart_fact_orders_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNeWqLEfG5aM4fdR_Gwg" name="mart_fact_orders_bnasimba" id="_THJmC2qLEfG5aM4fdR_Gwg" label="mart_fact_orders_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNemqLEfG5aM4fdR_Gwg" name="mart_fact_orders_cchimbo" id="_THJmDGqLEfG5aM4fdR_Gwg" label="mart_fact_orders_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNe2qLEfG5aM4fdR_Gwg" name="mart_fact_orders_fchafla" id="_THJmDWqLEfG5aM4fdR_Gwg" label="mart_fact_orders_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNfGqLEfG5aM4fdR_Gwg" name="mart_fact_orders_grupo_cuatro" id="_THJmDmqLEfG5aM4fdR_Gwg" label="mart_fact_orders_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNfWqLEfG5aM4fdR_Gwg" name="mart_fact_orders_jchamorro" id="_THJmD2qLEfG5aM4fdR_Gwg" label="mart_fact_orders_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNfmqLEfG5aM4fdR_Gwg" name="mart_fact_orders_jg" id="_THJmEGqLEfG5aM4fdR_Gwg" label="mart_fact_orders_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNf2qLEfG5aM4fdR_Gwg" name="mart_fact_orders_jlopez" id="_THJmEWqLEfG5aM4fdR_Gwg" label="mart_fact_orders_jlopez" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNgGqLEfG5aM4fdR_Gwg" name="mart_fact_orders_jmonje" id="_THJmEmqLEfG5aM4fdR_Gwg" label="mart_fact_orders_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNgWqLEfG5aM4fdR_Gwg" name="mart_fact_orders_kbarragan" id="_THJmE2qLEfG5aM4fdR_Gwg" label="mart_fact_orders_kbarragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNgmqLEfG5aM4fdR_Gwg" name="mart_fact_orders_mcoello" id="_THJmFGqLEfG5aM4fdR_Gwg" label="mart_fact_orders_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNg2qLEfG5aM4fdR_Gwg" name="mart_fact_orders_rj" id="_THJmFWqLEfG5aM4fdR_Gwg" label="mart_fact_orders_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNhGqLEfG5aM4fdR_Gwg" name="mart_fact_payments_grupo_cuatro" id="_THJmFmqLEfG5aM4fdR_Gwg" label="mart_fact_payments_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNhWqLEfG5aM4fdR_Gwg" name="mart_fact_reviews_grupo_cuatro" id="_THJmF2qLEfG5aM4fdR_Gwg" label="mart_fact_reviews_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNhmqLEfG5aM4fdR_Gwg" name="order_items_alpha" id="_THJmGGqLEfG5aM4fdR_Gwg" label="order_items_alpha" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNh2qLEfG5aM4fdR_Gwg" name="order_items_rejects_alpha" id="_THJmGWqLEfG5aM4fdR_Gwg" label="order_items_rejects_alpha" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNiGqLEfG5aM4fdR_Gwg" name="order_payments_alpha" id="_THJmGmqLEfG5aM4fdR_Gwg" label="order_payments_alpha" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNiWqLEfG5aM4fdR_Gwg" name="order_payments_rejects_alpha" id="_THJmG2qLEfG5aM4fdR_Gwg" label="order_payments_rejects_alpha" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNimqLEfG5aM4fdR_Gwg" name="orders_alpha" id="_THJmHGqLEfG5aM4fdR_Gwg" label="orders_alpha" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNi2qLEfG5aM4fdR_Gwg" name="pipeline_run_audit_grupo_uno" id="_THJmHWqLEfG5aM4fdR_Gwg" label="pipeline_run_audit_grupo_uno" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNjGqLEfG5aM4fdR_Gwg" name="products_alpha" id="_THJmHmqLEfG5aM4fdR_Gwg" label="products_alpha" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNjWqLEfG5aM4fdR_Gwg" name="raw_customers_tabla_g4" id="_THJmH2qLEfG5aM4fdR_Gwg" label="raw_customers_tabla_g4" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNjmqLEfG5aM4fdR_Gwg" name="raw_ingest_rejects_grupo_cuatro" id="_THJmIGqLEfG5aM4fdR_Gwg" label="raw_ingest_rejects_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNj2qLEfG5aM4fdR_Gwg" name="raw_ingest_rejects_grupo_uno" id="_THJmIWqLEfG5aM4fdR_Gwg" label="raw_ingest_rejects_grupo_uno" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNkGqLEfG5aM4fdR_Gwg" name="raw_olist_customers_acaceres" id="_THJmImqLEfG5aM4fdR_Gwg" label="raw_olist_customers_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNkWqLEfG5aM4fdR_Gwg" name="raw_olist_customers_achacon" id="_THJmI2qLEfG5aM4fdR_Gwg" label="raw_olist_customers_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNkmqLEfG5aM4fdR_Gwg" name="raw_olist_customers_agaibor" id="_THJmJGqLEfG5aM4fdR_Gwg" label="raw_olist_customers_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNk2qLEfG5aM4fdR_Gwg" name="raw_olist_customers_am" id="_THJmJWqLEfG5aM4fdR_Gwg" label="raw_olist_customers_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNlGqLEfG5aM4fdR_Gwg" name="raw_olist_customers_amendoza" id="_THJmJmqLEfG5aM4fdR_Gwg" label="raw_olist_customers_amendoza" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNlWqLEfG5aM4fdR_Gwg" name="raw_olist_customers_bnasimbar" id="_THJmJ2qLEfG5aM4fdR_Gwg" label="raw_olist_customers_bnasimbar" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNlmqLEfG5aM4fdR_Gwg" name="raw_olist_customers_cchimbo" id="_THJmKGqLEfG5aM4fdR_Gwg" label="raw_olist_customers_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNl2qLEfG5aM4fdR_Gwg" name="raw_olist_customers_fchafla" id="_THJmKWqLEfG5aM4fdR_Gwg" label="raw_olist_customers_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNmGqLEfG5aM4fdR_Gwg" name="raw_olist_customers_grupo_cuatro" id="_THJmKmqLEfG5aM4fdR_Gwg" label="raw_olist_customers_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNmWqLEfG5aM4fdR_Gwg" name="raw_olist_customers_jchamorro" id="_THJmK2qLEfG5aM4fdR_Gwg" label="raw_olist_customers_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNmmqLEfG5aM4fdR_Gwg" name="raw_olist_customers_jg" id="_THJmLGqLEfG5aM4fdR_Gwg" label="raw_olist_customers_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNm2qLEfG5aM4fdR_Gwg" name="raw_olist_customers_jlopez" id="_THJmLWqLEfG5aM4fdR_Gwg" label="raw_olist_customers_jlopez" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNnGqLEfG5aM4fdR_Gwg" name="raw_olist_customers_jmonje" id="_THJmLmqLEfG5aM4fdR_Gwg" label="raw_olist_customers_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNnWqLEfG5aM4fdR_Gwg" name="raw_olist_customers_k_barragan" id="_THJmL2qLEfG5aM4fdR_Gwg" label="raw_olist_customers_k_barragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNnmqLEfG5aM4fdR_Gwg" name="raw_olist_customers_mcoello" id="_THJmMGqLEfG5aM4fdR_Gwg" label="raw_olist_customers_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNn2qLEfG5aM4fdR_Gwg" name="raw_olist_customers_rj" id="_THJmMWqLEfG5aM4fdR_Gwg" label="raw_olist_customers_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNoGqLEfG5aM4fdR_Gwg" name="raw_olist_customers_rtenemaza" id="_THJmMmqLEfG5aM4fdR_Gwg" label="raw_olist_customers_rtenemaza" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNoWqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_acaceres" id="_THJmM2qLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNomqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_achacon" id="_THJmNGqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNo2qLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_agaibor" id="_THJmNWqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNpGqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_bnasimba" id="_THJmNmqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNpWqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_cchimbo" id="_THJmN2qLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNpmqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_fchafla" id="_THJmOGqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNp2qLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_jchamorro" id="_THJmOWqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNqGqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_jg" id="_THJmOmqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNqWqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_jmonje" id="_THJmO2qLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNqmqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_k_barragan" id="_THJmPGqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_k_barragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNq2qLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_mcoello" id="_THJmPWqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNrGqLEfG5aM4fdR_Gwg" name="raw_olist_geolocation_rj" id="_THJmPmqLEfG5aM4fdR_Gwg" label="raw_olist_geolocation_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNrWqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_acaceres" id="_THJmP2qLEfG5aM4fdR_Gwg" label="raw_olist_order_items_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNrmqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_achacon" id="_THJmQGqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNr2qLEfG5aM4fdR_Gwg" name="raw_olist_order_items_agaibor" id="_THJmQWqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNsGqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_am" id="_THJmQmqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNsWqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_amendoza" id="_THJmQ2qLEfG5aM4fdR_Gwg" label="raw_olist_order_items_amendoza" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNsmqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_bnasimba" id="_THJmRGqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNs2qLEfG5aM4fdR_Gwg" name="raw_olist_order_items_cchimbo" id="_THJmRWqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNtGqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_fchafla" id="_THJmRmqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNtWqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_grupo_cuatro" id="_THJmR2qLEfG5aM4fdR_Gwg" label="raw_olist_order_items_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNtmqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_jchamorro" id="_THJmSGqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNt2qLEfG5aM4fdR_Gwg" name="raw_olist_order_items_jg" id="_THJmSWqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNuGqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_jlopez" id="_THJmSmqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_jlopez" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNuWqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_jmonje" id="_THJmS2qLEfG5aM4fdR_Gwg" label="raw_olist_order_items_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNumqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_kbarragan" id="_THJmTGqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_kbarragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNu2qLEfG5aM4fdR_Gwg" name="raw_olist_order_items_mcoello" id="_THJmTWqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNvGqLEfG5aM4fdR_Gwg" name="raw_olist_order_items_rj" id="_THJmTmqLEfG5aM4fdR_Gwg" label="raw_olist_order_items_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNvWqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_acaceres" id="_THJmT2qLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNvmqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_achacon" id="_THJmUGqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNv2qLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_agaibor" id="_THJmUWqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNwGqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_amendoza" id="_THJmUmqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_amendoza" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNwWqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_bnasimba" id="_THJmU2qLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNwmqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_cchimbo" id="_THJmVGqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNw2qLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_fchafla" id="_THJmVWqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNxGqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_grupo_cuatro" id="_THJmVmqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNxWqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_jchamorro" id="_THJmV2qLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNxmqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_jg" id="_THJmWGqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNx2qLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_jlopez" id="_THJmWWqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_jlopez" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNyGqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_jmonje" id="_THJmWmqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNyWqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_k_barragan" id="_THJmW2qLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_k_barragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNymqLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_mcoello" id="_THJmXGqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNy2qLEfG5aM4fdR_Gwg" name="raw_olist_order_payments_rj" id="_THJmXWqLEfG5aM4fdR_Gwg" label="raw_olist_order_payments_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNzGqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_acaceres" id="_THJmXmqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNzWqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_achacon" id="_THJmX2qLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNzmqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_agaibor" id="_THJmYGqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKNz2qLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_bnasimba" id="_THJmYWqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN0GqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_cchimbo" id="_THJmYmqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN0WqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_fchafla" id="_THJmY2qLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN0mqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_grupo_cuatro" id="_THJmZGqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN02qLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_jchamorro" id="_THJmZWqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN1GqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_jg" id="_THJmZmqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN1WqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_k_barragan" id="_THJmZ2qLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_k_barragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN1mqLEfG5aM4fdR_Gwg" name="raw_olist_order_reviews_rj" id="_THJmaGqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviews_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN12qLEfG5aM4fdR_Gwg" name="raw_olist_order_reviewsjmonje" id="_THJmaWqLEfG5aM4fdR_Gwg" label="raw_olist_order_reviewsjmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN2GqLEfG5aM4fdR_Gwg" name="raw_olist_orders_acaceres" id="_THJmamqLEfG5aM4fdR_Gwg" label="raw_olist_orders_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN2WqLEfG5aM4fdR_Gwg" name="raw_olist_orders_achacon" id="_THJma2qLEfG5aM4fdR_Gwg" label="raw_olist_orders_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN2mqLEfG5aM4fdR_Gwg" name="raw_olist_orders_agaibor" id="_THJmbGqLEfG5aM4fdR_Gwg" label="raw_olist_orders_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN22qLEfG5aM4fdR_Gwg" name="raw_olist_orders_am" id="_THJmbWqLEfG5aM4fdR_Gwg" label="raw_olist_orders_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN3GqLEfG5aM4fdR_Gwg" name="raw_olist_orders_amendoza" id="_THJmbmqLEfG5aM4fdR_Gwg" label="raw_olist_orders_amendoza" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN3WqLEfG5aM4fdR_Gwg" name="raw_olist_orders_bnasimba" id="_THJmb2qLEfG5aM4fdR_Gwg" label="raw_olist_orders_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN3mqLEfG5aM4fdR_Gwg" name="raw_olist_orders_cchimbo" id="_THJmcGqLEfG5aM4fdR_Gwg" label="raw_olist_orders_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN32qLEfG5aM4fdR_Gwg" name="raw_olist_orders_fchafla" id="_THJmcWqLEfG5aM4fdR_Gwg" label="raw_olist_orders_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN4GqLEfG5aM4fdR_Gwg" name="raw_olist_orders_grupo_cuatro" id="_THJmcmqLEfG5aM4fdR_Gwg" label="raw_olist_orders_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN4WqLEfG5aM4fdR_Gwg" name="raw_olist_orders_jchamorro" id="_THJmc2qLEfG5aM4fdR_Gwg" label="raw_olist_orders_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN4mqLEfG5aM4fdR_Gwg" name="raw_olist_orders_jg" id="_THJmdGqLEfG5aM4fdR_Gwg" label="raw_olist_orders_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN42qLEfG5aM4fdR_Gwg" name="raw_olist_orders_jlopez" id="_THJmdWqLEfG5aM4fdR_Gwg" label="raw_olist_orders_jlopez" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN5GqLEfG5aM4fdR_Gwg" name="raw_olist_orders_jmonje" id="_THJmdmqLEfG5aM4fdR_Gwg" label="raw_olist_orders_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN5WqLEfG5aM4fdR_Gwg" name="raw_olist_orders_kbarragan" id="_THJmd2qLEfG5aM4fdR_Gwg" label="raw_olist_orders_kbarragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN5mqLEfG5aM4fdR_Gwg" name="raw_olist_orders_mcoello" id="_THJmeGqLEfG5aM4fdR_Gwg" label="raw_olist_orders_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN52qLEfG5aM4fdR_Gwg" name="raw_olist_orders_rj" id="_THJmeWqLEfG5aM4fdR_Gwg" label="raw_olist_orders_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN6GqLEfG5aM4fdR_Gwg" name="raw_olist_orders_rt" id="_THJmemqLEfG5aM4fdR_Gwg" label="raw_olist_orders_rt" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN6WqLEfG5aM4fdR_Gwg" name="raw_olist_orders_rtenemaza" id="_THJme2qLEfG5aM4fdR_Gwg" label="raw_olist_orders_rtenemaza" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN6mqLEfG5aM4fdR_Gwg" name="raw_olist_product_category_name_translation_mcoello" id="_THJmfGqLEfG5aM4fdR_Gwg" label="raw_olist_product_category_name_translation_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN62qLEfG5aM4fdR_Gwg" name="raw_olist_product_category_translation_grupo_cuatro" id="_THJmfWqLEfG5aM4fdR_Gwg" label="raw_olist_product_category_translation_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN7GqLEfG5aM4fdR_Gwg" name="raw_olist_products_acaceres" id="_THJmfmqLEfG5aM4fdR_Gwg" label="raw_olist_products_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN7WqLEfG5aM4fdR_Gwg" name="raw_olist_products_achacon" id="_THJmf2qLEfG5aM4fdR_Gwg" label="raw_olist_products_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN7mqLEfG5aM4fdR_Gwg" name="raw_olist_products_agaibor" id="_THJmgGqLEfG5aM4fdR_Gwg" label="raw_olist_products_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN72qLEfG5aM4fdR_Gwg" name="raw_olist_products_bnasimba" id="_THJmgWqLEfG5aM4fdR_Gwg" label="raw_olist_products_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN8GqLEfG5aM4fdR_Gwg" name="raw_olist_products_cchimbo" id="_THJmgmqLEfG5aM4fdR_Gwg" label="raw_olist_products_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN8WqLEfG5aM4fdR_Gwg" name="raw_olist_products_fchafla" id="_THJmg2qLEfG5aM4fdR_Gwg" label="raw_olist_products_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN8mqLEfG5aM4fdR_Gwg" name="raw_olist_products_grupo_cuatro" id="_THJmhGqLEfG5aM4fdR_Gwg" label="raw_olist_products_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN82qLEfG5aM4fdR_Gwg" name="raw_olist_products_jchamorro" id="_THJmhWqLEfG5aM4fdR_Gwg" label="raw_olist_products_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN9GqLEfG5aM4fdR_Gwg" name="raw_olist_products_jg" id="_THJmhmqLEfG5aM4fdR_Gwg" label="raw_olist_products_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN9WqLEfG5aM4fdR_Gwg" name="raw_olist_products_jmonje" id="_THJmh2qLEfG5aM4fdR_Gwg" label="raw_olist_products_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN9mqLEfG5aM4fdR_Gwg" name="raw_olist_products_k_barragan" id="_THJmiGqLEfG5aM4fdR_Gwg" label="raw_olist_products_k_barragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN92qLEfG5aM4fdR_Gwg" name="raw_olist_products_mcoello" id="_THJmiWqLEfG5aM4fdR_Gwg" label="raw_olist_products_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN-GqLEfG5aM4fdR_Gwg" name="raw_olist_products_rj" id="_THJmimqLEfG5aM4fdR_Gwg" label="raw_olist_products_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN-WqLEfG5aM4fdR_Gwg" name="raw_olist_reviews_mcoello" id="_THJmi2qLEfG5aM4fdR_Gwg" label="raw_olist_reviews_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN-mqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_acaceres" id="_THJmjGqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN-2qLEfG5aM4fdR_Gwg" name="raw_olist_sellers_achacon" id="_THJmjWqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_achacon" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN_GqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_agaibor" id="_THJmjmqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN_WqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_bnasimba" id="_THJmj2qLEfG5aM4fdR_Gwg" label="raw_olist_sellers_bnasimba" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN_mqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_cchimbo" id="_THJmkGqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKN_2qLEfG5aM4fdR_Gwg" name="raw_olist_sellers_fchafla" id="_THJmkWqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOAGqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_grupo_cuatro" id="_THJmkmqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOAWqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_jchamorro" id="_THJmk2qLEfG5aM4fdR_Gwg" label="raw_olist_sellers_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOAmqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_jg" id="_THJmlGqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOA2qLEfG5aM4fdR_Gwg" name="raw_olist_sellers_jmonje" id="_THJmlWqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_jmonje" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOBGqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_k_barragan" id="_THJmlmqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_k_barragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOBWqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_mcoello" id="_THJml2qLEfG5aM4fdR_Gwg" label="raw_olist_sellers_mcoello" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOBmqLEfG5aM4fdR_Gwg" name="raw_olist_sellers_rj" id="_THJmmGqLEfG5aM4fdR_Gwg" label="raw_olist_sellers_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOB2qLEfG5aM4fdR_Gwg" name="raw_order_items_tabla_g4" id="_THJmmWqLEfG5aM4fdR_Gwg" label="raw_order_items_tabla_g4" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOCGqLEfG5aM4fdR_Gwg" name="raw_product_category_name_translation_acaceres" id="_THJmmmqLEfG5aM4fdR_Gwg" label="raw_product_category_name_translation_acaceres" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOCWqLEfG5aM4fdR_Gwg" name="raw_product_category_name_translation_agaibor" id="_THJmm2qLEfG5aM4fdR_Gwg" label="raw_product_category_name_translation_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOCmqLEfG5aM4fdR_Gwg" name="raw_product_category_name_translation_cchimbo" id="_THJmnGqLEfG5aM4fdR_Gwg" label="raw_product_category_name_translation_cchimbo" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOC2qLEfG5aM4fdR_Gwg" name="raw_product_category_name_translation_fchafla" id="_THJmnWqLEfG5aM4fdR_Gwg" label="raw_product_category_name_translation_fchafla" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKODGqLEfG5aM4fdR_Gwg" name="raw_product_category_name_translation_jchamorro" id="_THJmnmqLEfG5aM4fdR_Gwg" label="raw_product_category_name_translation_jchamorro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKODWqLEfG5aM4fdR_Gwg" name="raw_product_category_name_translation_jg" id="_THJmn2qLEfG5aM4fdR_Gwg" label="raw_product_category_name_translation_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKODmqLEfG5aM4fdR_Gwg" name="raw_product_category_name_translation_k_barragan" id="_THJmoGqLEfG5aM4fdR_Gwg" label="raw_product_category_name_translation_k_barragan" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOD2qLEfG5aM4fdR_Gwg" name="raw_product_category_name_translation_rj" id="_THJmoWqLEfG5aM4fdR_Gwg" label="raw_product_category_name_translation_rj" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOEGqLEfG5aM4fdR_Gwg" name="raw_telco_customer_churn_grupo_uno" id="_THJmomqLEfG5aM4fdR_Gwg" label="raw_telco_customer_churn_grupo_uno" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOEWqLEfG5aM4fdR_Gwg" name="sesiones_usuario" id="_THJmo2qLEfG5aM4fdR_Gwg" label="sesiones_usuario" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOEmqLEfG5aM4fdR_Gwg" name="stg_dq_findings" id="_THJmpGqLEfG5aM4fdR_Gwg" label="stg_dq_findings" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOE2qLEfG5aM4fdR_Gwg" name="stg_dq_findings_agaibor" id="_THJmpWqLEfG5aM4fdR_Gwg" label="stg_dq_findings_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOFGqLEfG5aM4fdR_Gwg" name="stg_dq_findings_grupo_cuatro" id="_THJmpmqLEfG5aM4fdR_Gwg" label="stg_dq_findings_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOFWqLEfG5aM4fdR_Gwg" name="stg_dq_findings_kb" id="_THJmp2qLEfG5aM4fdR_Gwg" label="stg_dq_findings_kb" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOFmqLEfG5aM4fdR_Gwg" name="stg_dq_metrics" id="_THJmqGqLEfG5aM4fdR_Gwg" label="stg_dq_metrics" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOF2qLEfG5aM4fdR_Gwg" name="stg_dq_metrics_agaibor" id="_THJmqWqLEfG5aM4fdR_Gwg" label="stg_dq_metrics_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOGGqLEfG5aM4fdR_Gwg" name="stg_dq_metrics_grupo_cuatro" id="_THJmqmqLEfG5aM4fdR_Gwg" label="stg_dq_metrics_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOGWqLEfG5aM4fdR_Gwg" name="stg_dq_metrics_kb" id="_THJmq2qLEfG5aM4fdR_Gwg" label="stg_dq_metrics_kb" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOGmqLEfG5aM4fdR_Gwg" name="stg_dq_profile_agaibor" id="_THJmrGqLEfG5aM4fdR_Gwg" label="stg_dq_profile_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOG2qLEfG5aM4fdR_Gwg" name="stg_dq_profile_grupo_cuatro" id="_THJmrWqLEfG5aM4fdR_Gwg" label="stg_dq_profile_grupo_cuatro" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOHGqLEfG5aM4fdR_Gwg" name="stg_dq_profile_kb" id="_THJmrmqLEfG5aM4fdR_Gwg" label="stg_dq_profile_kb" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOHWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_ac" id="_THJmr2qLEfG5aM4fdR_Gwg" label="stg_olist_orders_ac" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOHmqLEfG5aM4fdR_Gwg" name="stg_olist_orders_af" id="_THJmsGqLEfG5aM4fdR_Gwg" label="stg_olist_orders_af" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOH2qLEfG5aM4fdR_Gwg" name="stg_olist_orders_ag" id="_THJmsWqLEfG5aM4fdR_Gwg" label="stg_olist_orders_ag" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOIGqLEfG5aM4fdR_Gwg" name="stg_olist_orders_am" id="_THJmsmqLEfG5aM4fdR_Gwg" label="stg_olist_orders_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOIWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_ap" id="_THJms2qLEfG5aM4fdR_Gwg" label="stg_olist_orders_ap" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOImqLEfG5aM4fdR_Gwg" name="stg_olist_orders_bn" id="_THJmtGqLEfG5aM4fdR_Gwg" label="stg_olist_orders_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOI2qLEfG5aM4fdR_Gwg" name="stg_olist_orders_cch" id="_THJmtWqLEfG5aM4fdR_Gwg" label="stg_olist_orders_cch" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOJGqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_ac" id="_THJmtmqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_ac" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOJWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_ag" id="_THJmt2qLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_ag" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOJmqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_am" id="_THJmuGqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_am" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOJ2qLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_ap" id="_THJmuWqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_ap" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOKGqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_bn" id="_THJmumqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_bn" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOKWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_cch" id="_THJmu2qLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_cch" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOKmqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_fa" id="_THJmvGqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_fa" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOK2qLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_fc" id="_THJmvWqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_fc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOLGqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_jc" id="_THJmvmqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_jc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOLWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_jg" id="_THJmv2qLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOLmqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_jjm" id="_THJmwGqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_jjm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOL2qLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_jl" id="_THJmwWqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_jl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOMGqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_k_b" id="_THJmwmqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_k_b" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOMWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_mc" id="_THJmw2qLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_mc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOMmqLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_rl" id="_THJmxGqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_rl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOM2qLEfG5aM4fdR_Gwg" name="stg_olist_orders_enriched_rt" id="_THJmxWqLEfG5aM4fdR_Gwg" label="stg_olist_orders_enriched_rt" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKONGqLEfG5aM4fdR_Gwg" name="stg_olist_orders_fa" id="_THJmxmqLEfG5aM4fdR_Gwg" label="stg_olist_orders_fa" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKONWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_fc" id="_THJmx2qLEfG5aM4fdR_Gwg" label="stg_olist_orders_fc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKONmqLEfG5aM4fdR_Gwg" name="stg_olist_orders_jc" id="_THJmyGqLEfG5aM4fdR_Gwg" label="stg_olist_orders_jc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKON2qLEfG5aM4fdR_Gwg" name="stg_olist_orders_jg" id="_THJmyWqLEfG5aM4fdR_Gwg" label="stg_olist_orders_jg" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOOGqLEfG5aM4fdR_Gwg" name="stg_olist_orders_jl" id="_THJmymqLEfG5aM4fdR_Gwg" label="stg_olist_orders_jl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOOWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_jm" id="_THJmy2qLEfG5aM4fdR_Gwg" label="stg_olist_orders_jm" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOOmqLEfG5aM4fdR_Gwg" name="stg_olist_orders_k_b" id="_THJmzGqLEfG5aM4fdR_Gwg" label="stg_olist_orders_k_b" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOO2qLEfG5aM4fdR_Gwg" name="stg_olist_orders_mc" id="_THJmzWqLEfG5aM4fdR_Gwg" label="stg_olist_orders_mc" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOPGqLEfG5aM4fdR_Gwg" name="stg_olist_orders_rl" id="_THJmzmqLEfG5aM4fdR_Gwg" label="stg_olist_orders_rl" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOPWqLEfG5aM4fdR_Gwg" name="stg_olist_orders_rt" id="_THKM0GqLEfG5aM4fdR_Gwg" label="stg_olist_orders_rt" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOPmqLEfG5aM4fdR_Gwg" name="stg_olist_orders_st" id="_THKM0WqLEfG5aM4fdR_Gwg" label="stg_olist_orders_st" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOP2qLEfG5aM4fdR_Gwg" name="stg_rejects_agaibor" id="_THKM0mqLEfG5aM4fdR_Gwg" label="stg_rejects_agaibor" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOQGqLEfG5aM4fdR_Gwg" name="stg_rejects_kb" id="_THKM02qLEfG5aM4fdR_Gwg" label="stg_rejects_kb" tableType="TABLE"/>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_THKOQWqLEfG5aM4fdR_Gwg" name="stg_telco_customer_churn_grupo_uno" id="_THKM1GqLEfG5aM4fdR_Gwg" label="stg_telco_customer_churn_grupo_uno" tableType="TABLE">
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfnwGqLEfG5aM4fdR_Gwg" name="customer_id" id="customer_id" label="customer_id" length="64" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <taggedValue xmi:id="_ZmfnwWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_2A-EUWqLEfG5aM4fdR_Gwg" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfnwmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfnw2qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfnxGqLEfG5aM4fdR_Gwg" name="gender" id="gender" label="gender" length="20" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmfnxWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfnxmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfnx2qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfnyGqLEfG5aM4fdR_Gwg" name="senior_citizen" id="senior_citizen" label="senior_citizen" length="3" sourceType="TINYINT" talendType="id_Byte">
+        <taggedValue xmi:id="_ZmfnyWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_JZzkfGqQEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfnymqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfny2qLEfG5aM4fdR_Gwg" name="TINYINT" numericPrecisionRadix="10" javaDataType="-6" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfnzGqLEfG5aM4fdR_Gwg" name="partner_flag" id="partner_flag" label="partner_flag" length="3" sourceType="TINYINT" talendType="id_Byte">
+        <taggedValue xmi:id="_ZmfnzWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_JZzkiWqQEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfnzmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfnz2qLEfG5aM4fdR_Gwg" name="TINYINT" numericPrecisionRadix="10" javaDataType="-6" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn0GqLEfG5aM4fdR_Gwg" name="dependents_flag" id="dependents_flag" label="dependents_flag" length="3" sourceType="TINYINT" talendType="id_Byte">
+        <taggedValue xmi:id="_Zmfn0WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_JZzklmqQEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn0mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn02qLEfG5aM4fdR_Gwg" name="TINYINT" numericPrecisionRadix="10" javaDataType="-6" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn1GqLEfG5aM4fdR_Gwg" name="tenure_months" id="tenure_months" label="tenure_months" length="10" sourceType="INT" talendType="id_Integer">
+        <taggedValue xmi:id="_Zmfn1WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_JZzkpWqQEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn1mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn12qLEfG5aM4fdR_Gwg" name="INT" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn2GqLEfG5aM4fdR_Gwg" name="phone_service" id="phone_service" label="phone_service" length="30" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn2WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM82GqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn2mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn22qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn3GqLEfG5aM4fdR_Gwg" name="multiple_lines" id="multiple_lines" label="multiple_lines" length="40" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn3WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM84WqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn3mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn32qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn4GqLEfG5aM4fdR_Gwg" name="internet_service" id="internet_service" label="internet_service" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn4WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM86mqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn4mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn42qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn5GqLEfG5aM4fdR_Gwg" name="online_security" id="online_security" label="online_security" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn5WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM882qOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn5mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn52qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn6GqLEfG5aM4fdR_Gwg" name="online_backup" id="online_backup" label="online_backup" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn6WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM8_GqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn6mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn62qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn7GqLEfG5aM4fdR_Gwg" name="device_protection" id="device_protection" label="device_protection" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn7WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM9BWqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn7mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn72qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn8GqLEfG5aM4fdR_Gwg" name="tech_support" id="tech_support" label="tech_support" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn8WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM9DmqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn8mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn82qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn9GqLEfG5aM4fdR_Gwg" name="streaming_tv" id="streaming_tv" label="streaming_tv" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn9WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM9F2qOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn9mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn92qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn-GqLEfG5aM4fdR_Gwg" name="streaming_movies" id="streaming_movies" label="streaming_movies" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn-WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_sNM9IGqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn-mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn-2qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_Zmfn_GqLEfG5aM4fdR_Gwg" name="contract_type" id="contract_type" label="contract_type" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_Zmfn_WqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwZGqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_Zmfn_mqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_Zmfn_2qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoAGqLEfG5aM4fdR_Gwg" name="paperless_billing_flag" id="paperless_billing_flag" label="paperless_billing_flag" length="3" sourceType="TINYINT" talendType="id_Byte">
+        <taggedValue xmi:id="_ZmfoAWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwb2qOEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoAmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoA2qLEfG5aM4fdR_Gwg" name="TINYINT" numericPrecisionRadix="10" javaDataType="-6" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoBGqLEfG5aM4fdR_Gwg" name="payment_method" id="payment_method" label="payment_method" length="80" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmfoBWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwfGqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoBmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoB2qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoCGqLEfG5aM4fdR_Gwg" name="monthly_charges" id="monthly_charges" label="monthly_charges" length="10" sourceType="DECIMAL" talendType="id_BigDecimal">
+        <taggedValue xmi:id="_ZmfoCWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwh2qOEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoCmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoC2qLEfG5aM4fdR_Gwg" name="DECIMAL" numericPrecision="2" numericPrecisionRadix="10" javaDataType="3" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoDGqLEfG5aM4fdR_Gwg" name="total_charges" id="total_charges" label="total_charges" length="12" sourceType="DECIMAL" talendType="id_BigDecimal">
+        <taggedValue xmi:id="_ZmfoDWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwkmqOEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoDmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoD2qLEfG5aM4fdR_Gwg" name="DECIMAL" numericPrecision="2" numericPrecisionRadix="10" javaDataType="3" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoEGqLEfG5aM4fdR_Gwg" name="total_charges_raw" id="total_charges_raw" label="total_charges_raw" length="30" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmfoEWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwn2qOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoEmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoE2qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoFGqLEfG5aM4fdR_Gwg" name="total_charges_was_imputed" id="total_charges_was_imputed" label="total_charges_was_imputed" length="3" sourceType="TINYINT" talendType="id_Byte">
+        <taggedValue xmi:id="_ZmfoFWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwqmqOEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoFmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoF2qLEfG5aM4fdR_Gwg" name="TINYINT" numericPrecisionRadix="10" javaDataType="-6" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoGGqLEfG5aM4fdR_Gwg" name="churn_flag" id="churn_flag" label="churn_flag" length="3" sourceType="TINYINT" talendType="id_Byte">
+        <taggedValue xmi:id="_ZmfoGWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwV2qOEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoGmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoG2qLEfG5aM4fdR_Gwg" name="TINYINT" numericPrecisionRadix="10" javaDataType="-6" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoHGqLEfG5aM4fdR_Gwg" name="churn_label" id="churn_label" label="churn_label" length="10" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmfoHWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_MBBwTGqOEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoHmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoH2qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoIGqLEfG5aM4fdR_Gwg" name="service_score" id="service_score" label="service_score" length="10" sourceType="INT" talendType="id_Integer">
+        <taggedValue xmi:id="_ZmfoIWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_JZzk9mqQEfG1lqxu6qhfiQ" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoImqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoI2qLEfG5aM4fdR_Gwg" name="INT" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoJGqLEfG5aM4fdR_Gwg" name="service_level" id="service_level" label="service_level" length="20" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmfoJWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_lF9ieGqQEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoJmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmfoJ2qLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmfoKGqLEfG5aM4fdR_Gwg" name="tenure_segment" id="tenure_segment" label="tenure_segment" length="30" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmfoKWqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_lF9igWqQEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmfoKmqLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO0GqLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO0WqLEfG5aM4fdR_Gwg" name="monthly_charge_band" id="monthly_charge_band" label="monthly_charge_band" length="20" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmgO0mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_lF9iimqQEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO02qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO1GqLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO1WqLEfG5aM4fdR_Gwg" name="segment_key" id="segment_key" label="segment_key" length="200" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmgO1mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_lF9ik2qQEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO12qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO2GqLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO2WqLEfG5aM4fdR_Gwg" name="stg_quality_status" id="stg_quality_status" label="stg_quality_status" length="30" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmgO2mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_2A-EV2qLEfG5aM4fdR_Gwg" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO22qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO3GqLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO3WqLEfG5aM4fdR_Gwg" name="stg_notes" id="stg_notes" label="stg_notes" length="500" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmgO3mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_lF9ipGqQEfG1lqxu6qhfiQ" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO32qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO4GqLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO4WqLEfG5aM4fdR_Gwg" name="source_run_id" id="source_run_id" label="source_run_id" length="80" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmgO4mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_2A-EUmqLEfG5aM4fdR_Gwg" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO42qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO5GqLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO5WqLEfG5aM4fdR_Gwg" name="stg_run_id" id="stg_run_id" label="stg_run_id" length="80" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmgO5mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_2A-EU2qLEfG5aM4fdR_Gwg" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO52qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO6GqLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO6WqLEfG5aM4fdR_Gwg" name="source_file" id="source_file" label="source_file" length="255" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_ZmgO6mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_2A-EVGqLEfG5aM4fdR_Gwg" tag="Content Type" value="Nominal"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO62qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO7GqLEfG5aM4fdR_Gwg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO7WqLEfG5aM4fdR_Gwg" name="source_row_number" id="source_row_number" label="source_row_number" length="19" sourceType="BIGINT" talendType="id_Long">
+        <taggedValue xmi:id="_ZmgO7mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_2A-EVWqLEfG5aM4fdR_Gwg" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO72qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO8GqLEfG5aM4fdR_Gwg" name="BIGINT" numericPrecisionRadix="10" javaDataType="-5" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_ZmgO8WqLEfG5aM4fdR_Gwg" name="processed_at" id="processed_at" label="processed_at" length="26" sourceType="DATETIME" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_ZmgO8mqLEfG5aM4fdR_Gwg" tag="Comment" value=""/>
+        <taggedValue xmi:id="_2A-EVmqLEfG5aM4fdR_Gwg" tag="Content Type" value="Interval"/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_ZmgO82qLEfG5aM4fdR_Gwg" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_ZmgO9GqLEfG5aM4fdR_Gwg" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_R9iSUGqLEfG5aM4fdR_Gwg" name="DSAPRO" dataManager="_E6SecGqLEfG5aM4fdR_Gwg"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_R9iSUWqLEfG5aM4fdR_Gwg" name="DWHDEV" dataManager="_E6SecGqLEfG5aM4fdR_Gwg"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_R9iSUmqLEfG5aM4fdR_Gwg" name="DWHPRO" dataManager="_E6SecGqLEfG5aM4fdR_Gwg"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_R9iSU2qLEfG5aM4fdR_Gwg" name="information_schema" dataManager="_E6SecGqLEfG5aM4fdR_Gwg"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_2A-EUGqLEfG5aM4fdR_Gwg" kind="Usage" supplier="_E6SecGqLEfG5aM4fdR_Gwg">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_stg/PROFILE_01_STG_TELCO_IDENTIFICADORES_COMPLETITUD_0.1.ana#_KR9qkGqHEfG5aM4fdR_Gwg"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_stg/PROFILE_02_STG_TELCO_CHURN_CONTRATO_FACTURACION_0.1.ana#_uUJQoGqNEfG1lqxu6qhfiQ"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_stg/PROFILE_03_STG_TELCO_SERVICIOS_0.1.ana#_Tc0MYGqOEfG1lqxu6qhfiQ"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_stg/PROFILE_04_STG_TELCO_NUMERICOS_0.1.ana#_1bJ6IWqOEfG1lqxu6qhfiQ"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../TDQ_Data Profiling/Analyses/Analisis_stg/PROFILE_05_STG_TELCO_SEGMENTACIONES_0.1.ana#_PZeA0GqQEfG1lqxu6qhfiQ"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
