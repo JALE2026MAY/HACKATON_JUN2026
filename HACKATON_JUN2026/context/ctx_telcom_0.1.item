@@ -18,6 +18,7 @@
     <contextParameter xmi:id="_LzolDmoAEfGFz-1eMWTYGQ" comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="1000"/>
     <contextParameter xmi:id="_LzolD2oAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Grupo1"/>
     <contextParameter xmi:id="_m3DTgGq6EfGtjOM0sMIeGw" comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_m6PtQGrBEfGj_dhdvXtejg" comment="" name="action_run_id" prompt="action_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_LzolEGoAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="DEV">
     <contextParameter xmi:id="_LzolEWoAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
@@ -37,6 +38,7 @@
     <contextParameter xmi:id="_LzpMGGoAEfGFz-1eMWTYGQ" comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
     <contextParameter xmi:id="_LzpMGWoAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m3DTgWq6EfGtjOM0sMIeGw" comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_m6QUUGrBEfGj_dhdvXtejg" comment="" name="action_run_id" prompt="action_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_LzpMGmoAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="PROD">
     <contextParameter xmi:id="_LzpMG2oAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
@@ -56,6 +58,7 @@
     <contextParameter xmi:id="_LzpMKWoAEfGFz-1eMWTYGQ" comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
     <contextParameter xmi:id="_LzpMKmoAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m3DTgmq6EfGtjOM0sMIeGw" comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_m6QUUWrBEfGj_dhdvXtejg" comment="" name="action_run_id" prompt="action_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_LzpMK2oAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="QA">
     <contextParameter xmi:id="_LzpMLGoAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
@@ -75,5 +78,6 @@
     <contextParameter xmi:id="_LzpMOmoAEfGFz-1eMWTYGQ" comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
     <contextParameter xmi:id="_LzpMO2oAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m3D6kGq6EfGtjOM0sMIeGw" comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_m6QUUmrBEfGj_dhdvXtejg" comment="" name="action_run_id" prompt="action_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>
