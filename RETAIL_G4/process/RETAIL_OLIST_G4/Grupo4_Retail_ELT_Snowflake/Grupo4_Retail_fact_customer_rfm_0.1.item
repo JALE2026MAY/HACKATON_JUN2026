@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="Default">
-    <contextParameter comment="" name="sn_account" prompt="sn_account?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_String" value="crc78372.us-east-1" internalId="_lMR8UGrREfGJutgJywevvg"/>
-    <contextParameter comment="" name="sn_password" prompt="sn_password?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_Password" value="enc:system.encryption.key.v1:WVLfTGPV30x02k8QUAz2yQC2xWbIeF5FxZd4UF+Ej5WG/28H5IE5d1ifj/bgXDnb" internalId="_lMR8UWrREfGJutgJywevvg"/>
-    <contextParameter comment="" name="sn_user_id" prompt="sn_user_id?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_String" value="ANGEL.PACHECO" internalId="_lMR8UmrREfGJutgJywevvg"/>
-    <contextParameter comment="" name="sn_warehouse" prompt="sn_warehouse?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_String" value="COMPUTE_WH" internalId="_lMR8U2rREfGJutgJywevvg"/>
-    <contextParameter comment="" name="sn_database" prompt="sn_database?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_String" value="DW_GRUPO_4" internalId="_lMR8VGrREfGJutgJywevvg"/>
+    <contextParameter comment="" name="sn_account" prompt="sn_account?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_String" value="crc78372.us-east-1" internalId="_hJ20cGrsEfGJutgJywevvg"/>
+    <contextParameter comment="" name="sn_password" prompt="sn_password?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_Password" value="enc:system.encryption.key.v1:RdufJ3knmi9NudguKK67T08wSWtt7LWsMaTsKOx7k14FrygLyZgLnwOnaqYeamSj" internalId="_hJ20cWrsEfGJutgJywevvg"/>
+    <contextParameter comment="" name="sn_user_id" prompt="sn_user_id?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_String" value="ANGEL.PACHECO" internalId="_hJ20cmrsEfGJutgJywevvg"/>
+    <contextParameter comment="" name="sn_warehouse" prompt="sn_warehouse?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_String" value="COMPUTE_WH" internalId="_hJ20c2rsEfGJutgJywevvg"/>
+    <contextParameter comment="" name="sn_database" prompt="sn_database?" promptNeeded="false" repositoryContextId="_XWf8QGqlEfGJutgJywevvg" type="id_String" value="DW_GRUPO_4" internalId="_hJ20dGrsEfGJutgJywevvg"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -105,10 +105,6 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="80">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
   <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -137,22 +133,6 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="SnowflakeClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="920" posY="80">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAClose" show="false"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
-    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
-    <metadata connector="FLOW" name="tDBClose_1"/>
-    <metadata connector="LOOKUP" name="LOOKUP"/>
-    <metadata connector="MERGE" name="MERGE"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="360" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
@@ -162,9 +142,9 @@
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="FACT_ORDERS"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value=""/>
     <elementParameter field="CHECK" name="configuration.dataSet.manualQuery" value="true"/>
-    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;WITH rfm AS (&#xD;&#xA;    SELECT&#xD;&#xA;        o.CUSTOMER_KEY,&#xD;&#xA;&#xD;&#xA;        DATEDIFF(&#xD;&#xA;            'day',&#xD;&#xA;            MAX(dt.DATE),&#xD;&#xA;            '2018-10-29'&#xD;&#xA;        ) AS recency_days,&#xD;&#xA;&#xD;&#xA;        COUNT(*) AS frequency_count,&#xD;&#xA;        SUM(o.total_amount) AS monetary_value&#xD;&#xA;&#xD;&#xA;    FROM FACT.FACT_ORDERS o&#xD;&#xA;    INNER JOIN DIM.DIM_DATE dt&#xD;&#xA;        ON o.order_purchase_timestamp = dt.DATA_KEY&#xD;&#xA;&#xD;&#xA;    GROUP BY o.CUSTOMER_KEY&#xD;&#xA;),&#xD;&#xA;&#xD;&#xA;rfm_norm AS (&#xD;&#xA;    SELECT&#xD;&#xA;        CUSTOMER_KEY,&#xD;&#xA;&#xD;&#xA;        recency_days,&#xD;&#xA;        frequency_count,&#xD;&#xA;        monetary_value,&#xD;&#xA;&#xD;&#xA;        -- Normalización básica (min-max simplificado)&#xD;&#xA;        (recency_days - MIN(recency_days) OVER()) &#xD;&#xA;            / NULLIF(MAX(recency_days) OVER() - MIN(recency_days) OVER(), 0) AS recency_norm,&#xD;&#xA;&#xD;&#xA;        (frequency_count - MIN(frequency_count) OVER())&#xD;&#xA;            / NULLIF(MAX(frequency_count) OVER() - MIN(frequency_count) OVER(), 0) AS frequency_norm,&#xD;&#xA;&#xD;&#xA;        (monetary_value - MIN(monetary_value) OVER())&#xD;&#xA;            / NULLIF(MAX(monetary_value) OVER() - MIN(monetary_value) OVER(), 0) AS monetary_norm&#xD;&#xA;&#xD;&#xA;    FROM rfm&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;SELECT&#xD;&#xA;    CUSTOMER_KEY,&#xD;&#xA;    recency_days,&#xD;&#xA;    frequency_count,&#xD;&#xA;    monetary_value,&#xD;&#xA;&#xD;&#xA;    -- Inversión de recency (más recency = peor)&#xD;&#xA;    (1 - recency_norm) * 0.5&#xD;&#xA;    + frequency_norm * 0.3&#xD;&#xA;    + monetary_norm * 0.2 AS churn_risk_score&#xD;&#xA;&#xD;&#xA;FROM rfm_norm;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT&#xD;&#xA;    customer_key,&#xD;&#xA;    recency_days,&#xD;&#xA;    frequency_count,&#xD;&#xA;    monetary_value,&#xD;&#xA;&#xD;&#xA;    6 - NTILE(5) OVER (&#xD;&#xA;        ORDER BY recency_days&#xD;&#xA;    ) AS r_score,&#xD;&#xA;&#xD;&#xA;    NTILE(5) OVER (&#xD;&#xA;        ORDER BY frequency_count&#xD;&#xA;    ) AS f_score,&#xD;&#xA;&#xD;&#xA;    NTILE(5) OVER (&#xD;&#xA;        ORDER BY monetary_value&#xD;&#xA;    ) AS m_score&#xD;&#xA;&#xD;&#xA;FROM FACT_CHURN;&quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
@@ -179,13 +159,59 @@
       <column comment="" defaultValue="" key="false" length="9" name="RECENCY_DAYS" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="18" name="FREQUENCY_COUNT" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="-1" name="MONETARY_VALUE" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="CHURN_RISK_SCORE" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="R_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="18" name="F_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="18" name="M_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="280">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_75bgUGrqEfGJutgJywevvg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" defaultValue="" key="false" length="38" name="CUSTOMER_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="R_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="18" name="F_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="18" name="M_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RFM_SCORE" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SEGMENT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="CUSTOMER_KEY" expression="row1.CUSTOMER_KEY " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="R_SCORE" expression="row1.R_SCORE " type="id_Integer"/>
+        <mapperTableEntries name="F_SCORE" expression="row1.F_SCORE " type="id_Integer"/>
+        <mapperTableEntries name="M_SCORE" expression="row1.M_SCORE " type="id_Integer"/>
+        <mapperTableEntries name="RFM_SCORE" expression="row1.R_SCORE + row1.F_SCORE + row1.M_SCORE " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="SEGMENT" expression="row1.R_SCORE >= 4 &amp;&amp; row1.F_SCORE >= 4 &amp;&amp; row1.M_SCORE >= 4 ? &quot;Champions&quot; :&#xD;&#xA;row1.R_SCORE >= 4 &amp;&amp; row1.F_SCORE >= 3 &amp;&amp; row1.F_SCORE &lt; 4 ? &quot;Loyal Customers&quot; :&#xD;&#xA;row1.R_SCORE >= 3 &amp;&amp; row1.F_SCORE &lt;= 4 &amp;&amp; row1.F_SCORE >= 3 ? &quot;Potential Loyalists&quot; :&#xD;&#xA;row1.R_SCORE == 5 &amp;&amp; row1.F_SCORE &lt;= 2 ? &quot;New High Potential&quot; :&#xD;&#xA;row1.R_SCORE == 3 &amp;&amp; row1.F_SCORE &lt;= 2 ? &quot;Needs Attention&quot; : &#xD;&#xA;row1.R_SCORE &lt;= 2 &amp;&amp; row1.F_SCORE >= 4 ? &quot;At Risk High Value&quot; :&#xD;&#xA;row1.R_SCORE &lt;= 2 &amp;&amp; row1.F_SCORE >= 2 &amp;&amp; row1.F_SCORE &lt;= 3 ? &quot;At Risk&quot; :&#xD;&#xA;row1.R_SCORE &lt;= 1 &amp;&amp; row1.F_SCORE &lt;= 1 ? &quot;Lost&quot; : &quot;Hibernating&quot; " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="CUSTOMER_KEY" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="RECENCY_DAYS" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="FREQUENCY_COUNT" type="id_Integer"/>
+        <mapperTableEntries name="MONETARY_VALUE" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="R_SCORE" type="id_Integer"/>
+        <mapperTableEntries name="F_SCORE" type="id_Integer"/>
+        <mapperTableEntries name="M_SCORE" type="id_Integer"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="760" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -194,7 +220,7 @@
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="FACT_CHURN"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="FACT_CUSTOMER_RFM"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
     <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="CUSTOMER_KEY" show="false"/>
@@ -220,10 +246,11 @@
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" defaultValue="" key="false" length="38" name="CUSTOMER_KEY" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="9" name="RECENCY_DAYS" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="18" name="FREQUENCY_COUNT" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="MONETARY_VALUE" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="CHURN_RISK_SCORE" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="R_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="18" name="F_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="18" name="M_SCORE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RFM_SCORE" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SEGMENT" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
@@ -239,22 +266,40 @@
       <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tDBClose_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
-  </connection>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="SnowflakeClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="920" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAClose" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBClose_1"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
-  </subjob>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tDBClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
@@ -267,12 +312,18 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
