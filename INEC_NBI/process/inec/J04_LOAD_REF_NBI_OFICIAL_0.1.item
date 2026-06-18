@@ -261,13 +261,13 @@
       <column comment="" key="false" length="-1" name="FUENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_nbi_oficial">
         <mapperTableEntries name="PERIODO_REFERENCIA" expression="row1.periodo " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="PROVINCIA" expression="row1.provincia " type="id_String" nullable="true"/>
         <mapperTableEntries name="CANTON" expression="row1.canton " type="id_String" nullable="true"/>
-        <mapperTableEntries name="NBI_OFICIAL_INEC" expression="row1.porcentaje == null || row1.porcentaje.trim().isEmpty()&#xA;? null&#xA;: row1.porcentaje.trim().replace(&quot;,&quot;, &quot;.&quot;)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NBI_OFICIAL_INEC" expression="row1.porcentaje == null || row1.porcentaje.trim().isEmpty()&#xA;&#x9;&#x9;&#x9;&#x9;? null&#xA;&#x9;&#x9;&#x9;&#x9;: new java.math.BigDecimal(row1.porcentaje.trim().replace(&quot;,&quot;, &quot;.&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;    .multiply(new java.math.BigDecimal(&quot;100&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;    .toPlainString() " type="id_String" nullable="true"/>
         <mapperTableEntries name="CODIGO_PROVINCIA" expression="&quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="CODIGO_CANTON" expression="&quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="FUENTE" expression="row1.fuente " type="id_String" nullable="true"/>
@@ -395,12 +395,12 @@
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
   </subjob>
 </talendfile:ProcessType>
