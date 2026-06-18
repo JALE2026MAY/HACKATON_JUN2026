@@ -12,4 +12,5 @@
   <deletedItems id="_oDBt0F-KEfGsct_TJueQYg" path="" type="CONTEXT"/>
   <deletedItems id="_TU-6YGmvEfGgPtFU1f2lyA" path="ctx_dataton" type="CONTEXT"/>
   <deletedItems id="_GylDwGnxEfGB6uUEexBqfA" path="RETAIL_OLIST_G4" type="PROCESS"/>
+  <deletedItems id="_EUjBYGq9EfGJutgJywevvg" path="RETAIL_OLIST_G4/Grupo4_Retail_ELT_Snowflake" type="PROCESS"/>
 </recyclebin:RecycleBin>
