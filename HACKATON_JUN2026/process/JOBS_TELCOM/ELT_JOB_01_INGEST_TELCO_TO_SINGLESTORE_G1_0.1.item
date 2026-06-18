@@ -533,7 +533,7 @@
       <column comment="" key="false" length="-1" name="rejected_at" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="v_source_row_number" expression="Numeric.sequence(&quot;telco_src_row&quot;, 1, 1) " type="id_Long"/>
         <mapperTableEntries name="v_customer_id" expression="row_telco.customerID == null ? &quot;&quot; : row_telco.customerID.trim() " type="id_String"/>

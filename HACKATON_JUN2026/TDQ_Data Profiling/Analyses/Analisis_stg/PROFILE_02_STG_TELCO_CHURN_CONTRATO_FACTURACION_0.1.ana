@@ -24,7 +24,7 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoFGqLEfG5aM4fdR_Gwg"/>
     </context>
     <results xmi:id="_uUJQp2qNEfG1lqxu6qhfiQ">
-      <resultMetadata xmi:id="_uUJQqGqNEfG1lqxu6qhfiQ" executionDate="2026-06-17T16:38:18.416-0500" executionDuration="7972" message="" executionNumber="6" lastRunOk="true" lastExecutionNumberOk="6"/>
+      <resultMetadata xmi:id="_uUJQqGqNEfG1lqxu6qhfiQ" executionDate="2026-06-17T16:43:11.730-0500" executionDuration="10204" message="" executionNumber="7" lastRunOk="true" lastExecutionNumberOk="7"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_MBBwQGqOEfG1lqxu6qhfiQ" count="7043" computed="true">
         <parameters xmi:id="_MBBwQWqOEfG1lqxu6qhfiQ"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/CONN_SINGLESTORE_TELCO_G1_0.1.item#_ZmfoHGqLEfG5aM4fdR_Gwg"/>

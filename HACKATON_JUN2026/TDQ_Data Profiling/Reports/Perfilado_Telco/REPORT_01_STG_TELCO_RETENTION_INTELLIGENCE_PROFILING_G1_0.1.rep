@@ -19,7 +19,7 @@
   <taggedValue xmi:id="_rJIB_GqUEfG1lqxu6qhfiQ" tag="REP_DBINFO_DBNAME" value="talend_dq"/>
   <taggedValue xmi:id="_rJIB_WqUEfG1lqxu6qhfiQ" tag="REP_DBINFO_SCHEMA" value=""/>
   <taggedValue xmi:id="_rJIB_mqUEfG1lqxu6qhfiQ" tag="REP_DBINFO_USER" value="sa"/>
-  <taggedValue xmi:id="_rJIB_2qUEfG1lqxu6qhfiQ" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:ZhdbVpaP2h5aPl+wd0C8BOHFw73IZEtE4VWRFw=="/>
+  <taggedValue xmi:id="_rJIB_2qUEfG1lqxu6qhfiQ" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:DAMGY6kD1ltqZpvhlA+4EttwYmnauMTVS2teLg=="/>
   <taggedValue xmi:id="_rJICAGqUEfG1lqxu6qhfiQ" tag="REP_DBINFO_PARAMETER" value=""/>
   <taggedValue xmi:id="_rJICAWqUEfG1lqxu6qhfiQ" tag="REP_DBINFO_URL" value="jdbc:hsqldb:file:/C:\Program Files (x86)\Talend-Studio\studio\workspace\TDQ_reporting_db\talend_dq"/>
   <taggedValue xmi:id="_rJICAmqUEfG1lqxu6qhfiQ" tag="REP_DBINFO_DRIVER" value="org.hsqldb.jdbcDriver"/>
@@ -47,6 +47,6 @@
   <analysisMap xmi:id="_tGo3hGqUEfG1lqxu6qhfiQ" mustRefresh="true" reportType="Basic">
     <analysis href="../../Analyses/Analisis_stg/PROFILE_05_STG_TELCO_SEGMENTACIONES_0.1.ana#_PZeA0GqQEfG1lqxu6qhfiQ"/>
   </analysisMap>
-  <ExecInformations xmi:id="_8FHB8GqUEfG1lqxu6qhfiQ" executionDate="2026-06-17T16:38:04.731-0500" executionDuration="49748" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+  <ExecInformations xmi:id="_8FHB8GqUEfG1lqxu6qhfiQ" executionDate="2026-06-17T16:43:07.298-0500" executionDuration="36367" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
   <context xmi:id="_zttSIGqUEfG1lqxu6qhfiQ" confirmationNeeded="false" hide="false" name="Default"/>
 </dataquality.reports:TdReport>
