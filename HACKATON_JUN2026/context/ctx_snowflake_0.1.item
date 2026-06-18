@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_EfIxsGrGEfGdOMS5nfS_fg" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_EfIxsWrGEfGdOMS5nfS_fg" comment="" name="publish_run_id" prompt="publish_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_EfIxsmrGEfGdOMS5nfS_fg" comment="" name="sf_database" prompt="sf_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="TELCO_RETENTION_INTELLIGENCE"/>
+  <contextParameter xmi:id="_EfIxs2rGEfGdOMS5nfS_fg" comment="" name="sf_schema" prompt="sf_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ANALYTICS"/>
+  <contextParameter xmi:id="_EfIxtGrGEfGdOMS5nfS_fg" comment="" name="sf_warehouse" prompt="sf_warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="COMPUTE_WH"/>
+  <contextParameter xmi:id="_EfIxtWrGEfGdOMS5nfS_fg" comment="" name="sf_role" prompt="sf_role?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ACCOUNTADMIN"/>
+  <contextParameter xmi:id="_EfIxtmrGEfGdOMS5nfS_fg" comment="" name="sf_user" prompt="sf_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="JONATHAN2408"/>
+  <contextParameter xmi:id="_EfIxt2rGEfGdOMS5nfS_fg" comment="" name="sf_password" prompt="sf_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:1KDTJzguOauVvIC7eMfjhmUpPFOdb+KEkQXl3kmw3L/WPPV+SXM4uZSgeU0emzPf"/>
+  <contextParameter xmi:id="_EfIxuGrGEfGdOMS5nfS_fg" comment="" name="sf_account" prompt="sf_account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ki96629.sa-east-1.aws"/>
+  <contextParameter xmi:id="_HV3KYGrKEfGdOMS5nfS_fg" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="209.50.254.159"/>
+  <contextParameter xmi:id="_HV3KYWrKEfGdOMS5nfS_fg" comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="3306"/>
+  <contextParameter xmi:id="_HV3KYmrKEfGdOMS5nfS_fg" comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DSADEV"/>
+  <contextParameter xmi:id="_HV3KY2rKEfGdOMS5nfS_fg" comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="usr_acme"/>
+  <contextParameter xmi:id="_HV3KZGrKEfGdOMS5nfS_fg" comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:xNLQGhsReeTMq5yxts43Ful16gn1GjDTTSPyVQsJlcagFXM="/>
+</talendfile:ContextType>

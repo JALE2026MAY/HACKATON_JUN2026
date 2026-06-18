@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" name="publish_run_id" prompt="publish_run_id?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="" internalId="_U0PBwGrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="sf_database" prompt="sf_database?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="TELCO_RETENTION_INTELLIGENCE" internalId="_U0Po0GrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="sf_schema" prompt="sf_schema?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="ANALYTICS" internalId="_U0Po0WrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="sf_warehouse" prompt="sf_warehouse?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="COMPUTE_WH" internalId="_U0Po0mrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="sf_role" prompt="sf_role?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="ACCOUNTADMIN" internalId="_U0Po02rPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="sf_user" prompt="sf_user?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="JONATHAN2408" internalId="_U0Po1GrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="sf_password" prompt="sf_password?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_Password" value="enc:system.encryption.key.v1:Fb7Gkexcc5VqjXAAaj2nLaWmxrRJMFGu+FH4YW/jCeu+BToVCJnTFNAjSsyYGHFg" internalId="_U0Po1WrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="sf_account" prompt="sf_account?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="ki96629.sa-east-1.aws" internalId="_U0Po1mrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="209.50.254.159" internalId="_U0Po12rPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="3306" internalId="_U0Po2GrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="DSADEV" internalId="_U0Po2WrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_String" value="usr_acme" internalId="_U0Po2mrPEfGdOMS5nfS_fg"/>
+    <contextParameter comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="_EeyzcGrGEfGdOMS5nfS_fg" type="id_Password" value="enc:system.encryption.key.v1:fxecvOrUk63B4KhaZ7Isv8NpVVgavVPdWlCzBm4Edn1dA3A=" internalId="_U0Po22rPEfGdOMS5nfS_fg"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:YCx5Dopr4C4Aw+9855IT2Un2VvAG0Rl9CAo2HYdn" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/Talend Workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="JDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SfPqGY5z2LYn2MfhXNhPzJSt8uW8g3xx8qckbHHf" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.publish_run_id = &quot;RUN_PUBLISH_TELCO_&quot; &#xD;&#xA;&#x9;    + TalendDate.formatDate(&quot;yyyyMMdd_HHmmss&quot;, TalendDate.getCurrentDate());&#xD;&#xA;&#x9; &#xD;&#xA;&#x9;System.out.println(&quot;PUBLISH_RUN_ID = &quot; + context.publish_run_id);"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="tJava_set_publish_run_id"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="TEXT" name="HOST" value="context.db_host"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.db_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.db_name"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.db_user"/>
+    <elementParameter field="PASSWORD" name="PASS" value="context.db_password"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBConnection_SingleStore"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="SnowflakeConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="680" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dAConnection" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeConnection"/>
+    <elementParameter field="TEXT" name="configuration.account" value="context.sf_account"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.authenticationType" value="BASIC"/>
+    <elementParameter field="TEXT" name="configuration.snowflakeAuth.userId" value="context.sf_user"/>
+    <elementParameter field="PASSWORD" name="configuration.snowflakeAuth.password" value="context.sf_password"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="TEXT" name="configuration.warehouse" value="context.sf_warehouse"/>
+    <elementParameter field="TEXT" name="configuration.dbSchema" value="context.sf_schema"/>
+    <elementParameter field="TEXT" name="configuration.database" value="context.sf_database"/>
+    <elementParameter field="CHECK" name="configuration.shareConnection" value="false"/>
+    <elementParameter field="TEXT" name="configuration.sharedConnectionName" value="SNOWFLAKE_CONN" show="false"/>
+    <elementParameter field="CHECK" name="configuration.autoCommit" value="true"/>
+    <elementParameter field="TEXT" name="configuration.loginTimeout" value="15"/>
+    <elementParameter field="TEXT" name="configuration.jdbcUrlSuffix" value=".snowflakecomputing.com"/>
+    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBConnection_2"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeRow_truncate_dim_customer"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value=""/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="TRUNCATE TABLE DIM_CUSTOMER_TELCO"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.preparedStatementParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.commitEvery" value="10000"/>
+    <elementParameter field="CHECK" name="configuration.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBRow_1"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeRow_truncate_fact_contracts"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="TRUNCATE TABLE FACT_CONTRACTS_TELCO"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.preparedStatementParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.commitEvery" value="10000"/>
+    <elementParameter field="CHECK" name="configuration.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBRow_2"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    customer_id AS CUSTOMER_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    phone_service AS PHONE_SERVICE, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    multiple_lines AS MULTIPLE_LINES, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    internet_service AS INTERNET_SERVICE, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    online_security AS ONLINE_SECURITY, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    online_backup AS ONLINE_BACKUP, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    device_protection AS DEVICE_PROTECTION, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    tech_support AS TECH_SUPPORT, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    streaming_tv AS STREAMING_TV, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    streaming_movies AS STREAMING_MOVIES, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    contract_type AS CONTRACT_TYPE, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    paperless_billing_flag AS PAPERLESS_BILLING_FLAG, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    payment_method AS PAYMENT_METHOD, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    monthly_charges AS MONTHLY_CHARGES, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    total_charges AS TOTAL_CHARGES, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    total_charges_was_imputed AS TOTAL_CHARGES_WAS_IMPUTED, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    churn_flag AS CHURN_FLAG, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    churn_label AS CHURN_LABEL, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    service_score AS SERVICE_SCORE, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    source_run_id AS SOURCE_RUN_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    stg_run_id AS STG_RUN_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    dq_run_id_used AS DQ_RUN_ID_USED, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    gold_run_id AS GOLD_RUN_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    '&quot; + context.publish_run_id + &quot;' AS PUBLISH_RUN_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    NOW(6) AS PUBLISHED_AT &quot; +&#xD;&#xA;&#xD;&#xA;&quot;FROM gold_fact_contracts_telco_grupo_uno&quot;&#xD;&#xA; "/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customer_id" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone_service" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="multiple_lines" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="internet_service" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="online_security" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="online_backup" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="device_protection" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tech_support" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="streaming_tv" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="streaming_movies" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contract_type" id="20"/>
+      <elementValue elementRef="TRIM" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="paperless_billing_flag" id="22"/>
+      <elementValue elementRef="TRIM" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="payment_method" id="24"/>
+      <elementValue elementRef="TRIM" value="false" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="monthly_charges" id="26"/>
+      <elementValue elementRef="TRIM" value="false" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_charges" id="28"/>
+      <elementValue elementRef="TRIM" value="false" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_charges_was_imputed" id="30"/>
+      <elementValue elementRef="TRIM" value="false" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="churn_flag" id="32"/>
+      <elementValue elementRef="TRIM" value="false" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="churn_label" id="34"/>
+      <elementValue elementRef="TRIM" value="false" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="service_score" id="36"/>
+      <elementValue elementRef="TRIM" value="false" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_run_id" id="38"/>
+      <elementValue elementRef="TRIM" value="false" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stg_run_id" id="40"/>
+      <elementValue elementRef="TRIM" value="false" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dq_run_id_used" id="42"/>
+      <elementValue elementRef="TRIM" value="false" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="gold_run_id" id="44"/>
+      <elementValue elementRef="TRIM" value="false" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISH_RUN_ID" id="46"/>
+      <elementValue elementRef="TRIM" value="false" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISHED_AT" id="48"/>
+      <elementValue elementRef="TRIM" value="false" id="49"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="tDBInput_fact_contracts"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="" key="false" length="64" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="phone_service" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="multiple_lines" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="internet_service" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="online_security" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="online_backup" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="device_protection" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="tech_support" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="streaming_tv" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="streaming_movies" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contract_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="paperless_billing_flag" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="payment_method" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="monthly_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="total_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="total_charges_was_imputed" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="churn_flag" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="churn_label" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="service_score" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="source_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="stg_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="dq_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="gold_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="680" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeOutput_fact_contracts"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="FACT_CONTRACTS_TELCO"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+    <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="customer_id" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="true"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+    <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+    <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column comment="" key="false" length="64" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="phone_service" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="multiple_lines" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="internet_service" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="online_security" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="online_backup" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="device_protection" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="tech_support" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="streaming_tv" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="streaming_movies" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contract_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="paperless_billing_flag" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="payment_method" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="monthly_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="total_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="total_charges_was_imputed" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="churn_flag" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="churn_label" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="service_score" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="source_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="stg_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="dq_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="gold_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_3" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeRow_truncate_segments"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="TRUNCATE TABLE MART_RETENTION_SEGMENTS_TELCO"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.preparedStatementParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.commitEvery" value="10000"/>
+    <elementParameter field="CHECK" name="configuration.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBRow_3"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_3" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &quot; +&#xD;&#xA;&quot;    segment_key AS SEGMENT_KEY, &quot; +&#xD;&#xA;&quot;    contract_type AS CONTRACT_TYPE, &quot; +&#xD;&#xA;&quot;    internet_service AS INTERNET_SERVICE, &quot; +&#xD;&#xA;&quot;    payment_method AS PAYMENT_METHOD, &quot; +&#xD;&#xA;&quot;    tenure_segment AS TENURE_SEGMENT, &quot; +&#xD;&#xA;&quot;    service_level AS SERVICE_LEVEL, &quot; +&#xD;&#xA;&quot;    monthly_charge_band AS MONTHLY_CHARGE_BAND, &quot; +&#xD;&#xA;&quot;    total_customers AS TOTAL_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    churn_customers AS CHURN_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    active_customers AS ACTIVE_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    churn_rate_pct AS CHURN_RATE_PCT, &quot; +&#xD;&#xA;&quot;    active_rate_pct AS ACTIVE_RATE_PCT, &quot; +&#xD;&#xA;&quot;    avg_monthly_charges AS AVG_MONTHLY_CHARGES, &quot; +&#xD;&#xA;&quot;    avg_total_charges AS AVG_TOTAL_CHARGES, &quot; +&#xD;&#xA;&quot;    total_monthly_revenue AS TOTAL_MONTHLY_REVENUE, &quot; +&#xD;&#xA;&quot;    churn_monthly_revenue_risk AS CHURN_MONTHLY_REVENUE_RISK, &quot; +&#xD;&#xA;&quot;    risk_level AS RISK_LEVEL, &quot; +&#xD;&#xA;&quot;    risk_reason AS RISK_REASON, &quot; +&#xD;&#xA;&quot;    retention_priority_score AS RETENTION_PRIORITY_SCORE, &quot; +&#xD;&#xA;&quot;    dq_run_id_used AS DQ_RUN_ID_USED, &quot; +&#xD;&#xA;&quot;    gold_run_id AS GOLD_RUN_ID, &quot; +&#xD;&#xA;&quot;    '&quot; + context.publish_run_id + &quot;' AS PUBLISH_RUN_ID, &quot; +&#xD;&#xA;&quot;    NOW(6) AS PUBLISHED_AT &quot; +&#xD;&#xA;&quot;FROM mart_retention_segments_telco_grupo_uno&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="segment_key" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contract_type" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="internet_service" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="payment_method" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tenure_segment" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="service_level" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="monthly_charge_band" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_customers" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="churn_customers" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="active_customers" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="churn_rate_pct" id="20"/>
+      <elementValue elementRef="TRIM" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="active_rate_pct" id="22"/>
+      <elementValue elementRef="TRIM" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="avg_monthly_charges" id="24"/>
+      <elementValue elementRef="TRIM" value="false" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="avg_total_charges" id="26"/>
+      <elementValue elementRef="TRIM" value="false" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_monthly_revenue" id="28"/>
+      <elementValue elementRef="TRIM" value="false" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="churn_monthly_revenue_risk" id="30"/>
+      <elementValue elementRef="TRIM" value="false" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="risk_level" id="32"/>
+      <elementValue elementRef="TRIM" value="false" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="risk_reason" id="34"/>
+      <elementValue elementRef="TRIM" value="false" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="retention_priority_score" id="36"/>
+      <elementValue elementRef="TRIM" value="false" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dq_run_id_used" id="38"/>
+      <elementValue elementRef="TRIM" value="false" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="gold_run_id" id="40"/>
+      <elementValue elementRef="TRIM" value="false" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISH_RUN_ID" id="42"/>
+      <elementValue elementRef="TRIM" value="false" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISHED_AT" id="44"/>
+      <elementValue elementRef="TRIM" value="false" id="45"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="tDBInput_segments"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_3">
+      <column comment="" key="false" length="250" name="segment_key" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contract_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="internet_service" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="payment_method" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="tenure_segment" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="service_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="monthly_charge_band" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="churn_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="active_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="churn_rate_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="active_rate_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="avg_monthly_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="avg_total_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="total_monthly_revenue" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="churn_monthly_revenue_risk" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="risk_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="risk_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="retention_priority_score" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="dq_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="gold_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="680" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_3" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeOutput_segments"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="MART_RETENTION_SEGMENTS_TELCO"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+    <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="segment_key" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+    <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+    <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBOutput_3">
+      <column comment="" key="false" length="250" name="segment_key" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contract_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="internet_service" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="payment_method" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="tenure_segment" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="service_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="monthly_charge_band" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="churn_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="active_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="churn_rate_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="active_rate_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="avg_monthly_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="avg_total_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="total_monthly_revenue" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="churn_monthly_revenue_risk" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="risk_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="risk_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="retention_priority_score" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="dq_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="gold_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_4" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &quot; +&#xD;&#xA;&quot;    action_run_id AS ACTION_RUN_ID, &quot; +&#xD;&#xA;&quot;    segment_key AS SEGMENT_KEY, &quot; +&#xD;&#xA;&quot;    contract_type AS CONTRACT_TYPE, &quot; +&#xD;&#xA;&quot;    internet_service AS INTERNET_SERVICE, &quot; +&#xD;&#xA;&quot;    payment_method AS PAYMENT_METHOD, &quot; +&#xD;&#xA;&quot;    tenure_segment AS TENURE_SEGMENT, &quot; +&#xD;&#xA;&quot;    service_level AS SERVICE_LEVEL, &quot; +&#xD;&#xA;&quot;    monthly_charge_band AS MONTHLY_CHARGE_BAND, &quot; +&#xD;&#xA;&quot;    risk_level AS RISK_LEVEL, &quot; +&#xD;&#xA;&quot;    total_customers AS TOTAL_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    churn_customers AS CHURN_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    active_customers AS ACTIVE_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    churn_rate_pct AS CHURN_RATE_PCT, &quot; +&#xD;&#xA;&quot;    avg_monthly_charges AS AVG_MONTHLY_CHARGES, &quot; +&#xD;&#xA;&quot;    churn_monthly_revenue_risk AS CHURN_MONTHLY_REVENUE_RISK, &quot; +&#xD;&#xA;&quot;    retention_priority_score AS RETENTION_PRIORITY_SCORE, &quot; +&#xD;&#xA;&quot;    action_type AS ACTION_TYPE, &quot; +&#xD;&#xA;&quot;    recommended_action AS RECOMMENDED_ACTION, &quot; +&#xD;&#xA;&quot;    action_description AS ACTION_DESCRIPTION, &quot; +&#xD;&#xA;&quot;    retention_uplift_pct AS RETENTION_UPLIFT_PCT, &quot; +&#xD;&#xA;&quot;    uplift_assumption AS UPLIFT_ASSUMPTION, &quot; +&#xD;&#xA;&quot;    expected_saved_customers AS EXPECTED_SAVED_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    expected_churn_reduction_pct AS EXPECTED_CHURN_REDUCTION_PCT, &quot; +&#xD;&#xA;&quot;    expected_monthly_revenue_protected AS EXPECTED_MONTHLY_REVENUE_PROTECTED, &quot; +&#xD;&#xA;&quot;    action_priority AS ACTION_PRIORITY, &quot; +&#xD;&#xA;&quot;    business_rationale AS BUSINESS_RATIONALE, &quot; +&#xD;&#xA;&quot;    gold_run_id_used AS GOLD_RUN_ID_USED, &quot; +&#xD;&#xA;&quot;    '&quot; + context.publish_run_id + &quot;' AS PUBLISH_RUN_ID, &quot; +&#xD;&#xA;&quot;    NOW(6) AS PUBLISHED_AT &quot; +&#xD;&#xA;&quot;FROM mart_retention_actions_telco_grupo_uno&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="action_run_id" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="segment_key" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contract_type" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="internet_service" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="payment_method" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tenure_segment" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="service_level" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="monthly_charge_band" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="risk_level" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_customers" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="churn_customers" id="20"/>
+      <elementValue elementRef="TRIM" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="active_customers" id="22"/>
+      <elementValue elementRef="TRIM" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="churn_rate_pct" id="24"/>
+      <elementValue elementRef="TRIM" value="false" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="avg_monthly_charges" id="26"/>
+      <elementValue elementRef="TRIM" value="false" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="churn_monthly_revenue_risk" id="28"/>
+      <elementValue elementRef="TRIM" value="false" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="retention_priority_score" id="30"/>
+      <elementValue elementRef="TRIM" value="false" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="action_type" id="32"/>
+      <elementValue elementRef="TRIM" value="false" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="recommended_action" id="34"/>
+      <elementValue elementRef="TRIM" value="false" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="action_description" id="36"/>
+      <elementValue elementRef="TRIM" value="false" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="retention_uplift_pct" id="38"/>
+      <elementValue elementRef="TRIM" value="false" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="uplift_assumption" id="40"/>
+      <elementValue elementRef="TRIM" value="false" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expected_saved_customers" id="42"/>
+      <elementValue elementRef="TRIM" value="false" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expected_churn_reduction_pct" id="44"/>
+      <elementValue elementRef="TRIM" value="false" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expected_monthly_revenue_protected" id="46"/>
+      <elementValue elementRef="TRIM" value="false" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="action_priority" id="48"/>
+      <elementValue elementRef="TRIM" value="false" id="49"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="business_rationale" id="50"/>
+      <elementValue elementRef="TRIM" value="false" id="51"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="gold_run_id_used" id="52"/>
+      <elementValue elementRef="TRIM" value="false" id="53"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISH_RUN_ID" id="54"/>
+      <elementValue elementRef="TRIM" value="false" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISHED_AT" id="56"/>
+      <elementValue elementRef="TRIM" value="false" id="57"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="tDBInput_actions"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_4">
+      <column comment="" key="false" length="80" name="action_run_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="segment_key" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contract_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="internet_service" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="payment_method" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="tenure_segment" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="service_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="20" name="monthly_charge_band" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="risk_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="churn_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="active_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="churn_rate_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="avg_monthly_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="churn_monthly_revenue_risk" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="retention_priority_score" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="100" name="action_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="250" name="recommended_action" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1200" name="action_description" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="retention_uplift_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1000" name="uplift_assumption" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="expected_saved_customers" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="expected_churn_reduction_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="expected_monthly_revenue_protected" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="20" name="action_priority" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1500" name="business_rationale" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="80" name="gold_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="680" posY="600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_4" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeOutput_actions"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="MART_RETENTION_ACTIONS_TELCO"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+    <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="action_run_id" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="true"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+    <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+    <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBOutput_4">
+      <column comment="" key="false" length="80" name="action_run_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="segment_key" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contract_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="internet_service" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="payment_method" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="tenure_segment" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="service_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="20" name="monthly_charge_band" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="risk_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="churn_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="active_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="churn_rate_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="avg_monthly_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="churn_monthly_revenue_risk" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="retention_priority_score" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="100" name="action_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="250" name="recommended_action" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1200" name="action_description" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="7" name="retention_uplift_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1000" name="uplift_assumption" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="expected_saved_customers" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="expected_churn_reduction_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="expected_monthly_revenue_protected" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="20" name="action_priority" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1500" name="business_rationale" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="80" name="gold_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_4" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeRow_truncate_actions"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="TRUNCATE TABLE MART_RETENTION_ACTIONS_TELCO"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.preparedStatementParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.commitEvery" value="10000"/>
+    <elementParameter field="CHECK" name="configuration.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBRow_4"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="720">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_5" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeRow_truncate_kpi_summary"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value=""/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="enc:system.encryption.key.v1:+Qs3xbTOut8AMiv3dZ4nv+zKddE+b7r6fzs9CC5l" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="TRUNCATE TABLE MART_RETENTION_KPI_SUMMARY_TELCO&#xD;&#xA; "/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.preparedStatementParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.commitEvery" value="10000"/>
+    <elementParameter field="CHECK" name="configuration.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBRow_5"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="720">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &quot; +&#xD;&#xA;&quot;    action_run_id AS ACTION_RUN_ID, &quot; +&#xD;&#xA;&quot;    gold_run_id_used AS GOLD_RUN_ID_USED, &quot; +&#xD;&#xA;&quot;    total_segments AS TOTAL_SEGMENTS, &quot; +&#xD;&#xA;&quot;    target_segments AS TARGET_SEGMENTS, &quot; +&#xD;&#xA;&quot;    total_customers AS TOTAL_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    target_customers AS TARGET_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    total_churn_customers AS TOTAL_CHURN_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    target_churn_customers AS TARGET_CHURN_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    expected_saved_customers AS EXPECTED_SAVED_CUSTOMERS, &quot; +&#xD;&#xA;&quot;    expected_churn_reduction_pct AS EXPECTED_CHURN_REDUCTION_PCT, &quot; +&#xD;&#xA;&quot;    expected_monthly_revenue_protected AS EXPECTED_MONTHLY_REVENUE_PROTECTED, &quot; +&#xD;&#xA;&quot;    '&quot; + context.publish_run_id + &quot;' AS PUBLISH_RUN_ID, &quot; +&#xD;&#xA;&quot;    NOW(6) AS PUBLISHED_AT &quot; +&#xD;&#xA;&quot;FROM mart_retention_kpi_summary_telco_grupo_uno&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="action_run_id" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="gold_run_id_used" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_segments" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="target_segments" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_customers" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="target_customers" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_churn_customers" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="target_churn_customers" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expected_saved_customers" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expected_churn_reduction_pct" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expected_monthly_revenue_protected" id="20"/>
+      <elementValue elementRef="TRIM" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISH_RUN_ID" id="22"/>
+      <elementValue elementRef="TRIM" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISHED_AT" id="24"/>
+      <elementValue elementRef="TRIM" value="false" id="25"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="tDBInput_kpi_summary"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_5">
+      <column comment="" key="false" length="80" name="action_run_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="gold_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_segments" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="target_segments" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="target_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_churn_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="target_churn_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="expected_saved_customers" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="expected_churn_reduction_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="expected_monthly_revenue_protected" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="680" posY="720">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_5" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeOutput_kpi_summary"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="MART_RETENTION_KPI_SUMMARY_TELCO"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+    <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="action_run_id" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+    <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+    <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBOutput_5">
+      <column comment="" key="false" length="80" name="action_run_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="gold_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_segments" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="target_segments" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="target_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="total_churn_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="target_churn_customers" nullable="true" pattern="" precision="0" sourceType="BIGINT" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="expected_saved_customers" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="expected_churn_reduction_pct" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="14" name="expected_monthly_revenue_protected" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="840">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_6" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &quot; +&#xD;&#xA;&quot;    dq_run_id AS DQ_RUN_ID, &quot; +&#xD;&#xA;&quot;    dataset_name AS DATASET_NAME, &quot; +&#xD;&#xA;&quot;    global_dq_score AS GLOBAL_DQ_SCORE, &quot; +&#xD;&#xA;&quot;    score_status AS SCORE_STATUS, &quot; +&#xD;&#xA;&quot;    total_rules AS TOTAL_RULES, &quot; +&#xD;&#xA;&quot;    passed_rules AS PASSED_RULES, &quot; +&#xD;&#xA;&quot;    failed_rules AS FAILED_RULES, &quot; +&#xD;&#xA;&quot;    controlled_rules AS CONTROLLED_RULES, &quot; +&#xD;&#xA;&quot;    blocking_failures AS BLOCKING_FAILURES, &quot; +&#xD;&#xA;&quot;    certification_status AS CERTIFICATION_STATUS, &quot; +&#xD;&#xA;&quot;    calculated_at AS CALCULATED_AT, &quot; +&#xD;&#xA;&quot;    '&quot; + context.publish_run_id + &quot;' AS PUBLISH_RUN_ID, &quot; +&#xD;&#xA;&quot;    NOW(6) AS PUBLISHED_AT &quot; +&#xD;&#xA;&quot;FROM dq_score_global_telco_grupo_uno &quot; +&#xD;&#xA;&quot;ORDER BY calculated_at DESC &quot; +&#xD;&#xA;&quot;LIMIT 1&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="dq_run_id" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dataset_name" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="global_dq_score" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="score_status" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_rules" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="passed_rules" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="failed_rules" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="controlled_rules" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="blocking_failures" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="certification_status" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="calculated_at" id="20"/>
+      <elementValue elementRef="TRIM" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISH_RUN_ID" id="22"/>
+      <elementValue elementRef="TRIM" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISHED_AT" id="24"/>
+      <elementValue elementRef="TRIM" value="false" id="25"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="tDBInput_dq_score"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_6">
+      <column comment="" key="false" length="80" name="dq_run_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="150" name="dataset_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="global_dq_score" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="score_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="total_rules" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="passed_rules" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="failed_rules" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="controlled_rules" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="blocking_failures" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="50" name="certification_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="26" name="calculated_at" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="680" posY="840">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_6" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeOutput_dq_score"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DQ_SCORE_GLOBAL_TELCO"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+    <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="dq_run_id" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+    <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+    <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBOutput_6">
+      <column comment="" key="false" length="80" name="dq_run_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="150" name="dataset_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="global_dq_score" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="score_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="total_rules" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="passed_rules" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="failed_rules" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="controlled_rules" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="blocking_failures" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="50" name="certification_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="26" name="calculated_at" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="840">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_6" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeRow_truncate_dq_score"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="TRUNCATE TABLE DQ_SCORE_GLOBAL_TELCO"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.preparedStatementParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.commitEvery" value="10000"/>
+    <elementParameter field="CHECK" name="configuration.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBRow_6"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeInput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="960">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_7" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNJbnB1dA" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSnowflakeInput_read_publish_summary"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.manualQuery" value="true"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="SELECT&#xD;&#xA;    (SELECT COUNT(*) FROM DIM_CUSTOMER_TELCO) AS DIM_CUSTOMER_ROWS,&#xD;&#xA;    (SELECT COUNT(*) FROM FACT_CONTRACTS_TELCO) AS FACT_CONTRACTS_ROWS,&#xD;&#xA;    (SELECT COUNT(*) FROM MART_RETENTION_SEGMENTS_TELCO) AS SEGMENTS_ROWS,&#xD;&#xA;    (SELECT COUNT(*) FROM MART_RETENTION_ACTIONS_TELCO) AS ACTIONS_ROWS,&#xD;&#xA;    (SELECT COUNT(*) FROM MART_RETENTION_KPI_SUMMARY_TELCO) AS KPI_SUMMARY_ROWS,&#xD;&#xA;    (SELECT COUNT(*) FROM DQ_SCORE_GLOBAL_TELCO) AS DQ_SCORE_ROWS"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.useUnquotedObjectIdentifiers" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.useSessionTimezone" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBInput_7"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="960">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1"/>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="400" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:x5Nk5nWesAouNtdhKdhgD9WErWbXiLiquy5UVAmF" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    customer_id AS CUSTOMER_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    gender AS GENDER, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    senior_citizen AS SENIOR_CITIZEN, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    partner_flag AS PARTNER_FLAG, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    dependents_flag AS DEPENDENTS_FLAG, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    tenure_months AS TENURE_MONTHS, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    tenure_segment AS TENURE_SEGMENT, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    service_level AS SERVICE_LEVEL, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    monthly_charge_band AS MONTHLY_CHARGE_BAND, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    segment_key AS SEGMENT_KEY, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    source_run_id AS SOURCE_RUN_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    stg_run_id AS STG_RUN_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    dq_run_id_used AS DQ_RUN_ID_USED, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    gold_run_id AS GOLD_RUN_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    '&quot; + context.publish_run_id + &quot;' AS PUBLISH_RUN_ID, &quot; +&#xD;&#xA;&#xD;&#xA;&quot;    NOW(6) AS PUBLISHED_AT &quot; +&#xD;&#xA;&#xD;&#xA;&quot;FROM gold_dim_customer_telco_grupo_uno&quot;&#xD;&#xA; "/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customer_id" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="gender" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="senior_citizen" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="partner_flag" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dependents_flag" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tenure_months" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tenure_segment" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="service_level" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="monthly_charge_band" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="segment_key" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_run_id" id="20"/>
+      <elementValue elementRef="TRIM" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stg_run_id" id="22"/>
+      <elementValue elementRef="TRIM" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dq_run_id_used" id="24"/>
+      <elementValue elementRef="TRIM" value="false" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="gold_run_id" id="26"/>
+      <elementValue elementRef="TRIM" value="false" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISH_RUN_ID" id="28"/>
+      <elementValue elementRef="TRIM" value="false" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PUBLISHED_AT" id="30"/>
+      <elementValue elementRef="TRIM" value="false" id="31"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="tDBInput_dim_customer"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="64" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="gender" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="senior_citizen" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="partner_flag" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="dependents_flag" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="tenure_months" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="tenure_segment" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="service_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="monthly_charge_band" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="segment_key" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="source_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="stg_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="dq_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="gold_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="DIM_CUSTOMER_TELCO"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.tableAction" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dataAction" value="INSERT"/>
+    <elementParameter field="COLUMN_LIST" name="configuration.snowflakeOutputCommonConfig.upsertKeyColumn" value="customer_id" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="true"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.convertColumnsAndTableToUppercase" value="true"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useSchemaKeysForUpsert" value="true" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.enforceDatabaseSchema" value="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.usePersonalDBType" value="false" show="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.columnAndDBTypes" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDateMapping" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.snowflakeOutputCommonConfig.dateMapping" value="DATE" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useDBMappingFile" value="false" show="false"/>
+    <elementParameter field="CHECK" name="configuration.snowflakeOutputCommonConfig.useVectors" value="false"/>
+    <elementParameter field="TABLE" name="configuration.snowflakeOutputCommonConfig.vectorConfigs" show="false"/>
+    <elementParameter field="CHECK" name="configuration.convertEmptyStringsToNull" value="false"/>
+    <elementParameter field="CHECK" name="configuration.useSchemaDatePattern" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" key="false" length="64" name="customer_id" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="gender" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="senior_citizen" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="partner_flag" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="dependents_flag" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="tenure_months" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="tenure_segment" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="service_level" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="monthly_charge_band" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="segment_key" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="source_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="stg_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="dq_run_id_used" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="gold_run_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="536870911" name="PUBLISH_RUN_ID" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="25" name="PUBLISHED_AT" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="columnName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="rowNumber" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="category" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="character" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="byteOffset" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="line" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="sqlState" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk10" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_2" offsetLabelX="0" offsetLabelY="0" source="tDBRow_2" target="tDBInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_3" offsetLabelX="0" offsetLabelY="0" source="tDBRow_3" target="tDBInput_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDBOutput_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tDBOutput_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_4" offsetLabelX="0" offsetLabelY="0" source="tDBRow_4" target="tDBInput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_5" offsetLabelX="0" offsetLabelY="0" source="tDBRow_5" target="tDBInput_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tDBOutput_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tDBOutput_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_6" offsetLabelX="0" offsetLabelY="0" source="tDBRow_6" target="tDBInput_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tDBInput_7" offsetLabelX="0" offsetLabelY="0" source="tDBInput_7" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_4" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_4" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_5" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_6" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_6" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_7" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+</talendfile:ProcessType>

@@ -1,0 +1,47 @@
+{
+  "itemId" : "_Zn-pIGrFEfGdOMS5nfS_fg",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_EeyzcGrGEfGdOMS5nfS_fg",
+    "parameterList" : [ {
+      "id" : "_EfIxsWrGEfGdOMS5nfS_fg",
+      "name" : "publish_run_id"
+    }, {
+      "id" : "_EfIxsmrGEfGdOMS5nfS_fg",
+      "name" : "sf_database"
+    }, {
+      "id" : "_EfIxs2rGEfGdOMS5nfS_fg",
+      "name" : "sf_schema"
+    }, {
+      "id" : "_EfIxtGrGEfGdOMS5nfS_fg",
+      "name" : "sf_warehouse"
+    }, {
+      "id" : "_EfIxtWrGEfGdOMS5nfS_fg",
+      "name" : "sf_role"
+    }, {
+      "id" : "_EfIxtmrGEfGdOMS5nfS_fg",
+      "name" : "sf_user"
+    }, {
+      "id" : "_EfIxt2rGEfGdOMS5nfS_fg",
+      "name" : "sf_password"
+    }, {
+      "id" : "_EfIxuGrGEfGdOMS5nfS_fg",
+      "name" : "sf_account"
+    }, {
+      "id" : "_HV3KYGrKEfGdOMS5nfS_fg",
+      "name" : "db_host"
+    }, {
+      "id" : "_HV3KYWrKEfGdOMS5nfS_fg",
+      "name" : "db_port"
+    }, {
+      "id" : "_HV3KYmrKEfGdOMS5nfS_fg",
+      "name" : "db_name"
+    }, {
+      "id" : "_HV3KY2rKEfGdOMS5nfS_fg",
+      "name" : "db_user"
+    }, {
+      "id" : "_HV3KZGrKEfGdOMS5nfS_fg",
+      "name" : "db_password"
+    } ]
+  } ]
+}
