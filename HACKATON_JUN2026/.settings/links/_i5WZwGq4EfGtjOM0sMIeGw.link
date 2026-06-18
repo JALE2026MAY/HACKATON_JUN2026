@@ -51,9 +51,6 @@
     }, {
       "id" : "_LzpMO2oAEfGFz-1eMWTYGQ",
       "name" : "created_by"
-    }, {
-      "id" : "_m3D6kGq6EfGtjOM0sMIeGw",
-      "name" : "gold_run_id"
     } ]
   }, {
     "contextName" : "PROD",
@@ -106,9 +103,6 @@
     }, {
       "id" : "_LzpMKmoAEfGFz-1eMWTYGQ",
       "name" : "created_by"
-    }, {
-      "id" : "_m3DTgmq6EfGtjOM0sMIeGw",
-      "name" : "gold_run_id"
     } ]
   }, {
     "contextName" : "DEV",
@@ -161,9 +155,6 @@
     }, {
       "id" : "_LzpMGWoAEfGFz-1eMWTYGQ",
       "name" : "created_by"
-    }, {
-      "id" : "_m3DTgWq6EfGtjOM0sMIeGw",
-      "name" : "gold_run_id"
     } ]
   }, {
     "contextName" : "Default",
@@ -216,9 +207,6 @@
     }, {
       "id" : "_LzolD2oAEfGFz-1eMWTYGQ",
       "name" : "created_by"
-    }, {
-      "id" : "_m3DTgGq6EfGtjOM0sMIeGw",
-      "name" : "gold_run_id"
     } ]
   } ]
 }

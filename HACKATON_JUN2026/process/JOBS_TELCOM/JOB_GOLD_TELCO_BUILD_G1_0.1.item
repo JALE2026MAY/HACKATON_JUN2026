@@ -17,7 +17,7 @@
     <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_Date" value="" internalId="_7dIxTWq7EfGtjOM0sMIeGw"/>
     <contextParameter comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_Integer" value="" internalId="_7dIxTmq7EfGtjOM0sMIeGw"/>
     <contextParameter comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxT2q7EfGtjOM0sMIeGw"/>
-    <contextParameter comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxUGq7EfGtjOM0sMIeGw"/>
+    <contextParameter comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_7dIxUGq7EfGtjOM0sMIeGw"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="PROD">
     <contextParameter comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxUWq7EfGtjOM0sMIeGw"/>
@@ -36,7 +36,7 @@
     <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_Date" value="" internalId="_7dIxXmq7EfGtjOM0sMIeGw"/>
     <contextParameter comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_Integer" value="" internalId="_7dIxX2q7EfGtjOM0sMIeGw"/>
     <contextParameter comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxYGq7EfGtjOM0sMIeGw"/>
-    <contextParameter comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxYWq7EfGtjOM0sMIeGw"/>
+    <contextParameter comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_7dIxYWq7EfGtjOM0sMIeGw"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="DEV">
     <contextParameter comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxYmq7EfGtjOM0sMIeGw"/>
@@ -55,7 +55,7 @@
     <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_Date" value="" internalId="_7dIxb2q7EfGtjOM0sMIeGw"/>
     <contextParameter comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_Integer" value="" internalId="_7dIxcGq7EfGtjOM0sMIeGw"/>
     <contextParameter comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxcWq7EfGtjOM0sMIeGw"/>
-    <contextParameter comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxcmq7EfGtjOM0sMIeGw"/>
+    <contextParameter comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_7dIxcmq7EfGtjOM0sMIeGw"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Default">
     <contextParameter comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="209.50.254.159" internalId="_7dIxc2q7EfGtjOM0sMIeGw"/>
@@ -74,7 +74,7 @@
     <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_Date" value="" internalId="_7dIxgGq7EfGtjOM0sMIeGw"/>
     <contextParameter comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_Integer" value="1000" internalId="_7dIxgWq7EfGtjOM0sMIeGw"/>
     <contextParameter comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="Grupo1" internalId="_7dIxgmq7EfGtjOM0sMIeGw"/>
-    <contextParameter comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="_LyPd4GoAEfGFz-1eMWTYGQ" type="id_String" value="" internalId="_7dIxg2q7EfGtjOM0sMIeGw"/>
+    <contextParameter comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_7dIxg2q7EfGtjOM0sMIeGw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -196,6 +196,7 @@
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
@@ -234,6 +235,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBRow_set_gold_run_id_session"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_1"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -269,6 +271,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBRow_set_dq_run_id_used"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_2"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -304,6 +307,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBRow_truncate_mart_segments"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_3"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -339,6 +343,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBRow_truncate_fact_contracts&#xD;&#xA; "/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_4"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -374,6 +379,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBRow_truncate_dim_customer"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_5"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -409,6 +415,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBRow_insert_dim_customer"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_6"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -444,6 +451,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBRow_insert_fact_contracts"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_7"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -479,6 +487,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBRow_insert_mart_segments"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_8"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -525,6 +534,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="high_priority_segments" id="10"/>
       <elementValue elementRef="TRIM" value="false" id="11"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" key="false" length="-1" name="gold_run_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dq_run_id_user" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -580,6 +590,7 @@
   <node componentName="tMysqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="520" posY="720">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
