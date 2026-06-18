@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_XWxpEGqlEfGJutgJywevvg" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_l39L0GqrEfGJutgJywevvg" comment="" name="sn_account" prompt="sn_account?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="crc78372.us-east-1"/>
+  <contextParameter xmi:id="_l39L0WqrEfGJutgJywevvg" comment="" name="sn_password" prompt="sn_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:iGGZuZ4/9DUNcbHVw0vwnw4TIiFP2A31FOv2Atbu+6v1NqveFML3EZtllvlld2+Y"/>
+  <contextParameter xmi:id="_l39L0mqrEfGJutgJywevvg" comment="" name="sn_user_id" prompt="sn_user_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ANGEL.PACHECO"/>
+  <contextParameter xmi:id="_l39L02qrEfGJutgJywevvg" comment="" name="sn_warehouse" prompt="sn_warehouse?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="COMPUTE_WH"/>
+  <contextParameter xmi:id="_l39L1GqrEfGJutgJywevvg" comment="" name="sn_database" prompt="sn_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DW_GRUPO_4"/>
+</talendfile:ContextType>
