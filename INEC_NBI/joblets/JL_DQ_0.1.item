@@ -183,6 +183,7 @@
       <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
       <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
       <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tAggregateRow_agrupar"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tAggregateRow_1">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -209,6 +210,7 @@
       <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
       <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
       <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+      <elementParameter field="TEXT" name="LABEL" value="tMap_calcular_score"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="out_metrics">
         <column comment="" key="false" length="-1" name="RUN_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -253,6 +255,7 @@
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+      <elementParameter field="TEXT" name="LABEL" value="tDBOutput_metrics"/>
       <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.account"/>
       <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC"/>
       <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.user_id"/>
@@ -315,6 +318,7 @@
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+      <elementParameter field="TEXT" name="LABEL" value="tDBOutput_rejects"/>
       <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.account"/>
       <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC"/>
       <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.user_id"/>
@@ -403,8 +407,8 @@
     <note opaque="true" posX="360" posY="80" sizeHeight="80" sizeWidth="241" text="Quitamos el dato dummy"/>
     <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1" show="false"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
     </subjob>
     <jobletNodes componentName="INPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="360" posY="200" input="true">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1"/>
