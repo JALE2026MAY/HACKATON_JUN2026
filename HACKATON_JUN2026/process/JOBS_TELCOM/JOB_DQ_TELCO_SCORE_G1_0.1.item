@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" hide="false" name="QA">
+    <contextParameter comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bYGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bYWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bYmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bY2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Password" value="" internalId="_DJ9bZGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_file_path" prompt="source_file_path?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bZWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_file_name" prompt="source_file_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bZmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bZ2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="job_name" prompt="job_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9baGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_raw_table" prompt="target_raw_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9baWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_reject_table" prompt="target_reject_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bamquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_audit_table" prompt="target_audit_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9ba2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bbGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Date" value="" internalId="_DJ9bbWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Integer" value="" internalId="_DJ9bbmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bb2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_run_id" prompt="dq_run_id?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bcGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_contract_version" prompt="dq_contract_version?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bcWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_dataset_name" prompt="dq_dataset_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ9bcmquEfG03fAA8z20zg"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="PROD">
+    <contextParameter comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CcGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CcWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CcmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-Cc2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Password" value="" internalId="_DJ-CdGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_file_path" prompt="source_file_path?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CdWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_file_name" prompt="source_file_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CdmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-Cd2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="job_name" prompt="job_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CeGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_raw_table" prompt="target_raw_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CeWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_reject_table" prompt="target_reject_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CemquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_audit_table" prompt="target_audit_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-Ce2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CfGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Date" value="" internalId="_DJ-CfWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Integer" value="" internalId="_DJ-CfmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-Cf2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_run_id" prompt="dq_run_id?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CgGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_contract_version" prompt="dq_contract_version?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CgWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_dataset_name" prompt="dq_dataset_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CgmquEfG03fAA8z20zg"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="DEV">
+    <contextParameter comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-Cg2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-ChGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-ChWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-ChmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Password" value="" internalId="_DJ-Ch2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_file_path" prompt="source_file_path?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CiGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_file_name" prompt="source_file_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CiWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CimquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="job_name" prompt="job_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-Ci2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_raw_table" prompt="target_raw_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CjGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_reject_table" prompt="target_reject_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CjWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_audit_table" prompt="target_audit_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CjmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-Cj2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Date" value="" internalId="_DJ-CkGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Integer" value="" internalId="_DJ-CkWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CkmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_run_id" prompt="dq_run_id?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-Ck2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_contract_version" prompt="dq_contract_version?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-ClGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_dataset_name" prompt="dq_dataset_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-ClWquEfG03fAA8z20zg"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="209.50.254.159" internalId="_DJ-ClmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_port" prompt="db_port?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="3306" internalId="_DJ-Cl2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="DSADEV" internalId="_DJ-CmGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="usr_acme" internalId="_DJ-CmWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Password" value="enc:system.encryption.key.v1:kPhaIRjJS/bYYi12bD2e68hwWmcqJCLrhn7WzvHM4sRISCM=" internalId="_DJ-CmmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_file_path" prompt="source_file_path?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="C:\fuente\" internalId="_DJ-Cm2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_file_name" prompt="source_file_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="WA_Fn-UseC_-Telco-Customer-Churn" internalId="_DJ-CnGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="IBM_TELCO_KAGGLE" internalId="_DJ-CnWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="job_name" prompt="job_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="ELT_JOB_01_INGEST_TELCO_TO_SINGLESTORE_G1" internalId="_DJ-CnmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_raw_table" prompt="target_raw_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="raw_telco_customer_churn_grupo_uno" internalId="_DJ-Cn2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_reject_table" prompt="target_reject_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="raw_ingest_rejects_grupo_uno" internalId="_DJ-CoGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="target_audit_table" prompt="target_audit_table?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="pipeline_run_audit_grupo_uno" internalId="_DJ-CoWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-ComquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Date" value="" internalId="_DJ-Co2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="batch_size" prompt="batch_size?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_Integer" value="1000" internalId="_DJ-CpGquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="Grupo1" internalId="_DJ-CpWquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_run_id" prompt="dq_run_id?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="" internalId="_DJ-CpmquEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_contract_version" prompt="dq_contract_version?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="v1.0.0" internalId="_DJ-Cp2quEfG03fAA8z20zg"/>
+    <contextParameter comment="" name="dq_dataset_name" prompt="dq_dataset_name?" promptNeeded="false" repositoryContextId="_JvivoGqrEfG1lqxu6qhfiQ" type="id_String" value="stg_telco_customer_churn_grupo_uno" internalId="_DJ-CqGquEfG03fAA8z20zg"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:YCx5Dopr4C4Aw+9855IT2Un2VvAG0Rl9CAo2HYdn" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/Talend Workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="JDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SfPqGY5z2LYn2MfhXNhPzJSt8uW8g3xx8qckbHHf" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.dq_run_id = &quot;RUN_DQ_TELCO_&quot; &#xD;&#xA;&#x9;    + TalendDate.formatDate(&quot;yyyyMMdd_HHmmss&quot;, TalendDate.getCurrentDate());&#xD;&#xA;&#xD;&#xA;&#x9;System.out.println(&quot;DQ_RUN_ID = &quot; + context.dq_run_id);"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="tJava_set_dq_run_id"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="TEXT" name="HOST" value="context.db_host"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.db_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.db_name"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.db_user"/>
+    <elementParameter field="PASSWORD" name="PASS" value="context.db_password"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBConnection_SingleStore"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Q4fJND8Ynszc+2faUugLdXLk50vGxJ5IK4EE80+q" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SET @dq_run_id = '&quot; + context.dq_run_id + &quot;'&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_set_dq_run_id_session"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:+cGvr+NHHDMyGoXSbRdLIfAXSky+sTLJRMh0dYBV" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE FROM dq_rule_results_telco_grupo_uno WHERE dq_run_id = @dq_run_id&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_cleanup_rule_results"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_2"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_3" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1fOu1p/VHafpc9PUvbQVoXoZW+Oyc85bvAnzPbn2" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE FROM dq_score_dimension_telco_grupo_uno WHERE dq_run_id = @dq_run_id&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_cleanup_score_dimension"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_3"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_4" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Rxbm5VdjnUa4bEmH12PLI6lWQsrVT41qz5/MBSoH" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE FROM dq_score_global_telco_grupo_uno WHERE dq_run_id = @dq_run_id&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_cleanup_score_global"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_4"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="520" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_5" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ZoxVpyDBh/A4FQBXlQ+2d+e44nf89R1Nd1DGbYOh" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE FROM dq_rule_violations_telco_grupo_uno WHERE dq_run_id = @dq_run_id&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_cleanup_rule_violations"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_5"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_6" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:f9kF4OU2Y6EwZJNbPonB2tZ02O6c/rIA7hjAylRk" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO dq_rule_results_telco_grupo_uno ( &quot; +&#xD;&#xA;&quot;    dq_run_id, rule_id, rule_name, dq_dimension, dataset_name, column_name, &quot; +&#xD;&#xA;&quot;    dimension_weight_pct, rule_weight_pct, target_operator, target_score_pct, &quot; +&#xD;&#xA;&quot;    evaluated_rows, passed_rows, failed_rows, actual_score_pct, failed_pct, &quot; +&#xD;&#xA;&quot;    threshold_result, severity, notes &quot; +&#xD;&#xA;&quot;) &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;@dq_run_id AS dq_run_id, &quot; +&#xD;&#xA;&quot;'DQ-COMP-001' AS rule_id, &quot; +&#xD;&#xA;&quot;'customer_id completo' AS rule_name, &quot; +&#xD;&#xA;&quot;'Completitud' AS dq_dimension, &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno' AS dataset_name, &quot; +&#xD;&#xA;&quot;'customer_id' AS column_name, &quot; +&#xD;&#xA;&quot;25.00 AS dimension_weight_pct, &quot; +&#xD;&#xA;&quot;25.00 AS rule_weight_pct, &quot; +&#xD;&#xA;&quot;'>=' AS target_operator, &quot; +&#xD;&#xA;&quot;100.0000 AS target_score_pct, &quot; +&#xD;&#xA;&quot;COUNT(*) AS evaluated_rows, &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN customer_id IS NOT NULL AND TRIM(customer_id) &lt;> '' THEN 1 ELSE 0 END) AS passed_rows, &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN customer_id IS NULL OR TRIM(customer_id) = '' THEN 1 ELSE 0 END) AS failed_rows, &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN customer_id IS NOT NULL AND TRIM(customer_id) &lt;> '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) AS actual_score_pct, &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN customer_id IS NULL OR TRIM(customer_id) = '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) AS failed_pct, &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN customer_id IS NOT NULL AND TRIM(customer_id) &lt;> '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END AS threshold_result, &quot; +&#xD;&#xA;&quot;'Alta' AS severity, &quot; +&#xD;&#xA;&quot;'Regla de bloqueo: customer_id debe estar completo.' AS notes &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-COMP-002', 'churn_label completo', 'Completitud', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'churn_label', 25.00, 20.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN churn_label IS NOT NULL AND TRIM(churn_label) &lt;> '' THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN churn_label IS NULL OR TRIM(churn_label) = '' THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN churn_label IS NOT NULL AND TRIM(churn_label) &lt;> '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN churn_label IS NULL OR TRIM(churn_label) = '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN churn_label IS NOT NULL AND TRIM(churn_label) &lt;> '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Alta', 'Variable objetivo textual completa.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-COMP-003', 'total_charges final completo', 'Completitud', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'total_charges', 25.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN total_charges IS NOT NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN total_charges IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN total_charges IS NOT NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN total_charges IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN total_charges IS NOT NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Alta', 'TotalCharges final debe quedar completo despues de imputacion.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-COMP-004', 'segmentaciones completas', 'Completitud', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'service_level, tenure_segment, monthly_charge_band, segment_key', 25.00, 15.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN service_level IS NOT NULL AND TRIM(service_level) &lt;> '' AND tenure_segment IS NOT NULL AND TRIM(tenure_segment) &lt;> '' AND monthly_charge_band IS NOT NULL AND TRIM(monthly_charge_band) &lt;> '' AND segment_key IS NOT NULL AND TRIM(segment_key) &lt;> '' THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN service_level IS NULL OR TRIM(service_level) = '' OR tenure_segment IS NULL OR TRIM(tenure_segment) = '' OR monthly_charge_band IS NULL OR TRIM(monthly_charge_band) = '' OR segment_key IS NULL OR TRIM(segment_key) = '' THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN service_level IS NOT NULL AND TRIM(service_level) &lt;> '' AND tenure_segment IS NOT NULL AND TRIM(tenure_segment) &lt;> '' AND monthly_charge_band IS NOT NULL AND TRIM(monthly_charge_band) &lt;> '' AND segment_key IS NOT NULL AND TRIM(segment_key) &lt;> '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN service_level IS NULL OR TRIM(service_level) = '' OR tenure_segment IS NULL OR TRIM(tenure_segment) = '' OR monthly_charge_band IS NULL OR TRIM(monthly_charge_band) = '' OR segment_key IS NULL OR TRIM(segment_key) = '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN service_level IS NOT NULL AND TRIM(service_level) &lt;> '' AND tenure_segment IS NOT NULL AND TRIM(tenure_segment) &lt;> '' AND monthly_charge_band IS NOT NULL AND TRIM(monthly_charge_band) &lt;> '' AND segment_key IS NOT NULL AND TRIM(segment_key) &lt;> '' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Segmentaciones listas para GOLD y dashboard.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-COMP-005', 'total_charges_raw blancos controlados', 'Completitud', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'total_charges_raw', 25.00, 15.00, '>=', 99.8000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN (total_charges_raw IS NOT NULL AND TRIM(total_charges_raw) &lt;> '') OR ((total_charges_raw IS NULL OR TRIM(total_charges_raw) = '') AND total_charges_was_imputed = 1 AND tenure_months = 0) THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN NOT ((total_charges_raw IS NOT NULL AND TRIM(total_charges_raw) &lt;> '') OR ((total_charges_raw IS NULL OR TRIM(total_charges_raw) = '') AND total_charges_was_imputed = 1 AND tenure_months = 0)) THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN (total_charges_raw IS NOT NULL AND TRIM(total_charges_raw) &lt;> '') OR ((total_charges_raw IS NULL OR TRIM(total_charges_raw) = '') AND total_charges_was_imputed = 1 AND tenure_months = 0) THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN NOT ((total_charges_raw IS NOT NULL AND TRIM(total_charges_raw) &lt;> '') OR ((total_charges_raw IS NULL OR TRIM(total_charges_raw) = '') AND total_charges_was_imputed = 1 AND tenure_months = 0)) THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN (total_charges_raw IS NOT NULL AND TRIM(total_charges_raw) &lt;> '') OR ((total_charges_raw IS NULL OR TRIM(total_charges_raw) = '') AND total_charges_was_imputed = 1 AND tenure_months = 0) THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 99.8000 THEN 'CONTROLADO' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Los blancos originales de TotalCharges se aceptan solo si estan imputados y justificados.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-VAL-001', 'churn_flag dominio 0/1', 'Validez', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'churn_flag', 25.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN churn_flag IN (0,1) THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN churn_flag NOT IN (0,1) OR churn_flag IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN churn_flag IN (0,1) THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN churn_flag NOT IN (0,1) OR churn_flag IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN churn_flag IN (0,1) THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Alta', 'Variable objetivo binaria valida.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-VAL-002', 'contract_type dominio permitido', 'Validez', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'contract_type', 25.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN contract_type IN ('Month-to-month','One year','Two year') THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN contract_type NOT IN ('Month-to-month','One year','Two year') OR contract_type IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN contract_type IN ('Month-to-month','One year','Two year') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN contract_type NOT IN ('Month-to-month','One year','Two year') OR contract_type IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN contract_type IN ('Month-to-month','One year','Two year') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Dominio contractual cerrado.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-VAL-003', 'payment_method dominio permitido', 'Validez', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'payment_method', 25.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN payment_method IN ('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)') THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN payment_method NOT IN ('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)') OR payment_method IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN payment_method IN ('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN payment_method NOT IN ('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)') OR payment_method IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN payment_method IN ('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Dominio de metodos de pago controlado.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-VAL-004', 'internet_service dominio permitido', 'Validez', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'internet_service', 25.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN internet_service IN ('DSL','Fiber optic','No') THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN internet_service NOT IN ('DSL','Fiber optic','No') OR internet_service IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN internet_service IN ('DSL','Fiber optic','No') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN internet_service NOT IN ('DSL','Fiber optic','No') OR internet_service IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN internet_service IN ('DSL','Fiber optic','No') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Dominio de servicio de internet controlado.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-UNI-001', 'customer_id unico', 'Unicidad', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'customer_id', 20.00, 100.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;COUNT(DISTINCT customer_id), &quot; +&#xD;&#xA;&quot;COUNT(*) - COUNT(DISTINCT customer_id), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * COUNT(DISTINCT customer_id) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * (COUNT(*) - COUNT(DISTINCT customer_id)) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * COUNT(DISTINCT customer_id) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Alta', 'Regla de bloqueo: un registro por cliente.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-CON-001', 'phone_service consistente con multiple_lines', 'Consistencia', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'phone_service, multiple_lines', 20.00, 30.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN phone_service &lt;> 'No' OR (phone_service = 'No' AND multiple_lines = 'No phone service') THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN phone_service = 'No' AND multiple_lines &lt;> 'No phone service' THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN phone_service &lt;> 'No' OR (phone_service = 'No' AND multiple_lines = 'No phone service') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN phone_service = 'No' AND multiple_lines &lt;> 'No phone service' THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN phone_service &lt;> 'No' OR (phone_service = 'No' AND multiple_lines = 'No phone service') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Alta', 'Regla cruzada de servicios telefonicos.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-CON-002', 'internet_service consistente con servicios online', 'Consistencia', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'internet_service y servicios digitales', 20.00, 40.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN internet_service &lt;> 'No' OR (internet_service = 'No' AND online_security = 'No internet service' AND online_backup = 'No internet service' AND device_protection = 'No internet service' AND tech_support = 'No internet service' AND streaming_tv = 'No internet service' AND streaming_movies = 'No internet service') THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN internet_service = 'No' AND (online_security &lt;> 'No internet service' OR online_backup &lt;> 'No internet service' OR device_protection &lt;> 'No internet service' OR tech_support &lt;> 'No internet service' OR streaming_tv &lt;> 'No internet service' OR streaming_movies &lt;> 'No internet service') THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN internet_service &lt;> 'No' OR (internet_service = 'No' AND online_security = 'No internet service' AND online_backup = 'No internet service' AND device_protection = 'No internet service' AND tech_support = 'No internet service' AND streaming_tv = 'No internet service' AND streaming_movies = 'No internet service') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN internet_service = 'No' AND (online_security &lt;> 'No internet service' OR online_backup &lt;> 'No internet service' OR device_protection &lt;> 'No internet service' OR tech_support &lt;> 'No internet service' OR streaming_tv &lt;> 'No internet service' OR streaming_movies &lt;> 'No internet service') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN internet_service &lt;> 'No' OR (internet_service = 'No' AND online_security = 'No internet service' AND online_backup = 'No internet service' AND device_protection = 'No internet service' AND tech_support = 'No internet service' AND streaming_tv = 'No internet service' AND streaming_movies = 'No internet service') THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Alta', 'Regla cruzada de internet y servicios digitales.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-CON-003', 'imputacion de total_charges consistente con tenure', 'Consistencia', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'total_charges_was_imputed, tenure_months', 20.00, 30.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN total_charges_was_imputed = 0 OR (total_charges_was_imputed = 1 AND tenure_months = 0) THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN total_charges_was_imputed = 1 AND tenure_months &lt;> 0 THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN total_charges_was_imputed = 0 OR (total_charges_was_imputed = 1 AND tenure_months = 0) THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN total_charges_was_imputed = 1 AND tenure_months &lt;> 0 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN total_charges_was_imputed = 0 OR (total_charges_was_imputed = 1 AND tenure_months = 0) THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Toda imputacion de TotalCharges debe corresponder a clientes nuevos.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-PRE-001', 'tenure_months en rango plausible', 'Precision / Exactitud', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'tenure_months', 10.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN tenure_months BETWEEN 0 AND 72 THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN tenure_months &lt; 0 OR tenure_months > 72 OR tenure_months IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN tenure_months BETWEEN 0 AND 72 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN tenure_months &lt; 0 OR tenure_months > 72 OR tenure_months IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN tenure_months BETWEEN 0 AND 72 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Antiguedad del cliente debe estar entre 0 y 72 meses.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-PRE-002', 'monthly_charges positivo', 'Precision / Exactitud', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'monthly_charges', 10.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN monthly_charges > 0 THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN monthly_charges &lt;= 0 OR monthly_charges IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN monthly_charges > 0 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN monthly_charges &lt;= 0 OR monthly_charges IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN monthly_charges > 0 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Cargo mensual debe ser positivo.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-PRE-003', 'total_charges no negativo', 'Precision / Exactitud', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'total_charges', 10.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN total_charges >= 0 THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN total_charges &lt; 0 OR total_charges IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN total_charges >= 0 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN total_charges &lt; 0 OR total_charges IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN total_charges >= 0 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'Cargo total no debe ser negativo.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT @dq_run_id, 'DQ-PRE-004', 'service_score en rango plausible', 'Precision / Exactitud', &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno', 'service_score', 10.00, 25.00, '>=', 100.0000, &quot; +&#xD;&#xA;&quot;COUNT(*), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN service_score BETWEEN 0 AND 6 THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;SUM(CASE WHEN service_score &lt; 0 OR service_score > 6 OR service_score IS NULL THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN service_score BETWEEN 0 AND 6 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;ROUND(100.0 * SUM(CASE WHEN service_score &lt; 0 OR service_score > 6 OR service_score IS NULL THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4), &quot; +&#xD;&#xA;&quot;CASE WHEN ROUND(100.0 * SUM(CASE WHEN service_score BETWEEN 0 AND 6 THEN 1 ELSE 0 END) / NULLIF(COUNT(*),0), 4) >= 100.0000 THEN 'PASS' ELSE 'FAIL' END, &quot; +&#xD;&#xA;&quot;'Media', 'service_score debe estar entre 0 y 6.' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_insert_rule_results"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_6"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:HtH19n7ygjKQOV9XdPzb2v9USS8XQ2YrGb7gdIXD" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &quot; +&#xD;&#xA;&quot;    dq_run_id, &quot; +&#xD;&#xA;&quot;    dataset_name, &quot; +&#xD;&#xA;&quot;    global_dq_score, &quot; +&#xD;&#xA;&quot;    score_status, &quot; +&#xD;&#xA;&quot;    total_rules, &quot; +&#xD;&#xA;&quot;    passed_rules, &quot; +&#xD;&#xA;&quot;    failed_rules, &quot; +&#xD;&#xA;&quot;    controlled_rules, &quot; +&#xD;&#xA;&quot;    blocking_failures, &quot; +&#xD;&#xA;&quot;    certification_status, &quot; +&#xD;&#xA;&quot;    calculated_at &quot; +&#xD;&#xA;&quot;FROM dq_score_global_telco_grupo_uno &quot; +&#xD;&#xA;&quot;WHERE dq_run_id = '&quot; + context.dq_run_id + &quot;'&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBInput_read_score_global"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1"/>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="720">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMysqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="720">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_7" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:L4cOgqM+NxzPYFkwHi1zVjHQ5+9EYyrVMITpdkF0" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO dq_rule_violations_telco_grupo_uno ( &quot; +&#xD;&#xA;&quot;    violation_id, dq_run_id, rule_id, dq_dimension, dataset_name, customer_id, &quot; +&#xD;&#xA;&quot;    column_name, reject_reason, observed_value, expected_value, severity &quot; +&#xD;&#xA;&quot;) &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;CONCAT(@dq_run_id, '_DQ-COMP-001_', COALESCE(customer_id, 'NULL'), '_', COALESCE(CAST(source_row_number AS CHAR), 'NO_ROW')) AS violation_id, &quot; +&#xD;&#xA;&quot;@dq_run_id AS dq_run_id, &quot; +&#xD;&#xA;&quot;'DQ-COMP-001' AS rule_id, &quot; +&#xD;&#xA;&quot;'Completitud' AS dq_dimension, &quot; +&#xD;&#xA;&quot;'stg_telco_customer_churn_grupo_uno' AS dataset_name, &quot; +&#xD;&#xA;&quot;customer_id AS customer_id, &quot; +&#xD;&#xA;&quot;'customer_id' AS column_name, &quot; +&#xD;&#xA;&quot;'customer_id nulo o blanco' AS reject_reason, &quot; +&#xD;&#xA;&quot;COALESCE(customer_id, 'NULL') AS observed_value, &quot; +&#xD;&#xA;&quot;'customer_id no nulo ni blanco' AS expected_value, &quot; +&#xD;&#xA;&quot;'Alta' AS severity &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&quot;WHERE customer_id IS NULL OR TRIM(customer_id) = '' &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;CONCAT(@dq_run_id, '_DQ-VAL-001_', COALESCE(customer_id, 'NULL')), &quot; +&#xD;&#xA;&quot;@dq_run_id, 'DQ-VAL-001', 'Validez', 'stg_telco_customer_churn_grupo_uno', customer_id, &quot; +&#xD;&#xA;&quot;'churn_flag', 'churn_flag fuera del dominio 0/1', COALESCE(CAST(churn_flag AS CHAR), 'NULL'), '0 o 1', 'Alta' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&quot;WHERE churn_flag NOT IN (0,1) OR churn_flag IS NULL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;CONCAT(@dq_run_id, '_DQ-COMP-003_', COALESCE(customer_id, 'NULL')), &quot; +&#xD;&#xA;&quot;@dq_run_id, 'DQ-COMP-003', 'Completitud', 'stg_telco_customer_churn_grupo_uno', customer_id, &quot; +&#xD;&#xA;&quot;'total_charges', 'total_charges nulo despues de STG', 'NULL', 'total_charges no nulo', 'Alta' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&quot;WHERE total_charges IS NULL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;CONCAT(@dq_run_id, '_DQ-CON-001_', COALESCE(customer_id, 'NULL')), &quot; +&#xD;&#xA;&quot;@dq_run_id, 'DQ-CON-001', 'Consistencia', 'stg_telco_customer_churn_grupo_uno', customer_id, &quot; +&#xD;&#xA;&quot;'phone_service, multiple_lines', 'phone_service = No pero multiple_lines no es No phone service', &quot; +&#xD;&#xA;&quot;CONCAT('phone_service=', COALESCE(phone_service, 'NULL'), '; multiple_lines=', COALESCE(multiple_lines, 'NULL')), &quot; +&#xD;&#xA;&quot;'multiple_lines = No phone service', 'Alta' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&quot;WHERE phone_service = 'No' AND multiple_lines &lt;> 'No phone service' &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;CONCAT(@dq_run_id, '_DQ-CON-002_', COALESCE(customer_id, 'NULL')), &quot; +&#xD;&#xA;&quot;@dq_run_id, 'DQ-CON-002', 'Consistencia', 'stg_telco_customer_churn_grupo_uno', customer_id, &quot; +&#xD;&#xA;&quot;'internet_service, servicios_online', 'internet_service = No pero algun servicio online no es No internet service', &quot; +&#xD;&#xA;&quot;CONCAT('internet_service=', COALESCE(internet_service, 'NULL'), '; online_security=', COALESCE(online_security, 'NULL'), '; online_backup=', COALESCE(online_backup, 'NULL'), '; device_protection=', COALESCE(device_protection, 'NULL'), '; tech_support=', COALESCE(tech_support, 'NULL'), '; streaming_tv=', COALESCE(streaming_tv, 'NULL'), '; streaming_movies=', COALESCE(streaming_movies, 'NULL')), &quot; +&#xD;&#xA;&quot;'Todos los servicios online = No internet service', 'Alta' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&quot;WHERE internet_service = 'No' &quot; +&#xD;&#xA;&quot;AND (online_security &lt;> 'No internet service' OR online_backup &lt;> 'No internet service' OR device_protection &lt;> 'No internet service' OR tech_support &lt;> 'No internet service' OR streaming_tv &lt;> 'No internet service' OR streaming_movies &lt;> 'No internet service') &quot; +&#xD;&#xA;&#xD;&#xA;&quot;UNION ALL &quot; +&#xD;&#xA;&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;CONCAT(@dq_run_id, '_DQ-CON-003_', COALESCE(customer_id, 'NULL')), &quot; +&#xD;&#xA;&quot;@dq_run_id, 'DQ-CON-003', 'Consistencia', 'stg_telco_customer_churn_grupo_uno', customer_id, &quot; +&#xD;&#xA;&quot;'total_charges_was_imputed, tenure_months', 'total_charges imputado pero tenure_months no es 0', &quot; +&#xD;&#xA;&quot;CONCAT('total_charges_was_imputed=', COALESCE(CAST(total_charges_was_imputed AS CHAR), 'NULL'), '; tenure_months=', COALESCE(CAST(tenure_months AS CHAR), 'NULL')), &quot; +&#xD;&#xA;&quot;'Si total_charges_was_imputed = 1 entonces tenure_months = 0', 'Media' &quot; +&#xD;&#xA;&quot;FROM stg_telco_customer_churn_grupo_uno &quot; +&#xD;&#xA;&quot;WHERE total_charges_was_imputed = 1 AND tenure_months &lt;> 0&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_insert_rule_violations"/>
+    <metadata connector="FLOW" name="tDBRow_7"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="520" posY="400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_8" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:BOvPBr6tvkbrg7c8bJwysMJs0Of9JaTepGK6aP9b" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO dq_score_dimension_telco_grupo_uno ( &quot; +&#xD;&#xA;&quot;    dq_run_id, dq_dimension, dimension_weight_pct, dimension_score_pct, &quot; +&#xD;&#xA;&quot;    weighted_score, total_rules, passed_rules, failed_rules, controlled_rules &quot; +&#xD;&#xA;&quot;) &quot; +&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;    dq_run_id, &quot; +&#xD;&#xA;&quot;    dq_dimension, &quot; +&#xD;&#xA;&quot;    MAX(dimension_weight_pct), &quot; +&#xD;&#xA;&quot;    ROUND(SUM(actual_score_pct * rule_weight_pct / 100.0), 4), &quot; +&#xD;&#xA;&quot;    ROUND((SUM(actual_score_pct * rule_weight_pct / 100.0) * MAX(dimension_weight_pct) / 100.0), 4), &quot; +&#xD;&#xA;&quot;    COUNT(*), &quot; +&#xD;&#xA;&quot;    SUM(CASE WHEN threshold_result = 'PASS' THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;    SUM(CASE WHEN threshold_result = 'FAIL' THEN 1 ELSE 0 END), &quot; +&#xD;&#xA;&quot;    SUM(CASE WHEN threshold_result = 'CONTROLADO' THEN 1 ELSE 0 END) &quot; +&#xD;&#xA;&quot;FROM dq_rule_results_telco_grupo_uno &quot; +&#xD;&#xA;&quot;WHERE dq_run_id = @dq_run_id &quot; +&#xD;&#xA;&quot;GROUP BY dq_run_id, dq_dimension&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_insert_score_dimension"/>
+    <metadata connector="FLOW" name="tDBRow_8"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_9" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:N2xWwO7PDAQGd44bbRaogyU/7SI2v12uHVgAZIGd" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO dq_score_global_telco_grupo_uno ( &quot; +&#xD;&#xA;&quot;    dq_run_id, dataset_name, global_dq_score, score_status, total_rules, &quot; +&#xD;&#xA;&quot;    passed_rules, failed_rules, controlled_rules, blocking_failures, certification_status &quot; +&#xD;&#xA;&quot;) &quot; +&#xD;&#xA;&quot;SELECT &quot; +&#xD;&#xA;&quot;    s.dq_run_id, &quot; +&#xD;&#xA;&quot;    'stg_telco_customer_churn_grupo_uno', &quot; +&#xD;&#xA;&quot;    ROUND(SUM(s.weighted_score), 4), &quot; +&#xD;&#xA;&quot;    CASE &quot; +&#xD;&#xA;&quot;        WHEN ROUND(SUM(s.weighted_score), 4) >= 95 THEN 'Excelente' &quot; +&#xD;&#xA;&quot;        WHEN ROUND(SUM(s.weighted_score), 4) >= 90 THEN 'Bueno' &quot; +&#xD;&#xA;&quot;        WHEN ROUND(SUM(s.weighted_score), 4) >= 80 THEN 'Aceptable con observaciones' &quot; +&#xD;&#xA;&quot;        WHEN ROUND(SUM(s.weighted_score), 4) >= 70 THEN 'Riesgo medio' &quot; +&#xD;&#xA;&quot;        ELSE 'Riesgo alto' &quot; +&#xD;&#xA;&quot;    END, &quot; +&#xD;&#xA;&quot;    SUM(s.total_rules), &quot; +&#xD;&#xA;&quot;    SUM(s.passed_rules), &quot; +&#xD;&#xA;&quot;    SUM(s.failed_rules), &quot; +&#xD;&#xA;&quot;    SUM(s.controlled_rules), &quot; +&#xD;&#xA;&quot;    ( &quot; +&#xD;&#xA;&quot;        SELECT COUNT(*) &quot; +&#xD;&#xA;&quot;        FROM dq_rule_results_telco_grupo_uno r &quot; +&#xD;&#xA;&quot;        WHERE r.dq_run_id = s.dq_run_id &quot; +&#xD;&#xA;&quot;          AND r.threshold_result = 'FAIL' &quot; +&#xD;&#xA;&quot;          AND r.rule_id IN ('DQ-COMP-001','DQ-COMP-002','DQ-COMP-003','DQ-VAL-001','DQ-UNI-001','DQ-CON-001','DQ-CON-002') &quot; +&#xD;&#xA;&quot;    ), &quot; +&#xD;&#xA;&quot;    CASE &quot; +&#xD;&#xA;&quot;        WHEN ROUND(SUM(s.weighted_score), 4) >= 95 &quot; +&#xD;&#xA;&quot;         AND ( &quot; +&#xD;&#xA;&quot;            SELECT COUNT(*) &quot; +&#xD;&#xA;&quot;            FROM dq_rule_results_telco_grupo_uno r &quot; +&#xD;&#xA;&quot;            WHERE r.dq_run_id = s.dq_run_id &quot; +&#xD;&#xA;&quot;              AND r.threshold_result = 'FAIL' &quot; +&#xD;&#xA;&quot;              AND r.rule_id IN ('DQ-COMP-001','DQ-COMP-002','DQ-COMP-003','DQ-VAL-001','DQ-UNI-001','DQ-CON-001','DQ-CON-002') &quot; +&#xD;&#xA;&quot;         ) = 0 &quot; +&#xD;&#xA;&quot;        THEN 'CERTIFICADO' &quot; +&#xD;&#xA;&quot;        ELSE 'NO CERTIFICADO' &quot; +&#xD;&#xA;&quot;    END &quot; +&#xD;&#xA;&quot;FROM dq_score_dimension_telco_grupo_uno s &quot; +&#xD;&#xA;&quot;WHERE s.dq_run_id = @dq_run_id &quot; +&#xD;&#xA;&quot;GROUP BY s.dq_run_id&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBRow_insert_score_global"/>
+    <metadata connector="FLOW" name="tDBRow_9"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tDBConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBRow_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_2" offsetLabelX="0" offsetLabelY="0" source="tDBRow_2" target="tDBRow_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_3" offsetLabelX="0" offsetLabelY="0" source="tDBRow_3" target="tDBRow_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_4" offsetLabelX="0" offsetLabelY="0" source="tDBRow_4" target="tDBRow_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_5" offsetLabelX="0" offsetLabelY="0" source="tDBRow_5" target="tDBRow_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_6" offsetLabelX="0" offsetLabelY="0" source="tDBRow_6" target="tDBRow_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk10" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tDBClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_7" offsetLabelX="0" offsetLabelY="0" source="tDBRow_7" target="tDBRow_8">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk12" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_8" offsetLabelX="0" offsetLabelY="0" source="tDBRow_8" target="tDBRow_9">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk13" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_9" offsetLabelX="0" offsetLabelY="0" source="tDBRow_9" target="tDBInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk14" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_4" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_5" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_6" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBClose_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_7" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_8" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_9" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+</talendfile:ProcessType>
