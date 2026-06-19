@@ -150,7 +150,7 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="840" posY="360">
+  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="760" posY="200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -188,16 +188,6 @@
   </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tFileInputDelimited" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="File/Input" show="false"/>
-    <elementParameter field="CHECK" name="START" value="true" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tFileInputDelimited" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/Applications/TalendStudio-8.0.1/studio/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_XiGFAGtlEfGcM5xLoIB4dA - metadata" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
@@ -289,7 +279,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="400" posY="40">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="280" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -302,6 +292,7 @@
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="mapeo_nbi"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out_nbi">
       <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -340,7 +331,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="40">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_5" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -363,6 +354,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="&#x9;&#x9;&#x9;  input_row.PROVINCIA != null&#xA;&#x9;&#x9;&#x9;  &amp;&amp; input_row.CANTON != null&#xA;&#x9;&#x9;&#x9;  &amp;&amp; input_row.AREA != null&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.PROVINCIA.trim().equals(&quot;&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.CANTON.trim().equals(&quot;&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.CANTON.trim().equals(&quot;Nacional&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.PROVINCIA.trim().equals(&quot;Total Nacional&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.CANTON.trim().toLowerCase().contains(&quot;total&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; input_row.AREA.trim().toLowerCase().contains(&quot;total&quot;)"/>
+    <elementParameter field="TEXT" name="LABEL" value="filtrar_datos_nbi"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_5">
       <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -396,7 +388,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="720" posY="40">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -409,6 +401,7 @@
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="mapeo_relaciones"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out_nbi_filtrado">
       <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -420,7 +413,7 @@
       <column comment="" key="false" length="-1" name="FUENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out_nbi_filtrado">
         <mapperTableEntries name="PERIODO_REFERENCIA" expression="(String) globalMap.get(&quot;PERIODO&quot;)" type="id_String" nullable="true"/>
@@ -443,7 +436,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="840" posY="200">
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="760" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -509,6 +502,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String periodoContexto = context.periodo_censo;&#xA;&#xA;String periodo;&#xA;&#xA;//Si viene periodo desde contexto, usarlo&#xA;if (periodoContexto != null &amp;&amp; !periodoContexto.trim().equals(&quot;&quot;)) {&#xA; periodo = periodoContexto.trim();&#xA;} else {&#xA; // Si no viene periodo, usar año anterior&#xA; periodo = &quot;2022&quot;;&#xA;}&#xA;&#xA;&#xA;String path_csv = context.inec_path + &quot;censo/8.1.csv&quot;;&#xA;&#xA;&#xA;// Guardar rutas para los siguientes componentes&#xA;globalMap.put(&quot;CSV_PATH&quot;, path_csv);&#xA;globalMap.put(&quot;PERIODO&quot;, periodo);&#xA;&#xA;System.out.println(&quot;CSV en:&quot;);&#xA;System.out.println(path_csv);&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="inicio"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
   </node>

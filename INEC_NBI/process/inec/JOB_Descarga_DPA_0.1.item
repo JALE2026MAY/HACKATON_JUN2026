@@ -174,7 +174,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String periodoContexto = context.periodo_dpa;&#xA;&#xA;String periodo;&#xA;&#xA;//Si viene periodo desde contexto, usarlo&#xA;if (periodoContexto != null &amp;&amp; !periodoContexto.trim().equals(&quot;&quot;)) {&#xA; periodo = periodoContexto.trim();&#xA;} else {&#xA; // Si no viene periodo, usar año anterior&#xA; periodo = &quot;2026&quot;;&#xA;}&#xA;&#xA;&#xA;String path_csv = context.inec_path + &quot;dpa/CODIFICACIÓN_&quot;+ periodo +&quot;.xlsx&quot;;&#xA;&#xA;&#xA;String urlZip = &quot;https://www.ecuadorencifras.gob.ec/documentos/web-inec/Cartografia/Clasificador_Geografico/CLASIFICADOR_GEOGRAFICO_&quot; + periodo + &quot;.zip&quot;;&#xA;// String urlZip = &quot;https://www.ecuadorencifras.gob.ec/documentos/web-inec/EMPLEO/&quot; + periodo + &quot;/anual/2_BDD_DATOS_ABIERTOS_ENEMDU_&quot;+ periodo + &quot;_CSV.zip&quot;;&#xA;&#xA;String baseDir = context.inec_path;&#xA;String landingDir = baseDir + &quot;landing/&quot; + periodo;&#xA;String extractDir = baseDir + &quot;dpa/&quot; + periodo;&#xA;String zipPath = landingDir + &quot;/DPA_&quot; + periodo + &quot;.zip&quot;;&#xA;&#xA;// Crear carpetas&#xA;java.nio.file.Files.createDirectories(java.nio.file.Paths.get(landingDir));&#xA;java.nio.file.Files.createDirectories(java.nio.file.Paths.get(extractDir));&#xA;&#xA;// Descargar ZIP&#xA;System.out.println(&quot;Descargando ZIP desde:&quot;);&#xA;System.out.println(urlZip);&#xA;&#xA;try (&#xA;    java.io.InputStream in = new java.net.URL(urlZip).openStream()&#xA;) {&#xA;    java.nio.file.Files.copy(&#xA;        in,&#xA;        java.nio.file.Paths.get(zipPath),&#xA;        java.nio.file.StandardCopyOption.REPLACE_EXISTING&#xA;    );&#xA;}&#xA;&#xA;// Guardar rutas para los siguientes componentes&#xA;globalMap.put(&quot;PERIODO&quot;, periodo);&#xA;globalMap.put(&quot;ZIP_PATH&quot;, zipPath);&#xA;globalMap.put(&quot;EXTRACT_DIR&quot;, extractDir);&#xA;&#xA;System.out.println(&quot;ZIP descargado en:&quot;);&#xA;System.out.println(zipPath);&#xA;&#xA;System.out.println(&quot;Carpeta de extracción:&quot;);&#xA;System.out.println(extractDir);"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="LABEL" value="tJava_Descargar_Enemdu"/>
+    <elementParameter field="TEXT" name="LABEL" value="descargar_dpa"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_3"/>
   </node>
@@ -192,7 +192,7 @@
     <elementParameter field="CHECK" name="PRINTOUT" value="false"/>
     <elementParameter field="CHECK" name="USE_ENCODING" value="false"/>
     <elementParameter field="TEXT" name="ENCORDING" value="&quot;UTF-8&quot;" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tFileUnarchive_descomprimir"/>
+    <elementParameter field="TEXT" name="LABEL" value="descomprimir_zip"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">

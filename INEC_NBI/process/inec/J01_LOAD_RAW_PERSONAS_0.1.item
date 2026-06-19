@@ -1705,6 +1705,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String periodoContexto = context.periodo;&#xA;&#xA;int anioAnterior = java.time.LocalDate&#xA;.now(java.time.ZoneId.of(&quot;America/Guayaquil&quot;))&#xA;.minusYears(1)&#xA;.getYear();&#xA;&#xA;String periodo;&#xA;&#xA;//Si viene periodo desde contexto, usarlo&#xA;if (periodoContexto != null &amp;&amp; !periodoContexto.trim().equals(&quot;&quot;)) {&#xA; periodo = periodoContexto.trim();&#xA;} else {&#xA; // Si no viene periodo, usar año anterior&#xA; periodo = String.valueOf(anioAnterior);&#xA;}&#xA;&#xA;String path_csv = context.inec_path + &quot;/extract/&quot; + periodo + &quot;/BDDenemdu_personas_&quot; + periodo + &quot;_anual.csv&quot;;&#xA;&#xA;&#xA;// Guardar rutas para los siguientes componentes&#xA;globalMap.put(&quot;CSV_PATH&quot;, path_csv);&#xA;&#xA;System.out.println(&quot;CSV en:&quot;);&#xA;System.out.println(path_csv);&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="asignar_ruta_csv"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_3"/>
   </node>
