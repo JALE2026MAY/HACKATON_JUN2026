@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="DEV" jobType="Standard">
+  <context confirmationNeeded="false" hide="false" name="QA">
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCUGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCUWtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCUmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_zdJCU2tfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCVGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCVWtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCVmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_zdJCV2tfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCWGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCWWtfEfGcM5xLoIB4dA"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="PROD">
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCWmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCW2tfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCXGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_zdJCXWtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCXmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCX2tfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCYGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_zdJCYWtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCYmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCY2tfEfGcM5xLoIB4dA"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="DEV">
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_zdJCZGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_zdJCZWtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="C:/fuentes_inec/" internalId="_zdJCZmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:g7BM183fipK+ItmjW00H7pZX2AqCC2yj98+MCageKjaL9u9sIucwCyEv" internalId="_zdJCZ2tfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2025" internalId="_zdJCaGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2026" internalId="_zdJCaWtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCamtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_zdJCa2tfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_zdJCbGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_zdJCbWtfEfGcM5xLoIB4dA"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="MAC">
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_zdJCbmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_zdJCb2tfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_zdJCcGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:iJ8SHo29XDcVp+rxT7AXwBj9Ubpcn0DpWYcBLZcQ+iRHBpQr7Dtr0dcZ" internalId="_zdJCcWtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCcmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCc2tfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_zdJCdGtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_zdJCdWtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_zdJCdmtfEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_zdJpYGtfEfGcM5xLoIB4dA"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:zkhg4jX6XgGk1Qy3TERe2yx09l3vJcH4qLOx2yKY" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="JDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6Ik71QUtJTf1QQ0rAq6zBc0v/yFBzm1UicMVliwN" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Inicio del subjob viviendas&quot;);"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="inicio"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="440">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="440">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Fin del subjob viviendas&quot;);"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="fin"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String periodoContexto = context.periodo_dpa;&#xA;&#xA;String periodo;&#xA;&#xA;//Si viene periodo desde contexto, usarlo&#xA;if (periodoContexto != null &amp;&amp; !periodoContexto.trim().equals(&quot;&quot;)) {&#xA; periodo = periodoContexto.trim();&#xA;} else {&#xA; // Si no viene periodo, usar año anterior&#xA; periodo = &quot;2026&quot;;&#xA;}&#xA;&#xA;&#xA;String path_csv = context.inec_path + &quot;dpa/CODIFICACIÓN_&quot;+ periodo +&quot;.xlsx&quot;;&#xA;&#xA;&#xA;String urlZip = &quot;https://www.ecuadorencifras.gob.ec/documentos/web-inec/Cartografia/Clasificador_Geografico/CLASIFICADOR_GEOGRAFICO_&quot; + periodo + &quot;.zip&quot;;&#xA;// String urlZip = &quot;https://www.ecuadorencifras.gob.ec/documentos/web-inec/EMPLEO/&quot; + periodo + &quot;/anual/2_BDD_DATOS_ABIERTOS_ENEMDU_&quot;+ periodo + &quot;_CSV.zip&quot;;&#xA;&#xA;String baseDir = context.inec_path;&#xA;String landingDir = baseDir + &quot;landing/&quot; + periodo;&#xA;String extractDir = baseDir + &quot;dpa/&quot; + periodo;&#xA;String zipPath = landingDir + &quot;/DPA_&quot; + periodo + &quot;.zip&quot;;&#xA;&#xA;// Crear carpetas&#xA;java.nio.file.Files.createDirectories(java.nio.file.Paths.get(landingDir));&#xA;java.nio.file.Files.createDirectories(java.nio.file.Paths.get(extractDir));&#xA;&#xA;// Descargar ZIP&#xA;System.out.println(&quot;Descargando ZIP desde:&quot;);&#xA;System.out.println(urlZip);&#xA;&#xA;try (&#xA;    java.io.InputStream in = new java.net.URL(urlZip).openStream()&#xA;) {&#xA;    java.nio.file.Files.copy(&#xA;        in,&#xA;        java.nio.file.Paths.get(zipPath),&#xA;        java.nio.file.StandardCopyOption.REPLACE_EXISTING&#xA;    );&#xA;}&#xA;&#xA;// Guardar rutas para los siguientes componentes&#xA;globalMap.put(&quot;PERIODO&quot;, periodo);&#xA;globalMap.put(&quot;ZIP_PATH&quot;, zipPath);&#xA;globalMap.put(&quot;EXTRACT_DIR&quot;, extractDir);&#xA;&#xA;System.out.println(&quot;ZIP descargado en:&quot;);&#xA;System.out.println(zipPath);&#xA;&#xA;System.out.println(&quot;Carpeta de extracción:&quot;);&#xA;System.out.println(extractDir);"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="tJava_Descargar_Enemdu"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="tFileUnarchive" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileUnarchive_1" show="false"/>
+    <elementParameter field="FILE" name="ZIPFILE" value="(String) globalMap.get(&quot;ZIP_PATH&quot;)"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="(String) globalMap.get(&quot;EXTRACT_DIR&quot;)"/>
+    <elementParameter field="CHECK" name="ROOTNAME" value="false"/>
+    <elementParameter field="CHECK" name="INTEGRITY" value="false"/>
+    <elementParameter field="CHECK" name="EXTRACTPATH" value="true"/>
+    <elementParameter field="CHECK" name="CHECKPASSWORD" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DECRYPT_METHOD" value="ZIP4J_DECRYPT" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:zG0WZSH3g2yCukg6IbePxrUMIJXZZpmtgI+JG635" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="PRINTOUT" value="false"/>
+    <elementParameter field="CHECK" name="USE_ENCODING" value="false"/>
+    <elementParameter field="TEXT" name="ENCORDING" value="&quot;UTF-8&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFileUnarchive_descomprimir"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_3" offsetLabelX="0" offsetLabelY="0" source="tJava_3" target="tFileUnarchive_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileUnarchive_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+</talendfile:ProcessType>

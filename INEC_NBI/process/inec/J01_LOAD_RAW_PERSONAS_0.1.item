@@ -1,36 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="DEV" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="QA">
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2JrsGmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSwGmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSwWmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_d2KSwmmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSw2myEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSxGmyEfGOntcXjIZ3sg"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AEGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AEWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AEmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_MJ2AE2t1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AFGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AFWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AFmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AF2t1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_MJ2AGGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="La direccion del archivo de NBI del censo, por defecto se usa del 2022" name="url_nbi_censo" prompt="url_nbi_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AGWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AGmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AG2t1EfGcM5xLoIB4dA"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="PROD">
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSxWmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSxmmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSx2myEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_d2KSyGmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSyWmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_d2KSymmyEfGOntcXjIZ3sg"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AHGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AHWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AHmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_MJ2AH2t1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AIGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AIWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AImt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AI2t1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_MJ2AJGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="La direccion del archivo de NBI del censo, por defecto se usa del 2022" name="url_nbi_censo" prompt="url_nbi_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AJWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AJmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AJ2t1EfGcM5xLoIB4dA"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="DEV">
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="C:/fuentes_inec/" internalId="_d2KSy2myEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_d2KSzGmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_d2KSzWmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:16JVGduTRYhQKiHkrTrKTW+GrMKUWWuW/FwnMd+9xucm7alhO/zrQwTR" internalId="_d2KSzmmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_d2KSz2myEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_d2KS0GmyEfGOntcXjIZ3sg"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_MJ2AKGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_MJ2AKWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="C:/fuentes_inec/" internalId="_MJ2AKmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:T4IBwQsCTRvfbXWbWvsC141CPbtKVV1THopO4clG+7b5B44AagpM7Ywq" internalId="_MJ2AK2t1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2025" internalId="_MJ2ALGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2022" internalId="_MJ2ALWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2026" internalId="_MJ2ALmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AL2t1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_MJ2AMGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="La direccion del archivo de NBI del censo, por defecto se usa del 2022" name="url_nbi_censo" prompt="url_nbi_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AMWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_MJ2AMmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_MJ2AM2t1EfGcM5xLoIB4dA"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="MAC">
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_d2KS0WmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_d2KS0mmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_d2KS02myEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:Ai4e/UdSygGnIHd1rQv+tzEf/i4FtavmUWSIpiBBZB9D++MrpaC8qU8D" internalId="_d2KS1GmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_d2KS1WmyEfGOntcXjIZ3sg"/>
-    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_d2KS1mmyEfGOntcXjIZ3sg"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_MJ2ANGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_MJ2ANWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_MJ2ANmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:P8szpZeSH1H7KQzICBWWuq/boPSYE0JDtWH0d4nyJGOnPhRCawc3ujcM" internalId="_MJ2AN2t1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AOGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AOWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AOmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2AO2t1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_MJ2APGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="La direccion del archivo de NBI del censo, por defecto se usa del 2022" name="url_nbi_censo" prompt="url_nbi_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_MJ2APWt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_MJ2APmt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_MJ2AP2t1EfGcM5xLoIB4dA"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -135,7 +159,7 @@
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" value="" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.inec_path + &quot;BDDenemdu_personas_2025_anual.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="(String) globalMap.get(&quot;CSV_PATH&quot;)"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
@@ -1677,6 +1701,13 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2"/>
   </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="520" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String periodoContexto = context.periodo;&#xA;&#xA;int anioAnterior = java.time.LocalDate&#xA;.now(java.time.ZoneId.of(&quot;America/Guayaquil&quot;))&#xA;.minusYears(1)&#xA;.getYear();&#xA;&#xA;String periodo;&#xA;&#xA;//Si viene periodo desde contexto, usarlo&#xA;if (periodoContexto != null &amp;&amp; !periodoContexto.trim().equals(&quot;&quot;)) {&#xA; periodo = periodoContexto.trim();&#xA;} else {&#xA; // Si no viene periodo, usar año anterior&#xA; periodo = String.valueOf(anioAnterior);&#xA;}&#xA;&#xA;String path_csv = context.inec_path + &quot;/extract/&quot; + periodo + &quot;/BDDenemdu_personas_&quot; + periodo + &quot;_anual.csv&quot;;&#xA;&#xA;&#xA;// Guardar rutas para los siguientes componentes&#xA;globalMap.put(&quot;CSV_PATH&quot;, path_csv);&#xA;&#xA;System.out.println(&quot;CSV en:&quot;);&#xA;System.out.println(path_csv);&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
@@ -1687,6 +1718,9 @@
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tJava_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJava_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
@@ -1715,6 +1749,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
   </subjob>

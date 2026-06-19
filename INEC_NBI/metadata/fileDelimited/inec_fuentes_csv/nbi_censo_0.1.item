@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_XiNZwGtlEfGcM5xLoIB4dA" name="nbi_censo" dataPackage="_XiNZwWtlEfGcM5xLoIB4dA" Server="Localhost 127.0.0.1" FilePath="/Users/andresgaibor/geniuslab/Fuentes_INEC/8.1.csv" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="11" FooterValue="0" RemoveEmptyRow="true" EscapeType="CSV" EscapeChar="&quot;\&quot;&quot;" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_XiNZwWtlEfGcM5xLoIB4dA" name="default" dataManager="_XiNZwGtlEfGcM5xLoIB4dA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_XiNZwmtlEfGcM5xLoIB4dA" id="_UefmkGtkEfGcM5xLoIB4dA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XiNZw2tlEfGcM5xLoIB4dA" label="indice" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XiNZxGtlEfGcM5xLoIB4dA" label="provincia" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XiNZxWtlEfGcM5xLoIB4dA" label="canton" length="21" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XiNZxmtlEfGcM5xLoIB4dA" label="area" length="27" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XiNZx2tlEfGcM5xLoIB4dA" label="total_hogares" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XiNZyGtlEfGcM5xLoIB4dA" label="no_pobres" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XiNZyWtlEfGcM5xLoIB4dA" label="pobres" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

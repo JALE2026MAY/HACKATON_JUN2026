@@ -1,41 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="DEV" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="QA">
-    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uiwGmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uiwWmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uiwmmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_E8uiw2msEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uixGmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uixWmsEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNEGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNEWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNEmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_DLgNE2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNFGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNFWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNFmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNF2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_DLgNGGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNGWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNGmtqEfGcM5xLoIB4dA"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="PROD">
-    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uixmmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uix2msEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uiyGmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_E8uiyWmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uiymmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_E8uiy2msEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNG2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNHGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNHWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="" internalId="_DLgNHmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNH2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNIGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNIWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNImtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_DLgNI2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNJGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNJWtqEfGcM5xLoIB4dA"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="DEV">
-    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_E8uizGmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_E8uizWmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="C:/fuentes_inec/" internalId="_E8uizmmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:gc+2DnRGy40LRrVuqiregM78Z2/s4fXPYjP+ZaY1IGBYpsWYv88klRJu" internalId="_E8vJ0GmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_E8vJ0WmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_E8vJ0mmsEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_DLgNJmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_DLgNJ2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="C:/fuentes_inec/" internalId="_DLgNKGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:vCyH2aiv5586WNYKk8Vj8nzS2LAKMvKUfkA2JwadwpOSbTg0+kSL6btE" internalId="_DLgNKWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2025" internalId="_DLgNKmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2022" internalId="_DLgNK2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2026" internalId="_DLgNLGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNLWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_DLgNLmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_DLgNL2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_DLgNMGtqEfGcM5xLoIB4dA"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="MAC">
-    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_E8vJ02msEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_E8vJ1GmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_E8vJ1WmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:Wl6Ze01x7jPtmqI9twX3PP1lB7JMabaZU38f5FoEKgtogvlhkKDScPlM" internalId="_E8vJ1mmsEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_E8vJ12msEfGiX-30GkgJcQ"/>
-    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_E8vJ2GmsEfGiX-30GkgJcQ"/>
+    <contextParameter comment="" name="account" prompt="account?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="HRNWWSS-PV65102" internalId="_DLgNMWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_DLgNMmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_DLgNM2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:iFrFpQTT8CCfqrdPEYmbPsaTz03nYEq4p2RmkGBxuaWnZwF7AhtZ5w7+" internalId="_DLgNNGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNNWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNNmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNN2tqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_DLgNOGtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="run_ts" prompt="run_ts?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Date" value="" internalId="_DLgNOWtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="user_id" prompt="user_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="ANDRESGAIBOR" internalId="_DLgNOmtqEfGcM5xLoIB4dA"/>
+    <contextParameter comment="" name="warehouse" prompt="warehouse?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="COMPUTE_WH" internalId="_DLgNO2tqEfGcM5xLoIB4dA"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="200" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -130,118 +150,151 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
-    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.inec_path + &quot;nbi_oficial_inec_canton.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:mlVOFY8IMk0Bwtn1GKKlW8tSd95S5towwLGGqyUu"/>
-    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
-    <elementParameter field="TABLE" name="SHEETLIST">
-      <elementValue elementRef="SHEETNAME" value="&quot;NBI_Normalizado&quot;" id="0"/>
-      <elementValue elementRef="USE_REGEX" value="" id="1"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="HEADER" value="1"/>
+  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="840" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="relaciones_geograficas"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.account"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.user_id"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="context.password"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.warehouse"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="REF"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.database"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="CALL NBI_DB.REF.SP_ACTUALIZAR_NBI_OFICIAL_CON_DPA();"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com"/>
+    <elementParameter field="CHECK" name="configuration.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.preparedStatementParameters" show="false"/>
+    <elementParameter field="TEXT" name="configuration.commitEvery" value="10000"/>
+    <elementParameter field="CHECK" name="configuration.useSessionTimezone" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
+    <metadata connector="FLOW" name="tDBRow_1"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="reject" name="reject">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tFileInputDelimited" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="File/Input" show="false"/>
+    <elementParameter field="CHECK" name="START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tFileInputDelimited" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/Applications/TalendStudio-8.0.1/studio/configuration/lib/java" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_XiGFAGtlEfGcM5xLoIB4dA - metadata" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="DYNAMIC" value="" show="false"/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="(String) globalMap.get(&quot;CSV_PATH&quot;)"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;\&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;\&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="11"/>
     <elementParameter field="TEXT" name="FOOTER" value="0"/>
     <elementParameter field="TEXT" name="LIMIT" value=""/>
-    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
-    <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
-    <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_7nV6AGmmEfGiX-30GkgJcQ - metadata" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_7nV6AGmmEfGiX-30GkgJcQ - metadata" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_XiGFAGtlEfGcM5xLoIB4dA - metadata" show="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;/Applications/TalendStudio-8.0.1/studio/workspace&quot;" show="false"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="','" show="false"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="'.'" show="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false" show="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" value="10" show="false"/>
     <elementParameter field="CHECK" name="TRIMALL" value="false"/>
     <elementParameter field="TABLE" name="TRIMSELECT">
-      <elementValue elementRef="SCHEMA_COLUMN" value="orden_pdf" id="0"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="indice" id="0"/>
       <elementValue elementRef="TRIM" value="false" id="1"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="provincia" id="2"/>
       <elementValue elementRef="TRIM" value="false" id="3"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="canton" id="4"/>
       <elementValue elementRef="TRIM" value="false" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="periodo" id="6"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="area" id="6"/>
       <elementValue elementRef="TRIM" value="false" id="7"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="numero" id="8"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_hogares" id="8"/>
       <elementValue elementRef="TRIM" value="false" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="porcentaje" id="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="no_pobres" id="10"/>
       <elementValue elementRef="TRIM" value="false" id="11"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="variacion_porcentual" id="12"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pobres" id="12"/>
       <elementValue elementRef="TRIM" value="false" id="13"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="fuente" id="14"/>
-      <elementValue elementRef="TRIM" value="false" id="15"/>
     </elementParameter>
-    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
-    <elementParameter field="TABLE" name="DATESELECT" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="orden_pdf" id="0"/>
-      <elementValue elementRef="CONVERTDATE" value="false" id="1"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;" id="2"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="provincia" id="3"/>
-      <elementValue elementRef="CONVERTDATE" value="false" id="4"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="canton" id="6"/>
-      <elementValue elementRef="CONVERTDATE" value="false" id="7"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;" id="8"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="periodo" id="9"/>
-      <elementValue elementRef="CONVERTDATE" value="false" id="10"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;" id="11"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="numero" id="12"/>
-      <elementValue elementRef="CONVERTDATE" value="false" id="13"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;" id="14"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="porcentaje" id="15"/>
-      <elementValue elementRef="CONVERTDATE" value="false" id="16"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;" id="17"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="variacion_porcentual" id="18"/>
-      <elementValue elementRef="CONVERTDATE" value="false" id="19"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;" id="20"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="fuente" id="21"/>
-      <elementValue elementRef="CONVERTDATE" value="false" id="22"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;" id="23"/>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-1&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="CUSTOM"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="indice" id="0"/>
+      <elementValue elementRef="DECODE" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="provincia" id="2"/>
+      <elementValue elementRef="DECODE" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="canton" id="4"/>
+      <elementValue elementRef="DECODE" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="area" id="6"/>
+      <elementValue elementRef="DECODE" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="total_hogares" id="8"/>
+      <elementValue elementRef="DECODE" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="no_pobres" id="10"/>
+      <elementValue elementRef="DECODE" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pobres" id="12"/>
+      <elementValue elementRef="DECODE" value="false" id="13"/>
     </elementParameter>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="FORMAT_DATE_CELLS" value="true" show="false"/>
-    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
-    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false" show="false"/>
-    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
-    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" value="true" show="false"/>
-    <elementParameter field="CHECK" name="CONFIGURE_INFLATION_RATIO" value="false"/>
-    <elementParameter field="TEXT" name="INFLATION_RATIO" value="" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="nbi_oficial"/>
+    <elementParameter field="TEXT" name="DESTINATION" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_HEADER_AS_IS" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="nbi_censo"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tFileInputExcel_1">
-      <column comment="" key="false" length="2" name="orden_pdf" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="provincia" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="canton" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="periodo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="numero" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="18" name="porcentaje" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="variacion_porcentual" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="159" name="fuente" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" label="metadata" name="tFileInputDelimited_1">
+      <column comment="" key="false" length="0" name="indice" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="14" name="provincia" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="21" name="canton" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="area" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="total_hogares" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="no_pobres" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="pobres" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
-      <column comment="" key="false" length="2" name="orden_pdf" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="provincia" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="canton" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="periodo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="numero" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="18" name="porcentaje" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="variacion_porcentual" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="159" name="fuente" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="indice" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="14" name="provincia" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="21" name="canton" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="area" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="total_hogares" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="no_pobres" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="pobres" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="50" offsetLabelY="0" posX="400" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="400" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_zCEVAGmgEfGiX-30GkgJcQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_zCEVAGmgEfGiX-30GkgJcQ-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
@@ -249,42 +302,148 @@
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="LABEL" value="mapeo_nbi"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out_nbi_oficial">
-      <column comment="" key="false" length="4" name="PERIODO_REFERENCIA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="PROVINCIA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="CANTON" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="18" name="NBI_OFICIAL_INEC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="out_nbi">
+      <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO_PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO_CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NBI_OFICIAL_INEC" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FUENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AREA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="total" expression="row2.total_hogares == null || row2.total_hogares.replace(&quot;,&quot;, &quot;&quot;).replace(&quot;\&quot;&quot;, &quot;&quot;).trim().isEmpty()&#xA;? 0L : Long.parseLong(row2.total_hogares.replace(&quot;,&quot;, &quot;&quot;).replace(&quot;\&quot;&quot;, &quot;&quot;).trim()) " type="id_Long"/>
+        <mapperTableEntries name="pobres_n" expression="row2.pobres == null || row2.pobres.replace(&quot;,&quot;, &quot;&quot;).replace(&quot;\&quot;&quot;, &quot;&quot;).trim().isEmpty() ? 0L : Long.parseLong(row2.pobres.replace(&quot;,&quot;, &quot;&quot;).replace(&quot;\&quot;&quot;, &quot;&quot;).trim()) " type="id_Long"/>
+      </varTables>
+      <outputTables sizeState="INTERMEDIATE" name="out_nbi">
+        <mapperTableEntries name="PERIODO_REFERENCIA" expression="&quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CODIGO_PROVINCIA" expression="&quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PROVINCIA" expression="row2.provincia " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CODIGO_CANTON" expression="&quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CANTON" expression="row2.canton " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NBI_OFICIAL_INEC" expression="Var.total == 0L&#xA;&#x9;&#x9;&#x9;&#x9;? null&#xA;&#x9;&#x9;&#x9;&#x9;: Math.round((((double) Var.pobres_n / (double) Var.total) * 100.0) * 100.0) / 100.0 " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="FUENTE" expression="&quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="AREA" expression="row2.area " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="indice" type="id_String" nullable="true"/>
+        <mapperTableEntries name="provincia" type="id_String" nullable="true"/>
+        <mapperTableEntries name="canton" type="id_String" nullable="true"/>
+        <mapperTableEntries name="area" type="id_String" nullable="true"/>
+        <mapperTableEntries name="total_hogares" type="id_String" nullable="true"/>
+        <mapperTableEntries name="no_pobres" type="id_String" nullable="true"/>
+        <mapperTableEntries name="pobres" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_5" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="PROVINCIA" id="0"/>
+      <elementValue elementRef="FUNCTION" value="" id="1"/>
+      <elementValue elementRef="OPERATOR" value="!=" id="2"/>
+      <elementValue elementRef="RVALUE" value="&quot;&quot;" id="3"/>
+      <elementValue elementRef="INPUT_COLUMN" value="CANTON" id="4"/>
+      <elementValue elementRef="FUNCTION" value="" id="5"/>
+      <elementValue elementRef="OPERATOR" value="!=" id="6"/>
+      <elementValue elementRef="RVALUE" value="&quot;&quot;" id="7"/>
+      <elementValue elementRef="INPUT_COLUMN" value="PROVINCIA" id="8"/>
+      <elementValue elementRef="FUNCTION" value="" id="9"/>
+      <elementValue elementRef="OPERATOR" value="!=" id="10"/>
+      <elementValue elementRef="RVALUE" value="&quot;Total Nacional&quot;" id="11"/>
+      <elementValue elementRef="INPUT_COLUMN" value="CANTON" id="12"/>
+      <elementValue elementRef="FUNCTION" value="" id="13"/>
+      <elementValue elementRef="OPERATOR" value="!=" id="14"/>
+      <elementValue elementRef="RVALUE" value="&quot;Nacional&quot;" id="15"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="&#x9;&#x9;&#x9;  input_row.PROVINCIA != null&#xA;&#x9;&#x9;&#x9;  &amp;&amp; input_row.CANTON != null&#xA;&#x9;&#x9;&#x9;  &amp;&amp; input_row.AREA != null&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.PROVINCIA.trim().equals(&quot;&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.CANTON.trim().equals(&quot;&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.CANTON.trim().equals(&quot;Nacional&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.PROVINCIA.trim().equals(&quot;Total Nacional&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; !input_row.CANTON.trim().toLowerCase().contains(&quot;total&quot;)&#xA;&#x9;&#x9;&#x9;  &amp;&amp; input_row.AREA.trim().toLowerCase().contains(&quot;total&quot;)"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterRow_5">
+      <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO_PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO_CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NBI_OFICIAL_INEC" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FUENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AREA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO_PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO_CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NBI_OFICIAL_INEC" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FUENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AREA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO_PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO_CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NBI_OFICIAL_INEC" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FUENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AREA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="720" posY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_zCEVAGmgEfGiX-30GkgJcQ-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out_nbi_filtrado">
+      <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO_PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CODIGO_CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NBI_OFICIAL_INEC" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="FUENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="out_nbi_oficial">
-        <mapperTableEntries name="PERIODO_REFERENCIA" expression="row1.periodo " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="PROVINCIA" expression="row1.provincia " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CANTON" expression="row1.canton " type="id_String" nullable="true"/>
-        <mapperTableEntries name="NBI_OFICIAL_INEC" expression="row1.porcentaje == null || row1.porcentaje.trim().isEmpty()&#xA;&#x9;&#x9;&#x9;&#x9;? null&#xA;&#x9;&#x9;&#x9;&#x9;: new java.math.BigDecimal(row1.porcentaje.trim().replace(&quot;,&quot;, &quot;.&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;    .multiply(new java.math.BigDecimal(&quot;100&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;    .toPlainString() " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CODIGO_PROVINCIA" expression="&quot;&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CODIGO_CANTON" expression="&quot;&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="FUENTE" expression="row1.fuente " type="id_String" nullable="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out_nbi_filtrado">
+        <mapperTableEntries name="PERIODO_REFERENCIA" expression="(String) globalMap.get(&quot;PERIODO&quot;)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CODIGO_PROVINCIA" expression="row3.CODIGO_PROVINCIA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PROVINCIA" expression="row3.PROVINCIA.toUpperCase()" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CODIGO_CANTON" expression="row3.CODIGO_CANTON " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CANTON" expression="row3.CANTON.toUpperCase()" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NBI_OFICIAL_INEC" expression="String.format(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;    java.util.Locale.US,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;    &quot;%.2f&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;    row3.NBI_OFICIAL_INEC&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="FUENTE" expression="&quot;Datos Tabulados de Pobreza por Necesidades Basicas Insatisfechas del ultimo censo&quot;" type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="orden_pdf" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="provincia" type="id_String" nullable="true"/>
-        <mapperTableEntries name="canton" type="id_String" nullable="true"/>
-        <mapperTableEntries name="periodo" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="numero" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="porcentaje" type="id_String" nullable="true"/>
-        <mapperTableEntries name="variacion_porcentual" type="id_String" nullable="true"/>
-        <mapperTableEntries name="fuente" type="id_String" nullable="true"/>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="PERIODO_REFERENCIA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CODIGO_PROVINCIA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PROVINCIA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CODIGO_CANTON" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CANTON" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NBI_OFICIAL_INEC" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="FUENTE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="AREA" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="160">
+  <node componentName="SnowflakeOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="840" posY="200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNPdXRwdXQ" show="false"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
@@ -324,12 +483,12 @@
     <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="4" name="PERIODO_REFERENCIA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="PROVINCIA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="CANTON" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="18" name="NBI_OFICIAL_INEC" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PERIODO_REFERENCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO_PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PROVINCIA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CODIGO_CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CANTON" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NBI_OFICIAL_INEC" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="FUENTE" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="LOOKUP" name="LOOKUP"/>
@@ -346,61 +505,63 @@
       <column comment="" defaultValue="" key="false" length="255" name="code" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="SnowflakeRow" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="c25vd2ZsYWtlI1Nub3dmbGFrZSNSb3c" show="false"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="LABEL" value="relaciones_geograficas"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.account" value="context.account"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.snowflakeAuth.userId" value="context.user_id"/>
-    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.snowflakeAuth.password" value="context.password"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.warehouse" value="context.warehouse"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbSchema" value="REF"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.database" value="context.database"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="CALL NBI_DB.REF.SP_ACTUALIZAR_NBI_OFICIAL_CON_DPA();"/>
-    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrlSuffix" value=".snowflakecomputing.com"/>
-    <elementParameter field="CHECK" name="configuration.usePreparedStatement" value="false"/>
-    <elementParameter field="TABLE" name="configuration.preparedStatementParameters" show="false"/>
-    <elementParameter field="TEXT" name="configuration.commitEvery" value="10000"/>
-    <elementParameter field="CHECK" name="configuration.useSessionTimezone" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
-    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
-    <metadata connector="FLOW" name="tDBRow_1"/>
-    <metadata connector="LOOKUP" name="LOOKUP"/>
-    <metadata connector="MERGE" name="MERGE"/>
-    <metadata connector="reject" name="reject">
-      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="-120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String periodoContexto = context.periodo_censo;&#xA;&#xA;String periodo;&#xA;&#xA;//Si viene periodo desde contexto, usarlo&#xA;if (periodoContexto != null &amp;&amp; !periodoContexto.trim().equals(&quot;&quot;)) {&#xA; periodo = periodoContexto.trim();&#xA;} else {&#xA; // Si no viene periodo, usar año anterior&#xA; periodo = &quot;2022&quot;;&#xA;}&#xA;&#xA;&#xA;String path_csv = context.inec_path + &quot;censo/8.1.csv&quot;;&#xA;&#xA;&#xA;// Guardar rutas para los siguientes componentes&#xA;globalMap.put(&quot;CSV_PATH&quot;, path_csv);&#xA;globalMap.put(&quot;PERIODO&quot;, periodo);&#xA;&#xA;System.out.println(&quot;CSV en:&quot;);&#xA;System.out.println(path_csv);&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tMap_1">
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="-120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="out_nbi_oficial" lineStyle="0" metaname="out_nbi_oficial" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="out_nbi" lineStyle="0" metaname="out_nbi" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tFilterRow_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="AREA" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out_nbi_oficial" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out_nbi" show="false"/>
+  </connection>
+  <connection connectorName="FILTER" label="row3" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_5" target="tMap_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out_nbi_filtrado" lineStyle="0" metaname="out_nbi_filtrado" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out_nbi_filtrado" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tDBRow_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
   </subjob>
 </talendfile:ProcessType>
