@@ -307,6 +307,10 @@ Objetivos del dashboard:
 - Identificar zonas con mayores niveles de pobreza por NBI.
 - Presentar métricas de hogares, viviendas y personas de forma ejecutiva.
 
+Captura del dashboard analítico desarrollado en Power BI:
+
+![Dashboard analítico NBI](DASHBOARD_ANALITICO_Nuevo.jpg.jpeg)
+
 ## OpenMetadata
 
 OpenMetadata se utiliza para gobierno de datos.
