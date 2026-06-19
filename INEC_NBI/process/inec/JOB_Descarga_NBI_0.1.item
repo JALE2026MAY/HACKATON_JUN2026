@@ -47,7 +47,7 @@
     <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_fyzLhWtvEfGcM5xLoIB4dA"/>
     <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_fyzLhmtvEfGcM5xLoIB4dA"/>
     <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:LUX5g0aCHY6gcgr9V9OJF3FvBe7+qVyF2YXZP+zE2BhIHmN9c9Wows5J" internalId="_fyzLh2tvEfGcM5xLoIB4dA"/>
-    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_fyzLiGtvEfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2025" internalId="_fyzLiGtvEfGcM5xLoIB4dA"/>
     <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_fyzLiWtvEfGcM5xLoIB4dA"/>
     <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_fyzLimtvEfGcM5xLoIB4dA"/>
     <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_fyzLi2tvEfGcM5xLoIB4dA"/>
@@ -213,7 +213,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
@@ -224,7 +224,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>

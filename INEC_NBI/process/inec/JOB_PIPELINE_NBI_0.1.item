@@ -47,7 +47,7 @@
     <contextParameter comment="" name="database" prompt="database?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="NBI_DB" internalId="_Dmh7VWt1EfGcM5xLoIB4dA"/>
     <contextParameter comment="Ruta de las fuentes" name="inec_path" prompt="inec_path?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="/Users/andresgaibor/geniuslab/Fuentes_INEC/" internalId="_Dmh7Vmt1EfGcM5xLoIB4dA"/>
     <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_Password" value="enc:system.encryption.key.v1:GQq4eJSY444/HnXGHWYIcVUgD3dcwd9JsU2p8l9hUtIae3AP8wlfgWgK" internalId="_Dmh7V2t1EfGcM5xLoIB4dA"/>
-    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_Dmh7WGt1EfGcM5xLoIB4dA"/>
+    <contextParameter comment="Periodo (año) del ENEMDU, dejar vacio para descargar y cargar del año anterior" name="periodo" prompt="periodo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="2025" internalId="_Dmh7WGt1EfGcM5xLoIB4dA"/>
     <contextParameter comment="Periodo del censo para descargar el NBI oficial, por defecto se usa del 2022" name="periodo_censo" prompt="periodo_censo?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_Dmh7WWt1EfGcM5xLoIB4dA"/>
     <contextParameter comment="Periodo (año) del Devision Politica Admnistrativa (DPA), por defecto 2026" name="periodo_dpa" prompt="periodo_dpa?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_Dmh7Wmt1EfGcM5xLoIB4dA"/>
     <contextParameter comment="" name="run_id" prompt="run_id?" promptNeeded="false" repositoryContextId="_dk5X4GmXEfGiX-30GkgJcQ" type="id_String" value="" internalId="_Dmh7W2t1EfGcM5xLoIB4dA"/>
@@ -346,7 +346,7 @@
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="&quot;CALL MART.SP_LOAD_ALL_MART_NBI(&#xA;    &quot;+(String) globalMap.get(&quot;CSV_PATH&quot;)+&quot;,&#xA;    'NBI_&quot;+(String) globalMap.get(&quot;CSV_PATH&quot;)+&quot;'&#xA;);&quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="&quot;CALL MART.SP_LOAD_ALL_MART_NBI(&#xA;    &quot;+(String) globalMap.get(&quot;PERIODO_ENEMDU&quot;)+&quot;,&#xA;    'NBI_&quot;+(String) globalMap.get(&quot;PERIODO_ENEMDU&quot;)+&quot;'&#xA;);&quot;"/>
     <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
