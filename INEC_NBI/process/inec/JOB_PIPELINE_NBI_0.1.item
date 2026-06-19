@@ -160,7 +160,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Inicio JOB PIPELINE ORQUESTADOR&quot;);"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;Inicio JOB PIPELINE ORQUESTADOR&quot;);&#xA;&#xA;String periodoContexto = context.periodo;&#xA;&#xA;int anioAnterior = java.time.LocalDate&#xA;.now(java.time.ZoneId.of(&quot;America/Guayaquil&quot;))&#xA;.minusYears(1)&#xA;.getYear();&#xA;&#xA;String periodo;&#xA;&#xA;//Si viene periodo desde contexto, usarlo&#xA;if (periodoContexto != null &amp;&amp; !periodoContexto.trim().equals(&quot;&quot;)) {&#xA; periodo = periodoContexto.trim();&#xA;} else {&#xA; // Si no viene periodo, usar año anterior&#xA; periodo = String.valueOf(anioAnterior);&#xA;}&#xA;&#xA;globalMap.put(&quot;PERIODO_ENEMDU&quot;, periodo);&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="inicio"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -346,7 +346,7 @@
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.authenticationType" value="BASIC" show="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.snowflakeAuth.grantType" value="CLIENT_CREDENTIALS" show="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.shareConnection" value="false" show="false"/>
-    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="CALL MART.SP_LOAD_ALL_MART_NBI();"/>
+    <elementParameter field="MEMO_SQL" name="configuration.sqlQuery" value="&quot;CALL MART.SP_LOAD_ALL_MART_NBI(&#xA;    &quot;+(String) globalMap.get(&quot;CSV_PATH&quot;)+&quot;,&#xA;    'NBI_&quot;+(String) globalMap.get(&quot;CSV_PATH&quot;)+&quot;'&#xA;);&quot;"/>
     <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="true" show="false"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.loginTimeout" value="15" show="false"/>
