@@ -19,5 +19,42 @@
       "id" : "_l39L1GqrEfGJutgJywevvg",
       "name" : "sn_database"
     } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_LENkkGmPEfGE1IodBGmaCw",
+    "parameterList" : [ {
+      "id" : "_LEhGlGmPEfGE1IodBGmaCw",
+      "name" : "ss_user"
+    }, {
+      "id" : "_LEhGkWmPEfGE1IodBGmaCw",
+      "name" : "ss_host"
+    }, {
+      "id" : "_LEhGlWmPEfGE1IodBGmaCw",
+      "name" : "ss_password"
+    }, {
+      "id" : "_LEhGlmmPEfGE1IodBGmaCw",
+      "name" : "run_id"
+    }, {
+      "id" : "_LEhGk2mPEfGE1IodBGmaCw",
+      "name" : "ss_db"
+    }, {
+      "id" : "_LEhGl2mPEfGE1IodBGmaCw",
+      "name" : "olist_path"
+    }, {
+      "id" : "_-Ji68Gn8EfGSSoP7lP4F9A",
+      "name" : "ss_db_audit"
+    }, {
+      "id" : "_LEhGkmmPEfGE1IodBGmaCw",
+      "name" : "ss_port"
+    }, {
+      "id" : "_m4yxQWn8EfGSSoP7lP4F9A",
+      "name" : "ss_db_mart"
+    }, {
+      "id" : "_LEhGmGmPEfGE1IodBGmaCw",
+      "name" : "env"
+    }, {
+      "id" : "_m4yxQGn8EfGSSoP7lP4F9A",
+      "name" : "ss_db_stg"
+    } ]
   } ]
 }
