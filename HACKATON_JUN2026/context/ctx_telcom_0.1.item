@@ -19,6 +19,12 @@
     <contextParameter xmi:id="_LzolD2oAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Grupo1"/>
     <contextParameter xmi:id="_m3DTgGq6EfGtjOM0sMIeGw" comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m6PtQGrBEfGj_dhdvXtejg" comment="" name="action_run_id" prompt="action_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_nXafcGuHEfGZ5Jsy7VnhBg" comment="" name="MASTER_RUN_ID" prompt="MASTER_RUN_ID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_r7NawGuHEfGZ5Jsy7VnhBg" comment="" name="MASTER_START_TS" prompt="MASTER_START_TS?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_yPjGoGuHEfGZ5Jsy7VnhBg" comment="" name="DQ_MIN_SCORE" prompt="DQ_MIN_SCORE?" promptNeeded="false" repositoryContextId="built-in" type="id_Double" value="0.95"/>
+    <contextParameter xmi:id="_3GqmkGuHEfGZ5Jsy7VnhBg" comment="" name="STOP_ON_DQ_FAIL" prompt="STOP_ON_DQ_FAIL?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_6s4fUGuHEfGZ5Jsy7VnhBg" comment="" name="PROJECT_NAME" prompt="PROJECT_NAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Telco Retention Intelligence"/>
+    <contextParameter xmi:id="_BWCkoGuIEfGZ5Jsy7VnhBg" comment="" name="ENVIRONMENT" prompt="ENVIRONMENT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dev"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_LzolEGoAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="DEV">
     <contextParameter xmi:id="_LzolEWoAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
@@ -39,6 +45,12 @@
     <contextParameter xmi:id="_LzpMGWoAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m3DTgWq6EfGtjOM0sMIeGw" comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m6QUUGrBEfGj_dhdvXtejg" comment="" name="action_run_id" prompt="action_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_nXbGgGuHEfGZ5Jsy7VnhBg" comment="" name="MASTER_RUN_ID" prompt="MASTER_RUN_ID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_r7NawWuHEfGZ5Jsy7VnhBg" comment="" name="MASTER_START_TS" prompt="MASTER_START_TS?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_yPjGoWuHEfGZ5Jsy7VnhBg" comment="" name="DQ_MIN_SCORE" prompt="DQ_MIN_SCORE?" promptNeeded="false" repositoryContextId="built-in" type="id_Double" value=""/>
+    <contextParameter xmi:id="_3GqmkWuHEfGZ5Jsy7VnhBg" comment="" name="STOP_ON_DQ_FAIL" prompt="STOP_ON_DQ_FAIL?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value=""/>
+    <contextParameter xmi:id="_6s5GYGuHEfGZ5Jsy7VnhBg" comment="" name="PROJECT_NAME" prompt="PROJECT_NAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_BWCkoWuIEfGZ5Jsy7VnhBg" comment="" name="ENVIRONMENT" prompt="ENVIRONMENT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_LzpMGmoAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="PROD">
     <contextParameter xmi:id="_LzpMG2oAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
@@ -59,6 +71,12 @@
     <contextParameter xmi:id="_LzpMKmoAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m3DTgmq6EfGtjOM0sMIeGw" comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m6QUUWrBEfGj_dhdvXtejg" comment="" name="action_run_id" prompt="action_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_nXbGgWuHEfGZ5Jsy7VnhBg" comment="" name="MASTER_RUN_ID" prompt="MASTER_RUN_ID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_r7OB0GuHEfGZ5Jsy7VnhBg" comment="" name="MASTER_START_TS" prompt="MASTER_START_TS?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_yPjtsGuHEfGZ5Jsy7VnhBg" comment="" name="DQ_MIN_SCORE" prompt="DQ_MIN_SCORE?" promptNeeded="false" repositoryContextId="built-in" type="id_Double" value=""/>
+    <contextParameter xmi:id="_3GrNoGuHEfGZ5Jsy7VnhBg" comment="" name="STOP_ON_DQ_FAIL" prompt="STOP_ON_DQ_FAIL?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value=""/>
+    <contextParameter xmi:id="_6s5GYWuHEfGZ5Jsy7VnhBg" comment="" name="PROJECT_NAME" prompt="PROJECT_NAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_BWCkomuIEfGZ5Jsy7VnhBg" comment="" name="ENVIRONMENT" prompt="ENVIRONMENT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_LzpMK2oAEfGFz-1eMWTYGQ" confirmationNeeded="false" hide="false" name="QA">
     <contextParameter xmi:id="_LzpMLGoAEfGFz-1eMWTYGQ" comment="" name="db_host" prompt="db_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
@@ -79,5 +97,11 @@
     <contextParameter xmi:id="_LzpMO2oAEfGFz-1eMWTYGQ" comment="" name="created_by" prompt="created_by?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m3D6kGq6EfGtjOM0sMIeGw" comment="" name="gold_run_id" prompt="gold_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter xmi:id="_m6QUUmrBEfGj_dhdvXtejg" comment="" name="action_run_id" prompt="action_run_id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_nXbGgmuHEfGZ5Jsy7VnhBg" comment="" name="MASTER_RUN_ID" prompt="MASTER_RUN_ID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_r7OB0WuHEfGZ5Jsy7VnhBg" comment="" name="MASTER_START_TS" prompt="MASTER_START_TS?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_yPjtsWuHEfGZ5Jsy7VnhBg" comment="" name="DQ_MIN_SCORE" prompt="DQ_MIN_SCORE?" promptNeeded="false" repositoryContextId="built-in" type="id_Double" value=""/>
+    <contextParameter xmi:id="_3GrNoWuHEfGZ5Jsy7VnhBg" comment="" name="STOP_ON_DQ_FAIL" prompt="STOP_ON_DQ_FAIL?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value=""/>
+    <contextParameter xmi:id="_6s5GYmuHEfGZ5Jsy7VnhBg" comment="" name="PROJECT_NAME" prompt="PROJECT_NAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_BWCko2uIEfGZ5Jsy7VnhBg" comment="" name="ENVIRONMENT" prompt="ENVIRONMENT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>

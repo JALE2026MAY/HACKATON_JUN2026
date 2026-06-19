@@ -1,5 +1,40 @@
 [ {
   "baseItem" : {
+    "id" : "_-B00IGuCEfGatM45PvNViw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_EeyzcGrGEfGdOMS5nfS_fg",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "HACKATON_JUN2026:_GjihIGrAEfGj_dhdvXtejg",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "HACKATON_JUN2026:_IjlmAGn_EfGFz-1eMWTYGQ",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "HACKATON_JUN2026:_NGlcMGpkEfGZ2ujDAi3OWQ",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "HACKATON_JUN2026:_ZW930GqoEfG1lqxu6qhfiQ",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "HACKATON_JUN2026:_Zn-pIGrFEfGdOMS5nfS_fg",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "HACKATON_JUN2026:_i5WZwGq4EfGtjOM0sMIeGw",
+    "version" : "Latest",
+    "type" : "job"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_GjihIGrAEfGj_dhdvXtejg",
     "version" : "0.1",
     "type" : "job"

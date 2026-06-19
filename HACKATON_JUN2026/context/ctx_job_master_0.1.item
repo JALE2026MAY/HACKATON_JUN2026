@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_SQhQIGuFEfGatM45PvNViw" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_SQhQIWuFEfGatM45PvNViw" comment="" name="MASTER_RUN_ID" prompt="MASTER_RUN_ID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_SQhQImuFEfGatM45PvNViw" comment="" name="MASTER_START_TS" prompt="MASTER_START_TS?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_SQhQI2uFEfGatM45PvNViw" comment="" name="DQ_MIN_SCORE" prompt="DQ_MIN_SCORE?" promptNeeded="false" repositoryContextId="built-in" type="id_Double" value="0.95"/>
+  <contextParameter xmi:id="_SQhQJGuFEfGatM45PvNViw" comment="" name="STOP_ON_DQ_FAIL" prompt="STOP_ON_DQ_FAIL?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true"/>
+  <contextParameter xmi:id="_SQhQJWuFEfGatM45PvNViw" comment="" name="PROJECT_NAME" prompt="PROJECT_NAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Telco Retention Intelligence"/>
+  <contextParameter xmi:id="_SQhQJmuFEfGatM45PvNViw" comment="" name="ENVIRONMENT" prompt="ENVIRONMENT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dev"/>
+</talendfile:ContextType>

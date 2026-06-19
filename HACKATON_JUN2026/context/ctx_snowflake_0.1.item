@@ -13,4 +13,10 @@
   <contextParameter xmi:id="_HV3KYmrKEfGdOMS5nfS_fg" comment="" name="db_name" prompt="db_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DSADEV"/>
   <contextParameter xmi:id="_HV3KY2rKEfGdOMS5nfS_fg" comment="" name="db_user" prompt="db_user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="usr_acme"/>
   <contextParameter xmi:id="_HV3KZGrKEfGdOMS5nfS_fg" comment="" name="db_password" prompt="db_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:xNLQGhsReeTMq5yxts43Ful16gn1GjDTTSPyVQsJlcagFXM="/>
+  <contextParameter xmi:id="_loSOsGuIEfGZ5Jsy7VnhBg" comment="" name="MASTER_RUN_ID" prompt="MASTER_RUN_ID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_loSOsWuIEfGZ5Jsy7VnhBg" comment="" name="MASTER_START_TS" prompt="MASTER_START_TS?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_qn5jUGuIEfGZ5Jsy7VnhBg" comment="" name="DQ_MIN_SCORE" prompt="DQ_MIN_SCORE?" promptNeeded="false" repositoryContextId="built-in" type="id_Double" value="0.95"/>
+  <contextParameter xmi:id="_1lsGkGuIEfGZ5Jsy7VnhBg" comment="" name="STOP_ON_DQ_FAIL" prompt="STOP_ON_DQ_FAIL?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true"/>
+  <contextParameter xmi:id="_59sBkGuIEfGZ5Jsy7VnhBg" comment="" name="PROJECT_NAME" prompt="PROJECT_NAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Telco Retention Intelligence"/>
+  <contextParameter xmi:id="_BclcEGuJEfGZ5Jsy7VnhBg" comment="" name="ENVIRONMENT" prompt="ENVIRONMENT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dev"/>
 </talendfile:ContextType>
